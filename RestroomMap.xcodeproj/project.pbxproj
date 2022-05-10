@@ -44,6 +44,7 @@
 		D84930742829841B002DDFD2 /* RestroomMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestroomMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84930782829841B002DDFD2 /* RestroomMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapUITests.swift; sourceTree = "<group>"; };
 		D849307A2829841B002DDFD2 /* RestroomMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D849309E2829FF77002DDFD2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		D849305C2829841A002DDFD2 /* RestroomMap */ = {
 			isa = PBXGroup;
 			children = (
+				D849309E2829FF77002DDFD2 /* README.md */,
 				D84930952829FD47002DDFD2 /* Application */,
 				D849308C2829FC85002DDFD2 /* Presentation */,
 				D849308B2829FC82002DDFD2 /* Domain */,
