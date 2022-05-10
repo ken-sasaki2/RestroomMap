@@ -75,6 +75,7 @@
 		D84930512829841A002DDFD2 = {
 			isa = PBXGroup;
 			children = (
+				D849309E2829FF77002DDFD2 /* README.md */,
 				D849305C2829841A002DDFD2 /* RestroomMap */,
 				D849306D2829841B002DDFD2 /* RestroomMapTests */,
 				D84930772829841B002DDFD2 /* RestroomMapUITests */,
@@ -95,7 +96,6 @@
 		D849305C2829841A002DDFD2 /* RestroomMap */ = {
 			isa = PBXGroup;
 			children = (
-				D849309E2829FF77002DDFD2 /* README.md */,
 				D84930952829FD47002DDFD2 /* Application */,
 				D849308C2829FC85002DDFD2 /* Presentation */,
 				D849308B2829FC82002DDFD2 /* Domain */,
