@@ -1,0 +1,8 @@
+excluded:
+- /Users/sasaki.ken/Library/Mobile Documents/com~apple~CloudDocs/swift_projects/RestroomMap/BuildTools
+
+# 無効とするルール
+disabled_rules:
+
+# デフォで無効とされたルールを有効とする
+opt_in_rules:

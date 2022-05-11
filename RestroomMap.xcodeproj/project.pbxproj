@@ -455,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd BuildTools\n SDKROOT=macosx\n \n # Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n # swift package update\n \n cp $SRCROOT/.swiftlint.yml ./\n swift run -c release swiftlint\n rm .swiftlint.yml\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd BuildTools\n SDKROOT=macosx\n \n # Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n # swift package update\n \n cp \"${SRCROOT}/.swiftlint.yml\" ./\n swift run -c release swiftlint\n rm .swiftlint.yml\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
