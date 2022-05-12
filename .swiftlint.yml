@@ -18,6 +18,10 @@ opt_in_rules:
 
 # ルールをカスタム
 line_length: 450
+
 type_name:
   min_length: 2
   max_length: 50
+
+vertical_whitespace:
+ max_empty_lines: 2
