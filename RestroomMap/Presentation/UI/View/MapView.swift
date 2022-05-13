@@ -21,21 +21,41 @@ struct MapView: View {
     var lng: Double
 
     var body: some View {
-        Map(
-            coordinateRegion: $region,
-            interactionModes: .all,
-            showsUserLocation: true,
-            userTrackingMode: $userTrackingMode,
-            annotationItems: [
-                PinItem(coordinate: .init(latitude: lat, longitude: lng))
-            ],
-            annotationContent: { item in
-                MapMarker(coordinate: item.coordinate)
+        GeometryReader { _ in
+            NavigationView {
+                ZStack {
+                    Map(
+                        coordinateRegion: $region,
+                        interactionModes: .all,
+                        showsUserLocation: true,
+                        userTrackingMode: $userTrackingMode,
+                        annotationItems: [
+                            PinItem(coordinate: .init(latitude: lat, longitude: lng))
+                        ],
+                        annotationContent: { item in
+                            MapMarker(coordinate: item.coordinate)
+                        }
+                    )
+                    .edgesIgnoringSafeArea(.all)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .bottomBar) {
+                            MapToolBarButtonView(imageName: "plus") {
+                                print("On tapped button 1.")
+                            }
+                            MapToolBarButtonView(imageName: "location") {
+                                print("On tapped button 2.")
+                            }
+                            MapToolBarButtonView(imageName: "menucard") {
+                                print("On tapped button 3.")
+                            }
+                            Spacer()
+                        }
+                    }
+                    .onAppear {
+                        setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                    }
+                }
             }
-        )
-        .edgesIgnoringSafeArea(.all)
-        .onAppear {
-            setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
         }
     }
 
