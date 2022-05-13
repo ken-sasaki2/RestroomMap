@@ -16,7 +16,7 @@ struct MapToolBarButtonView: View {
             onTapped()
         } label: {
             Image(systemName: imageName)
-                .frame(width: 50, height: 50)
+                .frame(width: 40, height: 40)
                 .foregroundColor(.black.opacity(0.6))
                 .background(.gray.opacity(0.4))
                 .clipShape(Circle())

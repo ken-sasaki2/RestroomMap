@@ -16,6 +16,7 @@ struct PinItem: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
+    @State private var isShowMenuView = false
     var coordinate: CLLocationCoordinate2D?
     var lat: Double
     var lng: Double
@@ -46,7 +47,10 @@ struct MapView: View {
                                 print("On tapped button 2.")
                             }
                             MapToolBarButtonView(imageName: "menucard") {
-                                print("On tapped button 3.")
+                                isShowMenuView.toggle()
+                            }
+                            .sheet(isPresented: $isShowMenuView) {
+                                MenuView()
                             }
                             Spacer()
                         }
@@ -70,5 +74,6 @@ struct MapView: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(lat: 35.65139, lng: 139.63679)
+            .previewDevice("iPhone 13 Pro")
     }
 }
