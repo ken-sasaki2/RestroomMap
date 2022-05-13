@@ -13,7 +13,7 @@ struct RestroomMapApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MapView()
         }
     }
 }
