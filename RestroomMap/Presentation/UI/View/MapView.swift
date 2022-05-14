@@ -17,6 +17,7 @@ struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
     @State private var isShowMenuView = false
+    @State private var isShowFocusView = false
     var coordinate: CLLocationCoordinate2D?
     var lat: Double
     var lng: Double
@@ -41,7 +42,7 @@ struct MapView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .bottomBar) {
                             MapToolBarButtonView(imageName: "plus") {
-                                print("On tapped button 1.")
+                                isShowFocusView.toggle()
                             }
                             MapToolBarButtonView(imageName: "location") {
                                 print("On tapped button 2.")
@@ -57,6 +58,13 @@ struct MapView: View {
                     }
                     .onAppear {
                         setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                    }
+                    if isShowFocusView {
+                        MapFocusView {
+                            isShowFocusView.toggle()
+                        } onAddButtonTapped: {
+
+                        }
                     }
                 }
             }

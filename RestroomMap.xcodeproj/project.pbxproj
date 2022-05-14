@@ -17,6 +17,8 @@
 		D849306F2829841B002DDFD2 /* RestroomMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849306E2829841B002DDFD2 /* RestroomMapTests.swift */; };
 		D84930792829841B002DDFD2 /* RestroomMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84930782829841B002DDFD2 /* RestroomMapUITests.swift */; };
 		D849307B2829841B002DDFD2 /* RestroomMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849307A2829841B002DDFD2 /* RestroomMapUITestsLaunchTests.swift */; };
+		D8835FED282FB59C0048A495 /* MapFocusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */; };
+		D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEE282FB9250048A495 /* MapFocusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D84930782829841B002DDFD2 /* RestroomMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapUITests.swift; sourceTree = "<group>"; };
 		D849307A2829841B002DDFD2 /* RestroomMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D849309E2829FF77002DDFD2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFocusButtonView.swift; sourceTree = "<group>"; };
+		D8835FEE282FB9250048A495 /* MapFocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFocusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */,
+				D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			children = (
 				D8360620282EAA4100CDD7F0 /* Button */,
 				D849305F2829841A002DDFD2 /* MapView.swift */,
+				D8835FEE282FB9250048A495 /* MapFocusView.swift */,
 				D8360623282EB72D00CDD7F0 /* MenuView.swift */,
 			);
 			path = View;
@@ -499,8 +505,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8835FED282FB59C0048A495 /* MapFocusButtonView.swift in Sources */,
 				D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */,
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
+				D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */,
 				D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */,
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
 				D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */,
