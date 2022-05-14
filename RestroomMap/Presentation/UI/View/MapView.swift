@@ -18,6 +18,7 @@ struct MapView: View {
     @State private var userTrackingMode: MapUserTrackingMode = .none
     @State private var isShowMenuView = false
     @State private var isShowFocusView = false
+    @State private var isShowAddLocationView = false
     var coordinate: CLLocationCoordinate2D?
     var lat: Double
     var lng: Double
@@ -56,6 +57,9 @@ struct MapView: View {
                             Spacer()
                         }
                     }
+                    .sheet(isPresented: $isShowAddLocationView) {
+                        AddLocationView()
+                    }
                     .onAppear {
                         setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
                     }
@@ -63,7 +67,8 @@ struct MapView: View {
                         MapFocusView {
                             isShowFocusView.toggle()
                         } onAddButtonTapped: {
-
+                            isShowAddLocationView.toggle()
+                            isShowFocusView.toggle()
                         }
                     }
                 }
