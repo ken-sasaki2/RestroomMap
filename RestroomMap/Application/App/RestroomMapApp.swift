@@ -13,7 +13,7 @@ struct RestroomMapApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MapView(lat: 35.651390, lng: 139.63679)
+            MapBuilder.shared.build()
         }
     }
 }

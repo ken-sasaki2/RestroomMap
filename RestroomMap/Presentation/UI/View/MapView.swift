@@ -16,12 +16,11 @@ struct PinItem: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
-    @State private var isShowMenuView = false
-    @State private var isShowFocusView = false
-    @State private var isShowAddLocationView = false
+    @ObservedObject var mapViewModel: MapViewModel
+    let mapController: MapController
     var coordinate: CLLocationCoordinate2D?
-    var lat: Double
-    var lng: Double
+    var lat = 0.0
+    var lng = 0.0
 
     var body: some View {
         GeometryReader { _ in
@@ -43,32 +42,31 @@ struct MapView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .bottomBar) {
                             MapToolBarButtonView(imageName: "plus") {
-                                isShowFocusView.toggle()
+                                mapController.onPlusButtonTapped()
                             }
                             MapToolBarButtonView(imageName: "location") {
-                                print("On tapped button 2.")
+                                mapController.onCurrentLocationButtonTapped()
                             }
                             MapToolBarButtonView(imageName: "menucard") {
-                                isShowMenuView.toggle()
-                            }
-                            .sheet(isPresented: $isShowMenuView) {
-                                MenuView()
+                                mapController.onMenuButtonTapped()
                             }
                             Spacer()
                         }
                     }
-                    .sheet(isPresented: $isShowAddLocationView) {
+                    .sheet(isPresented: $mapViewModel.isShowAddLocationView) {
                         AddLocationView()
+                    }
+                    .sheet(isPresented: $mapViewModel.isShowMenuView) {
+                        MenuView()
                     }
                     .onAppear {
                         setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
                     }
-                    if isShowFocusView {
+                    if mapViewModel.isShowFocusView {
                         MapFocusView {
-                            isShowFocusView.toggle()
+                            mapController.onCancelAddLocationButtonTapped()
                         } onAddButtonTapped: {
-                            isShowAddLocationView.toggle()
-                            isShowFocusView.toggle()
+                            mapController.onAddLocationButtonTapped()
                         }
                     }
                 }
@@ -86,7 +84,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(lat: 35.65139, lng: 139.63679)
+        MapBuilder.shared.build()
             .previewDevice("iPhone 13 Pro")
     }
 }
