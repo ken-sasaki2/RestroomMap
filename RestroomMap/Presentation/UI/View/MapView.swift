@@ -42,7 +42,9 @@ struct MapView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .bottomBar) {
                             MapToolBarButtonView(imageName: "plus") {
-                                mapController.onPlusButtonTapped()
+                                withAnimation {
+                                    mapController.onPlusButtonTapped()
+                                }
                             }
                             MapToolBarButtonView(imageName: "location") {
                                 mapController.onCurrentLocationButtonTapped()
@@ -64,7 +66,9 @@ struct MapView: View {
                     }
                     if mapViewModel.isShowFocusView {
                         MapFocusView {
-                            mapController.onCancelAddLocationButtonTapped()
+                            withAnimation {
+                                mapController.onCancelAddLocationButtonTapped()
+                            }
                         } onAddButtonTapped: {
                             mapController.onAddLocationButtonTapped()
                         }
