@@ -13,7 +13,8 @@ struct RestroomMapApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MapBuilder.shared.build()
+            LocatePermissionView()
+            // MapBuilder.shared.build()
         }
     }
 }
