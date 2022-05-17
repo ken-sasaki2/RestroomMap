@@ -10,6 +10,21 @@
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
+		D838A7992833248000047D52 /* LocatePermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7982833248000047D52 /* LocatePermissionViewModel.swift */; };
+		D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */; };
+		D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */; };
+		D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79D2833249D00047D52 /* LocatePermissionController.swift */; };
+		D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79D2833249D00047D52 /* LocatePermissionController.swift */; };
+		D838A7A1283324B600047D52 /* LocatePermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */; };
+		D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */; };
+		D838A7A4283324C200047D52 /* LocatePermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */; };
+		D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */; };
+		D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */; };
+		D838A7A8283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */; };
+		D838A7AA283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */; };
+		D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */; };
+		D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */; };
+		D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */; };
 		D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305D2829841A002DDFD2 /* RestroomMapApp.swift */; };
 		D84930602829841A002DDFD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D84930622829841B002DDFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84930612829841B002DDFD2 /* Assets.xcassets */; };
@@ -58,6 +73,14 @@
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D838A7982833248000047D52 /* LocatePermissionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewModel.swift; sourceTree = "<group>"; };
+		D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionPresenter.swift; sourceTree = "<group>"; };
+		D838A79D2833249D00047D52 /* LocatePermissionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionController.swift; sourceTree = "<group>"; };
+		D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionRepository.swift; sourceTree = "<group>"; };
+		D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionUseCase.swift; sourceTree = "<group>"; };
+		D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionDataStore.swift; sourceTree = "<group>"; };
+		D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationStatusEntity.swift; sourceTree = "<group>"; };
+		D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilder.swift; sourceTree = "<group>"; };
 		D849305A2829841A002DDFD2 /* RestroomMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestroomMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D849305D2829841A002DDFD2 /* RestroomMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapApp.swift; sourceTree = "<group>"; };
 		D849305F2829841A002DDFD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -111,8 +134,8 @@
 		D8360620282EAA4100CDD7F0 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */,
 				D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */,
+				D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */,
 				D88360072830BEAC0048A495 /* PermissionButtonView.swift */,
 			);
 			path = Button;
@@ -181,19 +204,11 @@
 			path = RestroomMapUITests;
 			sourceTree = "<group>";
 		};
-		D84930872829FC76002DDFD2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		D84930882829FC7A002DDFD2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				D84930892829FC7C002DDFD2 /* Entity */,
 				D849308A2829FC7E002DDFD2 /* DataStore */,
-				D84930872829FC76002DDFD2 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 		D84930892829FC7C002DDFD2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -208,6 +224,7 @@
 		D849308A2829FC7E002DDFD2 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -245,8 +262,8 @@
 		D849308E2829FC91002DDFD2 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D849305D2829841A002DDFD2 /* RestroomMapApp.swift */,
 				D836061E282D023400CDD7F0 /* AppDelegate.swift */,
+				D849305D2829841A002DDFD2 /* RestroomMapApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 		D84930902829FCB3002DDFD2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7982833248000047D52 /* LocatePermissionViewModel.swift */,
 				D8835FF5282FBE1D0048A495 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
@@ -275,6 +293,7 @@
 		D84930912829FCCC002DDFD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D838A79D2833249D00047D52 /* LocatePermissionController.swift */,
 				D8835FF2282FBE020048A495 /* MapController.swift */,
 			);
 			path = Controller;
@@ -290,6 +309,7 @@
 		D84930932829FCE2002DDFD2 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */,
 				D8835FFB282FBE640048A495 /* MapUseCase.swift */,
 			);
 			path = UseCase;
@@ -298,6 +318,7 @@
 		D84930942829FCE9002DDFD2 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -314,6 +335,7 @@
 		D84930962829FD5A002DDFD2 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */,
 				D8835FFE282FC5800048A495 /* MapBuilder.swift */,
 			);
 			path = Builder;
@@ -322,6 +344,7 @@
 		D84930972829FD6D002DDFD2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */,
 				D8835FF8282FBE370048A495 /* MapPresenter.swift */,
 			);
 			path = Presenter;
@@ -532,18 +555,26 @@
 			files = (
 				D8835FED282FB59C0048A495 /* MapFocusButtonView.swift in Sources */,
 				D8835FF6282FBE1D0048A495 /* MapViewModel.swift in Sources */,
+				D838A7AA283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
+				D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
 				D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */,
 				D8835FF9282FBE370048A495 /* MapPresenter.swift in Sources */,
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
 				D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */,
 				D8835FFC282FBE640048A495 /* MapUseCase.swift in Sources */,
+				D838A7992833248000047D52 /* LocatePermissionViewModel.swift in Sources */,
 				D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */,
 				D8835FFF282FC5800048A495 /* MapBuilder.swift in Sources */,
 				D8835FF1282FBC830048A495 /* AddLocationView.swift in Sources */,
+				D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
+				D838A7A1283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D88360052830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8835FF3282FBE020048A495 /* MapController.swift in Sources */,
+				D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
+				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
+				D838A7A4283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,11 +585,18 @@
 			files = (
 				D8836000282FC5800048A495 /* MapBuilder.swift in Sources */,
 				D8835FF4282FBE020048A495 /* MapController.swift in Sources */,
+				D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */,
 				D8835FFD282FBE640048A495 /* MapUseCase.swift in Sources */,
+				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
+				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D849306F2829841B002DDFD2 /* RestroomMapTests.swift in Sources */,
+				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
+				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D88360062830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D88360092830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8835FF7282FBE1D0048A495 /* MapViewModel.swift in Sources */,
+				D838A7A8283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
+				D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D8835FFA282FBE370048A495 /* MapPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
