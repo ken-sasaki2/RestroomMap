@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct LocatePermissionView: View {
+    @ObservedObject var viewModel: LocatePermissionViewModel
+    let controller: LocatePermissionController
+
     var body: some View {
         ZStack {
             Image("locate＿permission")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .edgesIgnoringSafeArea(.all)
-//            Color.black.opacity(0.3)
-//                .edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
                 Text("位置情報をオンにする")
@@ -29,17 +30,24 @@ struct LocatePermissionView: View {
                     .lineLimit(2)
                     .padding(.bottom, 20)
                 PermissionButtonView {
-
+                    controller.onNextPageButtonTapped()
                 }
                 .padding(.bottom, 30)
+                .alert("確認", isPresented: $viewModel.isShowDeniedAlert) {
+                    Button("設定へ") {
+                        controller.onGoToSettingPageButtonTapped()
+                    }
+                } message: {
+                    Text("'設定'から位置情報を許可してください")
+                }
             }
         }
+        .interactiveDismissDisabled()
     }
 }
 
 struct LocatePermissionView_Previews: PreviewProvider {
     static var previews: some View {
-        LocatePermissionView()
-            .previewDevice("iPhone 13 Pro")
+        LocatePermissionViewBuilder.shared.build()
     }
 }
