@@ -15,7 +15,7 @@ protocol LocatePermissionDataStoreInterface {
 }
 
 protocol LocatePermissionDataStoreDelegate: AnyObject {
-    func didUpdatedLocation(_ dataStore: LocatePermissionDataStore)
+    func didUpdatedLocation(_ dataStore: LocatePermissionDataStore, entity: CurrentLocationEntity)
     func didFailWithError(_ dataStore: LocatePermissionDataStore)
 }
 
@@ -85,7 +85,9 @@ final class LocatePermissionDataStore: NSObject, LocatePermissionDataStoreInterf
         let lng = Double(location.coordinate.longitude)
         print("latitude:", lat, "longitude:", lng)
 
-        delegate?.didUpdatedLocation(self)
+        let entity = CurrentLocationEntity(lat: lat, lng: lng)
+
+        delegate?.didUpdatedLocation(self, entity: entity)
         locationManager.stopUpdatingLocation()
     }
 
