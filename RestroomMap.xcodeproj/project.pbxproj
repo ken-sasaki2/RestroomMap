@@ -238,8 +238,8 @@
 		D849308A2829FC7E002DDFD2 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				D8895ED12835323C0079C2AA /* UserDataStore.swift */,
 				D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */,
+				D8895ED12835323C0079C2AA /* UserDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";

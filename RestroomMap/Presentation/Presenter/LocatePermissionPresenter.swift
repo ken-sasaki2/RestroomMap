@@ -10,6 +10,7 @@ import Foundation
 protocol LocatePermissionPresenterinterface {
     func isShowDeniedAlert()
     func openSettingPage()
+    func doneLocatePermission()
 }
 
 
@@ -29,5 +30,10 @@ final class LocatePermissionPresenter: LocatePermissionPresenterinterface {
 
     func openSettingPage() {
         viewModel.openSettingPage()
+    }
+
+
+    func doneLocatePermission() {
+        viewModel.doneLocatePermission = true
     }
 }
