@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol LocatePermissionUseCaseInterface {
     func getAuthorizationStatus()
@@ -76,6 +77,6 @@ extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
 
 
     func didFailWithError(_ repository: LocatePermissionRepository) {
-        print("kenken2")
+        presenter.failLocatePermission()
     }
 }

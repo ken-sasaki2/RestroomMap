@@ -40,6 +40,11 @@ struct LocatePermissionView: View {
                 } message: {
                     Text("'設定'から位置情報を許可してください")
                 }
+                .alert("エラー", isPresented: $viewModel.isShowFailLocatePermissionAlert) {
+                    Button("設定へ") {}
+                } message: {
+                    Text("位置情報の取得に失敗しました。\n時間をおいて再度お試しください。")
+                }
             }
         }
         .interactiveDismissDisabled()

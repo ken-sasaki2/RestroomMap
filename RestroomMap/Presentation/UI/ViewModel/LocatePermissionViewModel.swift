@@ -10,6 +10,7 @@ import SwiftUI
 final class LocatePermissionViewModel: ObservableObject {
     @Published var isShowDeniedAlert = false
     @Published var doneLocatePermission = false
+    @Published var isShowFailLocatePermissionAlert = false
 
     func openSettingPage() {
         let urlString = UIApplication.openSettingsURLString
