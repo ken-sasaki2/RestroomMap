@@ -14,18 +14,24 @@ protocol LocatePermissionUseCaseInterface {
 
 
 final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
-    private var repository: LocatePermissionRepositoryInterface
+    private var locatePermissionRepository: LocatePermissionRepositoryInterface
+    private let userRepository: UserRepositoryInterface
     private let presenter: LocatePermissionPresenterinterface
 
 
-    init(repository: LocatePermissionRepositoryInterface, presenter: LocatePermissionPresenterinterface) {
-        self.repository = repository
+    init(
+        locatePermissionRepository: LocatePermissionRepositoryInterface,
+        userRepository: UserRepositoryInterface,
+        presenter: LocatePermissionPresenterinterface
+    ) {
+        self.locatePermissionRepository = locatePermissionRepository
+        self.userRepository = userRepository
         self.presenter = presenter
     }
 
 
     func getAuthorizationStatus() {
-        let status = repository.getAuthorizationStatus()
+        let status = locatePermissionRepository.getAuthorizationStatus()
         onNextPageButtonTapped(status)
     }
 
@@ -33,7 +39,7 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
     private func onNextPageButtonTapped(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
-            repository.requestWhenInUse { status in
+            locatePermissionRepository.requestWhenInUse { status in
                 self.onNextPageButtonTapped(status)
             }
         case .restricted:
@@ -51,8 +57,8 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
 
     private func startUpdatingLocation() {
-        repository.delegate = self
-        repository.startUpdatingLocation()
+        locatePermissionRepository.delegate = self
+        locatePermissionRepository.startUpdatingLocation()
     }
 
 
@@ -65,9 +71,10 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
     func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
         print("kenken1")
-        // ローカルに位置情報保存して
+        userRepository.saveLocation(entity: entity)
         // 画面遷移
     }
+    
 
     func didFailWithError(_ repository: LocatePermissionRepository) {
         print("kenken2")
