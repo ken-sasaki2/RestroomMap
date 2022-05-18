@@ -70,9 +70,8 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
     func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
-        print("kenken1")
         userRepository.saveLocation(entity: entity)
-        // 画面遷移
+        presenter.doneLocatePermission()
     }
 
 
