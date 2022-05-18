@@ -74,7 +74,7 @@ extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
         userRepository.saveLocation(entity: entity)
         // 画面遷移
     }
-    
+
 
     func didFailWithError(_ repository: LocatePermissionRepository) {
         print("kenken2")

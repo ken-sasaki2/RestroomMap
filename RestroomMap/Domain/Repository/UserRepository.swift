@@ -14,12 +14,12 @@ protocol UserRepositoryInterface {
 
 final class UserRepository: UserRepositoryInterface {
     private let dataStore: UserDataStoreInterface
-    
-    
+
+
     init(dataStore: UserDataStoreInterface) {
         self.dataStore = dataStore
     }
-    
+
 
     func saveLocation(entity: CurrentLocationEntity) {
         dataStore.saveLocation(entity: entity)
