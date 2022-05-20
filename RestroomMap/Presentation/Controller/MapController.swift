@@ -8,34 +8,34 @@
 import Foundation
 
 final class MapController {
-    private let mapUseCase: MapUseCaseInterface
+    private let useCase: MapUseCaseInterface
 
-    init(mapUseCase: MapUseCaseInterface) {
-        self.mapUseCase = mapUseCase
+    init(useCase: MapUseCaseInterface) {
+        self.useCase = useCase
     }
 
 
     func onPlusButtonTapped() {
-        mapUseCase.onPlusButtonTapped()
+        useCase.onPlusButtonTapped()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        mapUseCase.onCancelAddLocationButtonTapped()
+        useCase.onCancelAddLocationButtonTapped()
     }
 
 
     func onAddLocationButtonTapped() {
-        mapUseCase.onAddLocationButtonTapped()
-    }
-
-
-    func onCurrentLocationButtonTapped() {
-        mapUseCase.onCurrentLocationButtonTapped()
+        useCase.onAddLocationButtonTapped()
     }
 
 
     func onMenuButtonTapped() {
-        mapUseCase.onMenuButtonTapped()
+        useCase.onMenuButtonTapped()
+    }
+
+
+    func getCurrentLocation() {
+        useCase.getCurrentLocation()
     }
 }

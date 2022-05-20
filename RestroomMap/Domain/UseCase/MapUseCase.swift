@@ -11,39 +11,50 @@ protocol MapUseCaseInterface {
     func onPlusButtonTapped()
     func onCancelAddLocationButtonTapped()
     func onAddLocationButtonTapped()
-    func onCurrentLocationButtonTapped()
     func onMenuButtonTapped()
+    func getCurrentLocation()
 }
 
-final class MapUseCase: MapUseCaseInterface {
-    private let mapPresenter: MapPresenterInterface
 
-    init(mapPresenter: MapPresenterInterface) {
-        self.mapPresenter = mapPresenter
+final class MapUseCase: MapUseCaseInterface {
+    private let presenter: MapPresenterInterface
+    private let repository: MapRepositoryInterface
+
+
+    init(presenter: MapPresenterInterface, repository: MapRepositoryInterface) {
+        self.presenter = presenter
+        self.repository = repository
     }
 
 
     func onPlusButtonTapped() {
-        mapPresenter.toggleFocusView()
+        presenter.toggleFocusView()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        mapPresenter.toggleFocusView()
+        presenter.toggleFocusView()
     }
 
 
     func onAddLocationButtonTapped() {
-        mapPresenter.isShowAddLocationView()
-    }
-
-
-    func onCurrentLocationButtonTapped() {
-        print("現在地へ遷移させる")
+        presenter.isShowAddLocationView()
     }
 
 
     func onMenuButtonTapped() {
-        mapPresenter.isShowMenuView()
+        presenter.isShowMenuView()
+    }
+
+
+    func getCurrentLocation() {
+        let entity = repository.getCurrentLocationEntity()
+        let model = CurrentLocationModelTranslator.translate(entity: entity)
+        moveCurrentLocationPoint(model: model)
+    }
+
+
+    private func moveCurrentLocationPoint(model: CurrentLocationModel) {
+        presenter.moveCurrentLocationPoint(model: model)
     }
 }

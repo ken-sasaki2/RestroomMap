@@ -16,8 +16,8 @@ struct PinItem: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
-    @ObservedObject var mapViewModel: MapViewModel
-    let mapController: MapController
+    @ObservedObject var viewModel: MapViewModel
+    let controller: MapController
     var coordinate: CLLocationCoordinate2D?
     var lat = 0.0
     var lng = 0.0
@@ -43,34 +43,41 @@ struct MapView: View {
                         ToolbarItemGroup(placement: .bottomBar) {
                             MapToolBarButtonView(imageName: "plus") {
                                 withAnimation {
-                                    mapController.onPlusButtonTapped()
+                                    controller.onPlusButtonTapped()
                                 }
                             }
                             MapToolBarButtonView(imageName: "location") {
-                                mapController.onCurrentLocationButtonTapped()
+                                controller.getCurrentLocation()
+                                withAnimation {
+                                    setRegion(lat: viewModel.currentLocation.lat, lng: viewModel.currentLocation.lng)
+                                }
                             }
                             MapToolBarButtonView(imageName: "menucard") {
-                                mapController.onMenuButtonTapped()
+                                controller.onMenuButtonTapped()
                             }
                             Spacer()
                         }
                     }
-                    .sheet(isPresented: $mapViewModel.isShowAddLocationView) {
+                    .sheet(isPresented: $viewModel.isShowAddLocationView) {
                         AddLocationView()
                     }
-                    .sheet(isPresented: $mapViewModel.isShowMenuView) {
+                    .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuView()
                     }
                     .onAppear {
-                        setRegion(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                        controller.getCurrentLocation()
+                        setRegion(
+                            lat: viewModel.currentLocation.lat,
+                            lng: viewModel.currentLocation.lng
+                        )
                     }
-                    if mapViewModel.isShowFocusView {
+                    if viewModel.isShowFocusView {
                         MapFocusView {
                             withAnimation {
-                                mapController.onCancelAddLocationButtonTapped()
+                                controller.onCancelAddLocationButtonTapped()
                             }
                         } onAddButtonTapped: {
-                            mapController.onAddLocationButtonTapped()
+                            controller.onAddLocationButtonTapped()
                         }
                     }
                 }
@@ -78,10 +85,15 @@ struct MapView: View {
         }
     }
 
-    private func setRegion(coordinate: CLLocationCoordinate2D) {
+    private func setRegion(lat: Double, lng: Double) {
         region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.0009, longitudeDelta: 0.0009)
+            center: CLLocationCoordinate2D(
+                latitude: lat,
+                longitude: lng
+            ), span: MKCoordinateSpan(
+                latitudeDelta: 0.0009,
+                longitudeDelta: 0.0009
+            )
         )
     }
 }

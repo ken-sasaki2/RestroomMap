@@ -13,14 +13,17 @@ final class MapBuilder {
     private init() {}
 
     func build() -> MapView {
-        let mapViewModel = MapViewModel()
+        let viewModel = MapViewModel()
 
         let view = MapView(
-            mapViewModel: mapViewModel,
-            mapController: MapController(
-                mapUseCase: MapUseCase(
-                    mapPresenter: MapPresenter(
-                        mapViewModel: mapViewModel
+            viewModel: viewModel,
+            controller: MapController(
+                useCase: MapUseCase(
+                    presenter: MapPresenter(
+                        viewModel: viewModel
+                    ),
+                    repository: MapRepository(
+                        dataStore: MapDataStore()
                     )
                 )
             ),
