@@ -47,6 +47,7 @@
 		D85B0B71283772D800E8062D /* MapFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEE282FB9250048A495 /* MapFocusView.swift */; };
 		D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */; };
 		D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
+		D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B742837743C00E8062D /* CurrentLocationModelTranslatorTests.swift */; };
 		D8835FED282FB59C0048A495 /* MapFocusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */; };
 		D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEE282FB9250048A495 /* MapFocusView.swift */; };
 		D8835FF1282FBC830048A495 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FF0282FBC830048A495 /* AddLocationView.swift */; };
@@ -119,6 +120,7 @@
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
 		D85B0B652837681200E8062D /* CurrentLocationModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModelTranslator.swift; sourceTree = "<group>"; };
 		D85B0B682837712900E8062D /* MapDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStoreTests.swift; sourceTree = "<group>"; };
+		D85B0B742837743C00E8062D /* CurrentLocationModelTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModelTranslatorTests.swift; sourceTree = "<group>"; };
 		D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFocusButtonView.swift; sourceTree = "<group>"; };
 		D8835FEE282FB9250048A495 /* MapFocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFocusView.swift; sourceTree = "<group>"; };
 		D8835FF0282FBC830048A495 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 		D849309B2829FDFA002DDFD2 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
+				D85B0B742837743C00E8062D /* CurrentLocationModelTranslatorTests.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */,
 				D85B0B70283772CD00E8062D /* MenuView.swift in Sources */,
 				D8835FFA282FBE370048A495 /* MapPresenter.swift in Sources */,
+				D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */,
 				D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
 				D85B0B672837684300E8062D /* CurrentLocationModelTranslator.swift in Sources */,
