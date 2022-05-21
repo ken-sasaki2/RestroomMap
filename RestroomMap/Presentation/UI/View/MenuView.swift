@@ -8,8 +8,35 @@
 import SwiftUI
 
 struct MenuView: View {
+    // @ObservedObject var viewModel: MenuViewModel
+    // let controller: MenuController
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { _ in
+            Form {
+                Section {
+                    MenuButtonView(text: "ピンの種類について") {
+
+                    }
+                }
+                Section {
+                    MenuButtonView(text: "レビュー") {
+
+                    }
+                    MenuButtonView(text: "シェア") {
+
+                    }
+                    MenuButtonView(text: "お問合せ") {
+
+                    }
+                }
+                Section {
+                    MenuButtonView(text: "開発者にビールを奢る") {
+
+                    }
+                }
+            }
+        }
     }
 }
 
