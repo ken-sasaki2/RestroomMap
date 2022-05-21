@@ -8,10 +8,24 @@
 import Foundation
 
 final class MenuController {
-    private let useCase: MenuUseCaseInterface
+    private let pinTypeUseCase: PinTypeUseCaseInterface
+    private let reviewUseCase: ReviewUseCaseInterface
+    private let shareUseCase: ShareUseCaseInterface
+    private let inquiryUseCase: InquiryUseCaseInterface
+    private let billingUseCase: BillingUseCaseInterface
 
 
-    init(useCase: MenuUseCaseInterface) {
-        self.useCase = useCase
+    init(
+        pinTypeUseCase: PinTypeUseCaseInterface,
+        reviewUseCase: ReviewUseCaseInterface,
+        shareUseCase: ShareUseCaseInterface,
+        inquiryUseCase: InquiryUseCaseInterface,
+        billingUseCase: BillingUseCaseInterface
+    ) {
+        self.pinTypeUseCase = pinTypeUseCase
+        self.reviewUseCase = reviewUseCase
+        self.shareUseCase = shareUseCase
+        self.inquiryUseCase = inquiryUseCase
+        self.billingUseCase = billingUseCase
     }
 }

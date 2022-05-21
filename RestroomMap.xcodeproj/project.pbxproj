@@ -78,10 +78,18 @@
 		D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
 		D8CE68D32837950D00C1EFD7 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */; };
 		D8CE68D42837950D00C1EFD7 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */; };
-		D8CE68D62837957D00C1EFD7 /* MenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D52837957D00C1EFD7 /* MenuUseCase.swift */; };
-		D8CE68D72837957D00C1EFD7 /* MenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D52837957D00C1EFD7 /* MenuUseCase.swift */; };
 		D8CE68D92838CA7700C1EFD7 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D82838CA7700C1EFD7 /* MenuButtonView.swift */; };
 		D8CE68DA2838CA7700C1EFD7 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68D82838CA7700C1EFD7 /* MenuButtonView.swift */; };
+		D8CE68DC2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */; };
+		D8CE68DD2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */; };
+		D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */; };
+		D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */; };
+		D8CE68E22838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */; };
+		D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */; };
+		D8CE68E52838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E42838CCDF00C1EFD7 /* BillingUseCase.swift */; };
+		D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E42838CCDF00C1EFD7 /* BillingUseCase.swift */; };
+		D8CE68E82838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */; };
+		D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */; };
 		D8D8578D283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 		D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 /* End PBXBuildFile section */
@@ -148,8 +156,12 @@
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		D8CE68D52837957D00C1EFD7 /* MenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUseCase.swift; sourceTree = "<group>"; };
 		D8CE68D82838CA7700C1EFD7 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
+		D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareUseCase.swift; sourceTree = "<group>"; };
+		D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewUseCase.swift; sourceTree = "<group>"; };
+		D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryUseCase.swift; sourceTree = "<group>"; };
+		D8CE68E42838CCDF00C1EFD7 /* BillingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingUseCase.swift; sourceTree = "<group>"; };
+		D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTypeUseCase.swift; sourceTree = "<group>"; };
 		D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,9 +376,13 @@
 		D84930932829FCE2002DDFD2 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D8CE68E42838CCDF00C1EFD7 /* BillingUseCase.swift */,
+				D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */,
 				D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */,
 				D8835FFB282FBE640048A495 /* MapUseCase.swift */,
-				D8CE68D52837957D00C1EFD7 /* MenuUseCase.swift */,
+				D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */,
+				D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */,
+				D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -626,6 +642,7 @@
 				D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */,
 				D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */,
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
+				D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */,
 				D85B0B662837681200E8062D /* CurrentLocationModelTranslator.swift in Sources */,
 				D8835FFC282FBE640048A495 /* MapUseCase.swift in Sources */,
@@ -633,6 +650,7 @@
 				D838A7992833248000047D52 /* LocatePermissionViewModel.swift in Sources */,
 				D8895ED8283536D20079C2AA /* UserRepository.swift in Sources */,
 				D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */,
+				D8CE68E52838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D8835FFF282FC5800048A495 /* MapBuilder.swift in Sources */,
 				D8835FF1282FBC830048A495 /* AddLocationView.swift in Sources */,
 				D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
@@ -645,10 +663,12 @@
 				D8CE68D92838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
 				D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */,
 				D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
-				D8CE68D62837957D00C1EFD7 /* MenuUseCase.swift in Sources */,
 				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
+				D8CE68E82838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D838A7A4283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
+				D8CE68E22838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
 				D8CE68D32837950D00C1EFD7 /* MenuViewModel.swift in Sources */,
+				D8CE68DC2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */,
 				D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */,
 				D8D8578D283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
 			);
@@ -669,6 +689,7 @@
 				D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */,
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
+				D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D85B0B71283772D800E8062D /* MapFocusView.swift in Sources */,
 				D8895ED32835323C0079C2AA /* UserDataStore.swift in Sources */,
 				D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */,
@@ -676,6 +697,7 @@
 				D85B0B6E283772BE00E8062D /* MapView.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
+				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D88360062830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8895ED6283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D85B0B6F283772C800E8062D /* AddLocationView.swift in Sources */,
@@ -688,10 +710,12 @@
 				D8CE68DA2838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
 				D8835FFA282FBE370048A495 /* MapPresenter.swift in Sources */,
 				D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */,
-				D8CE68D72837957D00C1EFD7 /* MenuUseCase.swift in Sources */,
 				D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */,
+				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
+				D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
 				D8CE68D42837950D00C1EFD7 /* MenuViewModel.swift in Sources */,
+				D8CE68DD2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */,
 				D85B0B672837684300E8062D /* CurrentLocationModelTranslator.swift in Sources */,
 				D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
 			);
