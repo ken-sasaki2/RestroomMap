@@ -62,7 +62,7 @@ struct MapView: View {
                         AddLocationView()
                     }
                     .sheet(isPresented: $viewModel.isShowMenuView) {
-                        MenuView()
+                        MenuViewBuilder.shared.build()
                     }
                     .onAppear {
                         controller.getCurrentLocation()
@@ -100,7 +100,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapBuilder.shared.build()
+        MapViewBuilder.shared.build()
             .previewDevice("iPhone 13 Pro")
     }
 }

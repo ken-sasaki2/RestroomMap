@@ -1,5 +1,5 @@
 //
-//  MapBuilder.swift
+//  MapViewBuilder.swift
 //  RestroomMap
 //
 //  Created by sasaki.ken on 2022/05/14.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class MapBuilder {
-    static let shared = MapBuilder()
+final class MapViewBuilder {
+    static let shared = MapViewBuilder()
 
     private init() {}
 
