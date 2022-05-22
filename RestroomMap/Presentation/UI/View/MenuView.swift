@@ -8,32 +8,37 @@
 import SwiftUI
 
 struct MenuView: View {
-    // @ObservedObject var viewModel: MenuViewModel
-    // let controller: MenuController
+    @ObservedObject var viewModel: MenuViewModel
+    let controller: MenuController
 
     var body: some View {
-        GeometryReader { _ in
-            Form {
-                Section {
-                    MenuButtonView(text: "ピンの種類について") {
+        Form {
+            Section {
+                MenuButtonView(text: "ピンの種類について") {
 
-                    }
                 }
-                Section {
-                    MenuButtonView(text: "レビュー") {
+            }
+            Section {
+                MenuButtonView(text: "レビュー") {
 
-                    }
-                    MenuButtonView(text: "シェア") {
-
-                    }
-                    MenuButtonView(text: "お問合せ") {
-
-                    }
                 }
-                Section {
-                    MenuButtonView(text: "開発者にビールを奢る") {
+                MenuButtonView(text: "シェア") {
+                    controller.onShareButtonTapped()
+                }
+                .sheet(isPresented: $viewModel.isShowShareSheet) {
+                    ShareSheetView(
+                        text: viewModel.shareText,
+                        image: viewModel.shareImage,
+                        url: viewModel.shareUrl
+                    )
+                }
+                MenuButtonView(text: "お問合せ") {
 
-                    }
+                }
+            }
+            Section {
+                MenuButtonView(text: "開発者にビールを奢る") {
+
                 }
             }
         }
@@ -42,6 +47,6 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuViewBuilder.shared.build()
     }
 }

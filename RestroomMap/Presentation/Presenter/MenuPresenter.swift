@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MenuPresenterInterface {
-
+    func showShareSheet(model: SharePostModel)
 }
 
 
@@ -18,5 +18,13 @@ final class MenuPresenter: MenuPresenterInterface {
 
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
+    }
+
+
+    func showShareSheet(model: SharePostModel) {
+        viewModel.isShowShareSheet = true
+        viewModel.shareText = model.shareText
+        viewModel.shareImage = model.shareImage
+        viewModel.shareUrl = model.shareUrl
     }
 }

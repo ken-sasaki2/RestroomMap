@@ -8,5 +8,8 @@
 import Foundation
 
 final class MenuViewModel: ObservableObject {
-
+    @Published var isShowShareSheet = false
+    @Published var shareText = ""
+    @Published var shareImage = ""
+    @Published var shareUrl = ""
 }

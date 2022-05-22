@@ -28,4 +28,14 @@ final class MenuController {
         self.inquiryUseCase = inquiryUseCase
         self.billingUseCase = billingUseCase
     }
+
+    func onShareButtonTapped() {
+        // refactorTODO: const化する
+        let shareText = "公衆トイレ共有アプリ"
+        let shareUrl = "https://qiita.com/ken_sasaki2"
+        let shareImage = "focus"
+
+        let model = SharePostModel(shareText: shareText, shareImage: shareImage, shareUrl: shareUrl)
+        shareUseCase.onShareButtonTapped(model: model)
+    }
 }
