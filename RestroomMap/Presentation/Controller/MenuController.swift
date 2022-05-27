@@ -45,6 +45,6 @@ final class MenuController {
 
 
     func onInquiryButtonTapped() {
-        inquiryUseCase.onInquiryButtonTapped()
+        inquiryUseCase.showInquiryView()
     }
 }

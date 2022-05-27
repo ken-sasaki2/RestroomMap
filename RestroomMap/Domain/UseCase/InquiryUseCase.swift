@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InquiryUseCaseInterface {
-    func onInquiryButtonTapped()
+    func showInquiryView()
 }
 
 
@@ -21,7 +21,7 @@ final class InquiryUseCase: InquiryUseCaseInterface {
     }
 
 
-    func onInquiryButtonTapped() {
+    func showInquiryView() {
         presenter.showInquiryView()
     }
 }
