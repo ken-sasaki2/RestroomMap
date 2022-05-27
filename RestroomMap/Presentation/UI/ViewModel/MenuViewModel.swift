@@ -12,4 +12,6 @@ final class MenuViewModel: ObservableObject {
     @Published var shareText = ""
     @Published var shareImage = ""
     @Published var shareUrl = ""
+    @Published var isShowInquiryView = false
+    @Published var inquiryUrl = Const.inquiryUrl
 }

@@ -30,12 +30,21 @@ final class MenuController {
     }
 
     func onShareButtonTapped() {
-        // refactorTODO: const化する
-        let shareText = "公衆トイレ共有アプリ"
-        let shareUrl = "https://qiita.com/ken_sasaki2"
-        let shareImage = "focus"
+        let model = SharePostModel(
+            shareText: Const.shareText,
+            shareImage: Const.shareImage,
+            shareUrl: Const.shareUrl
+        )
 
-        let model = SharePostModel(shareText: shareText, shareImage: shareImage, shareUrl: shareUrl)
-        shareUseCase.onShareButtonTapped(model: model)
+        shareUseCase.showShareSheet(model: model)
+    }
+
+    func onReviewButtontapped() {
+        reviewUseCase.requestReview()
+    }
+
+
+    func onInquiryButtonTapped() {
+        inquiryUseCase.onInquiryButtonTapped()
     }
 }

@@ -20,7 +20,7 @@ struct MenuView: View {
             }
             Section {
                 MenuButtonView(text: "レビュー") {
-
+                    controller.onReviewButtontapped()
                 }
                 MenuButtonView(text: "シェア") {
                     controller.onShareButtonTapped()
@@ -32,8 +32,13 @@ struct MenuView: View {
                         url: viewModel.shareUrl
                     )
                 }
-                MenuButtonView(text: "お問合せ") {
-
+                MenuButtonView(text: "お問い合せ") {
+                    controller.onInquiryButtonTapped()
+                }
+                .sheet(isPresented: $viewModel.isShowInquiryView) {
+                    if let url = viewModel.inquiryUrl {
+                        SafariView(url: url)
+                    }
                 }
             }
             Section {

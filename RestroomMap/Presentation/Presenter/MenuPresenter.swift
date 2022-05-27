@@ -27,4 +27,9 @@ final class MenuPresenter: MenuPresenterInterface {
         viewModel.shareImage = model.shareImage
         viewModel.shareUrl = model.shareUrl
     }
+
+
+    func showInquiryView() {
+        viewModel.isShowInquiryView = true
+    }
 }

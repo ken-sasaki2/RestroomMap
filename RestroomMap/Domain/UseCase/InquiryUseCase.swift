@@ -8,14 +8,20 @@
 import Foundation
 
 protocol InquiryUseCaseInterface {
-
+    func onInquiryButtonTapped()
 }
 
 
 final class InquiryUseCase: InquiryUseCaseInterface {
     private let presenter: MenuPresenter
 
+    
     init(presenter: MenuPresenter) {
         self.presenter = presenter
+    }
+
+
+    func onInquiryButtonTapped() {
+        presenter.showInquiryView()
     }
 }
