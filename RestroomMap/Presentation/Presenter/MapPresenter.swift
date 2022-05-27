@@ -9,14 +9,16 @@ import Foundation
 
 protocol MapPresenterInterface {
     func toggleFocusView()
-    func isShowAddLocationView()
-    func isShowMenuView()
+    func showAddLocationView()
+    func showMenuView()
     func moveCurrentLocationPoint(model: CurrentLocationModel)
 }
+
 
 final class MapPresenter: MapPresenterInterface {
     let viewModel: MapViewModel
 
+    
     init(viewModel: MapViewModel) {
         self.viewModel = viewModel
     }
@@ -27,14 +29,14 @@ final class MapPresenter: MapPresenterInterface {
     }
 
 
-    func isShowAddLocationView() {
+    func showAddLocationView() {
         toggleFocusView()
-        viewModel.isShowAddLocationView.toggle()
+        viewModel.isShowAddLocationView = true
     }
 
 
-    func isShowMenuView() {
-        viewModel.isShowMenuView.toggle()
+    func showMenuView() {
+        viewModel.isShowMenuView = true
     }
 
 
