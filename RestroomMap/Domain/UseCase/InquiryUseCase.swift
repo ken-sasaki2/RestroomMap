@@ -15,7 +15,7 @@ protocol InquiryUseCaseInterface {
 final class InquiryUseCase: InquiryUseCaseInterface {
     private let presenter: MenuPresenter
 
-    
+
     init(presenter: MenuPresenter) {
         self.presenter = presenter
     }

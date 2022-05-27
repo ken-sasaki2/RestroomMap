@@ -15,7 +15,7 @@ protocol ShareUseCaseInterface {
 final class ShareUseCase: ShareUseCaseInterface {
     private let presenter: MenuPresenter
 
-    
+
     init(presenter: MenuPresenter) {
         self.presenter = presenter
     }
