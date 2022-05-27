@@ -8,19 +8,20 @@
 import Foundation
 
 protocol ShareUseCaseInterface {
-    func onShareButtonTapped(model: SharePostModel)
+    func showShareSheet(model: SharePostModel)
 }
+
 
 final class ShareUseCase: ShareUseCaseInterface {
     private let presenter: MenuPresenter
 
+    
     init(presenter: MenuPresenter) {
         self.presenter = presenter
     }
 
 
-    // こういう場合の命名どうするべき？
-    func onShareButtonTapped(model: SharePostModel) {
+    func showShareSheet(model: SharePostModel) {
         presenter.showShareSheet(model: model)
     }
 }

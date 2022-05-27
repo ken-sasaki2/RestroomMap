@@ -21,7 +21,5 @@ struct ShareSheetView: UIViewControllerRepresentable {
     }
 
 
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-
-    }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
