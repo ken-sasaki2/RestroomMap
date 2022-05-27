@@ -18,7 +18,7 @@ protocol MapPresenterInterface {
 final class MapPresenter: MapPresenterInterface {
     let viewModel: MapViewModel
 
-    
+
     init(viewModel: MapViewModel) {
         self.viewModel = viewModel
     }

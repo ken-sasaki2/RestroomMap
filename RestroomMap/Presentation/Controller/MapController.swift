@@ -10,7 +10,7 @@ import Foundation
 final class MapController {
     private let useCase: MapUseCaseInterface
 
-    
+
     init(useCase: MapUseCaseInterface) {
         self.useCase = useCase
     }

@@ -25,12 +25,12 @@ final class MapUseCase: MapUseCaseInterface {
         self.presenter = presenter
         self.repository = repository
     }
-    
-    
+
+
     func toggleFocusView() {
         presenter.toggleFocusView()
     }
-    
+
 
     func showAddLocationView() {
         presenter.showAddLocationView()
