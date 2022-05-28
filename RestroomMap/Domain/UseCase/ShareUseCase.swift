@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ShareUseCaseInterface {
-    func showShareSheet(model: SharePostModel)
+    func showShareSheetView(model: SharePostModel)
 }
 
 
@@ -21,7 +21,7 @@ final class ShareUseCase: ShareUseCaseInterface {
     }
 
 
-    func showShareSheet(model: SharePostModel) {
-        presenter.showShareSheet(model: model)
+    func showShareSheetView(model: SharePostModel) {
+        presenter.showShareSheetView(model: model)
     }
 }

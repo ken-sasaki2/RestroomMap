@@ -25,7 +25,7 @@ struct MenuView: View {
                 MenuButtonView(text: "シェア") {
                     controller.onShareButtonTapped()
                 }
-                .sheet(isPresented: $viewModel.isShowShareSheet) {
+                .sheet(isPresented: $viewModel.isShowShareSheetView) {
                     ShareSheetView(
                         text: viewModel.shareText,
                         image: viewModel.shareImage,

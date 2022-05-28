@@ -36,7 +36,7 @@ final class MenuController {
             shareUrl: Const.shareUrl
         )
 
-        shareUseCase.showShareSheet(model: model)
+        shareUseCase.showShareSheetView(model: model)
     }
 
     func onReviewButtontapped() {
