@@ -29,7 +29,7 @@ final class LocatePermissionPresenter: LocatePermissionPresenterinterface {
 
 
     func doneLocatePermission() {
-        viewModel.doneLocatePermission = true
+        viewModel.isDoneLocatePermission = true
     }
 
 

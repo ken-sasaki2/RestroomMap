@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */; };
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
@@ -122,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionPresenterTest.swift; sourceTree = "<group>"; };
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8176FEC2841D3CA00C674EA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		D8360620282EAA4100CDD7F0 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +274,7 @@
 		D849306D2829841B002DDFD2 /* RestroomMapTests */ = {
 			isa = PBXGroup;
 			children = (
+				D8176FEC2841D3CA00C674EA /* Presentation */,
 				D849309A2829FDF4002DDFD2 /* Domain */,
 				D849309D2829FE12002DDFD2 /* Data */,
 			);
@@ -728,6 +739,7 @@
 				D8895ED32835323C0079C2AA /* UserDataStore.swift in Sources */,
 				D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */,
 				D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */,
+				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
 				D85B0B6E283772BE00E8062D /* MapView.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,

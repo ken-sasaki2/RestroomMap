@@ -9,6 +9,6 @@ import Foundation
 
 final class LocatePermissionViewModel: ObservableObject {
     @Published var isShowDeniedAlert = false
-    @Published var doneLocatePermission = false
+    @Published var isDoneLocatePermission = false
     @Published var isShowFailLocatePermissionAlert = false
 }
