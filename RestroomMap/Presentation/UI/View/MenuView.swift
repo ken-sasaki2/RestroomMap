@@ -8,13 +8,50 @@
 import SwiftUI
 
 struct MenuView: View {
+    @ObservedObject var viewModel: MenuViewModel
+    let controller: MenuController
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                MenuButtonView(text: "ピンの種類について") {
+
+                }
+            }
+            Section {
+                MenuButtonView(text: "レビュー") {
+                    controller.onReviewButtontapped()
+                }
+                MenuButtonView(text: "シェア") {
+                    controller.onShareButtonTapped()
+                }
+                .sheet(isPresented: $viewModel.isShowShareSheetView) {
+                    ShareSheetView(
+                        text: viewModel.shareText,
+                        image: viewModel.shareImage,
+                        url: viewModel.shareUrl
+                    )
+                }
+                MenuButtonView(text: "お問い合わせ") {
+                    controller.onInquiryButtonTapped()
+                }
+                .sheet(isPresented: $viewModel.isShowInquiryView) {
+                    if let url = viewModel.inquiryUrl {
+                        SafariView(url: url)
+                    }
+                }
+            }
+            Section {
+                MenuButtonView(text: "開発者にビールを奢る") {
+
+                }
+            }
+        }
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuViewBuilder.shared.build()
     }
 }

@@ -1,0 +1,43 @@
+//
+//  LocatePermissionPresenterTest.swift
+//  RestroomMapTests
+//
+//  Created by sasaki.ken on 2022/05/28.
+//
+
+import XCTest
+
+class LocatePermissionPresenterTest: XCTestCase {
+    private let viewModel = LocatePermissionViewModel()
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func test_showDeniedAlert() throws {
+        let presenter = LocatePermissionPresenter(viewModel: viewModel)
+        presenter.showDeniedAlert()
+
+        XCTAssertEqual(viewModel.isShowDeniedAlert, true)
+    }
+
+
+    func test_doneLocatePermission() throws {
+        let presenter = LocatePermissionPresenter(viewModel: viewModel)
+        presenter.doneLocatePermission()
+
+        XCTAssertEqual(viewModel.isDoneLocatePermission, true)
+    }
+
+
+    func test_failLocatePermission() throws {
+        let presenter = LocatePermissionPresenter(viewModel: viewModel)
+        presenter.failLocatePermission()
+
+        XCTAssertEqual(viewModel.isShowFailLocatePermissionAlert, true)
+    }
+}

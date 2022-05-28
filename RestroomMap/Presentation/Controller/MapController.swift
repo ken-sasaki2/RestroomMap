@@ -10,28 +10,29 @@ import Foundation
 final class MapController {
     private let useCase: MapUseCaseInterface
 
+
     init(useCase: MapUseCaseInterface) {
         self.useCase = useCase
     }
 
 
     func onPlusButtonTapped() {
-        useCase.onPlusButtonTapped()
+        useCase.toggleFocusView()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        useCase.onCancelAddLocationButtonTapped()
+        useCase.toggleFocusView()
     }
 
 
     func onAddLocationButtonTapped() {
-        useCase.onAddLocationButtonTapped()
+        useCase.showAddLocationView()
     }
 
 
     func onMenuButtonTapped() {
-        useCase.onMenuButtonTapped()
+        useCase.showMenuView()
     }
 
 

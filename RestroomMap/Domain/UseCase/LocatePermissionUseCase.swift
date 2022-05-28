@@ -5,7 +5,7 @@
 //  Created by sasaki.ken on 2022/05/15.
 //
 
-import Foundation
+
 import SwiftUI
 
 protocol LocatePermissionUseCaseInterface {
@@ -33,20 +33,20 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
     func getAuthorizationStatus() {
         let status = locatePermissionRepository.getAuthorizationStatus()
-        onNextPageButtonTapped(status)
+        actionByAuthorizationStatus(status)
     }
 
 
-    private func onNextPageButtonTapped(_ status: AuthorizationStatusEntity) {
+    private func actionByAuthorizationStatus(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
             locatePermissionRepository.requestWhenInUse { status in
-                self.onNextPageButtonTapped(status)
+                self.actionByAuthorizationStatus(status)
             }
         case .restricted:
-            presenter.isShowDeniedAlert()
+            presenter.showDeniedAlert()
         case .denied:
-            presenter.isShowDeniedAlert()
+            presenter.showDeniedAlert()
         case .authorizedAlways:
             startUpdatingLocation()
         case .authorizedWhenInUse:
@@ -64,7 +64,11 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
 
     func openSettingPage() {
-        presenter.openSettingPage()
+        let urlString = UIApplication.openSettingsURLString
+
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
 

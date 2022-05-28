@@ -7,11 +7,11 @@
 
 import Foundation
 
+
 protocol MapUseCaseInterface {
-    func onPlusButtonTapped()
-    func onCancelAddLocationButtonTapped()
-    func onAddLocationButtonTapped()
-    func onMenuButtonTapped()
+    func toggleFocusView()
+    func showAddLocationView()
+    func showMenuView()
     func getCurrentLocation()
 }
 
@@ -27,23 +27,18 @@ final class MapUseCase: MapUseCaseInterface {
     }
 
 
-    func onPlusButtonTapped() {
+    func toggleFocusView() {
         presenter.toggleFocusView()
     }
 
 
-    func onCancelAddLocationButtonTapped() {
-        presenter.toggleFocusView()
+    func showAddLocationView() {
+        presenter.showAddLocationView()
     }
 
 
-    func onAddLocationButtonTapped() {
-        presenter.isShowAddLocationView()
-    }
-
-
-    func onMenuButtonTapped() {
-        presenter.isShowMenuView()
+    func showMenuView() {
+        presenter.showMenuView()
     }
 
 
