@@ -33,15 +33,15 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
     func getAuthorizationStatus() {
         let status = locatePermissionRepository.getAuthorizationStatus()
-        onNextPageButtonTapped(status)
+        actionByAuthorizationStatus(status)
     }
 
 
-    private func onNextPageButtonTapped(_ status: AuthorizationStatusEntity) {
+    private func actionByAuthorizationStatus(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
             locatePermissionRepository.requestWhenInUse { status in
-                self.onNextPageButtonTapped(status)
+                self.actionByAuthorizationStatus(status)
             }
         case .restricted:
             presenter.showDeniedAlert()
