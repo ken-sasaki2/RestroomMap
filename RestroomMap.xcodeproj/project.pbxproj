@@ -11,6 +11,7 @@
 		D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FEF2841D65100C674EA /* MapPresenterTests.swift */; };
 		D8176FF22841D92A00C674EA /* TestConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF12841D92A00C674EA /* TestConst.swift */; };
 		D8176FF42841DA2700C674EA /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */; };
+		D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF52841E3C500C674EA /* ATTPermissionView.swift */; };
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
@@ -130,6 +131,7 @@
 		D8176FEF2841D65100C674EA /* MapPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTests.swift; sourceTree = "<group>"; };
 		D8176FF12841D92A00C674EA /* TestConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConst.swift; sourceTree = "<group>"; };
 		D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		D8176FF52841E3C500C674EA /* ATTPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionView.swift; sourceTree = "<group>"; };
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				D8360620282EAA4100CDD7F0 /* Button */,
 				D8835FF0282FBC830048A495 /* AddLocationView.swift */,
+				D8176FF52841E3C500C674EA /* ATTPermissionView.swift */,
 				D88360042830BAC70048A495 /* LocatePermissionView.swift */,
 				D8835FEE282FB9250048A495 /* MapFocusView.swift */,
 				D849305F2829841A002DDFD2 /* MapView.swift */,
@@ -692,6 +695,7 @@
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
 				D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D8CE68F4283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
+				D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */,
 				D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */,
 				D85B0B662837681200E8062D /* CurrentLocationModelTranslator.swift in Sources */,
 				D8835FFC282FBE640048A495 /* MapUseCase.swift in Sources */,
