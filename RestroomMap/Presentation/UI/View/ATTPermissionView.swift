@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ATTPermissionView: View {
+    let viewModel: ATTPermissionViewModel
+    let controller: ATTPermissionController
+
     var body: some View {
         ZStack {
             Image("")
@@ -27,7 +30,7 @@ struct ATTPermissionView: View {
                     .lineLimit(2)
                     .padding(.bottom, 20)
                 PermissionButtonView {
-
+                    controller.onNextPegeButtonTapped()
                 }
                 .padding(.bottom, 30)
             }
@@ -38,6 +41,6 @@ struct ATTPermissionView: View {
 
 struct ATTPermissionView_Previews: PreviewProvider {
     static var previews: some View {
-        ATTPermissionView()
+        ATTPermissionViewBuilder.shared.build()
     }
 }
