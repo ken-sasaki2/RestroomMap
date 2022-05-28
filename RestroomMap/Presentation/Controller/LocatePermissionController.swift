@@ -14,9 +14,11 @@ final class LocatePermissionController {
         self.useCase = useCase
     }
 
+
     func onNextPageButtonTapped() {
         useCase.getAuthorizationStatus()
     }
+
 
     func onGoToSettingPageButtonTapped() {
         useCase.openSettingPage()
