@@ -32,7 +32,7 @@ struct MenuView: View {
                         url: viewModel.shareUrl
                     )
                 }
-                MenuButtonView(text: "お問い合せ") {
+                MenuButtonView(text: "お問い合わせ") {
                     controller.onInquiryButtonTapped()
                 }
                 .sheet(isPresented: $viewModel.isShowInquiryView) {

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Const {
-    static let inquiryUrl = URL(string: "https://docs.google.com/forms/d/11mbsJ-Zy46PeAwnVROIgY8qkBg6lAu0RijAyQw_bQ9c/edit?usp=sharing")
+    static let inquiryUrl = URL(string: "https://forms.gle/wp6PC6nKqfauHDEb8")
     static let shareText = "公衆トイレ共有アプリ"
     static let shareUrl = "https://qiita.com/ken_sasaki2"
     static let shareImage = "focus"
