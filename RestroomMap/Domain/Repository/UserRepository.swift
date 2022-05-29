@@ -9,6 +9,8 @@ import Foundation
 
 protocol UserRepositoryInterface {
     func saveLocation(entity: CurrentLocationEntity)
+    func saveLaunchCount()
+    func getLaunchCount() -> LaunchCountEntity
 }
 
 
@@ -23,5 +25,17 @@ final class UserRepository: UserRepositoryInterface {
 
     func saveLocation(entity: CurrentLocationEntity) {
         dataStore.saveLocation(entity: entity)
+    }
+
+
+    func saveLaunchCount() {
+        dataStore.saveLaunchCount()
+    }
+
+
+    func getLaunchCount() -> LaunchCountEntity {
+        let entity = dataStore.getLaunchCount()
+
+        return entity
     }
 }
