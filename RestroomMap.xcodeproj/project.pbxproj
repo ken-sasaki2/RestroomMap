@@ -129,6 +129,7 @@
 		D8D8578D283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 		D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 		D8E700322842E20B0046B391 /* AppDelegateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E700312842E20B0046B391 /* AppDelegateController.swift */; };
+		D8E700342842F02A0046B391 /* ApplicationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E700332842F02A0046B391 /* ApplicationBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		D8CE68F7283A865800C1EFD7 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationEntity.swift; sourceTree = "<group>"; };
 		D8E700312842E20B0046B391 /* AppDelegateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateController.swift; sourceTree = "<group>"; };
+		D8E700332842F02A0046B391 /* ApplicationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,10 +499,11 @@
 		D84930962829FD5A002DDFD2 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				D8E700332842F02A0046B391 /* ApplicationBuilder.swift */,
+				D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */,
 				D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */,
 				D8835FFE282FC5800048A495 /* MapViewBuilder.swift */,
 				D8CE68ED283A328B00C1EFD7 /* MenuViewBuilder.swift */,
-				D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 				D8835FF1282FBC830048A495 /* AddLocationView.swift in Sources */,
 				D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D838A7A1283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
+				D8E700342842F02A0046B391 /* ApplicationBuilder.swift in Sources */,
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8CE68EB283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
