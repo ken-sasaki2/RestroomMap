@@ -18,12 +18,20 @@ final class MapViewBuilder {
         let view = MapView(
             viewModel: viewModel,
             controller: MapController(
-                useCase: MapUseCase(
+                mapUseCase: MapUseCase(
                     presenter: MapPresenter(
                         viewModel: viewModel
                     ),
                     repository: MapRepository(
                         dataStore: MapDataStore()
+                    )
+                ),
+                userUseCase: UserUseCase(
+                    repository: UserRepository(
+                        dataStore: UserDataStore()
+                    ),
+                    mapPresenter: MapPresenter(
+                        viewModel: MapViewModel()
                     )
                 )
             ),
