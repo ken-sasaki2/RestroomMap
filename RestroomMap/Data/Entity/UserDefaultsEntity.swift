@@ -12,6 +12,7 @@ final class UserDefaultsEntity {
     private enum DefaultsKey: String {
         case lat
         case lng
+        case launchCount
     }
 
 
@@ -34,6 +35,15 @@ final class UserDefaultsEntity {
             defaults.double(forKey: DefaultsKey.lng.rawValue)
         } set {
             defaults.set(newValue, forKey: DefaultsKey.lng.rawValue)
+        }
+    }
+
+
+    var launchCount: Int {
+        get {
+            defaults.integer(forKey: DefaultsKey.launchCount.rawValue)
+        } set {
+            defaults.set(newValue + 1, forKey: DefaultsKey.launchCount.rawValue)
         }
     }
 }
