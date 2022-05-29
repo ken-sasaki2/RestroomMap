@@ -64,12 +64,16 @@ struct MapView: View {
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
                     }
+                    .sheet(isPresented: $viewModel.isShowLocatePermissionView) {
+                        LocatePermissionViewBuilder.shared.build()
+                    }
                     .onAppear {
                         controller.getCurrentLocation()
                         setRegion(
                             lat: viewModel.currentLocation.lat,
                             lng: viewModel.currentLocation.lng
                         )
+                        controller.getLaunchCount()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {

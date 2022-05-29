@@ -8,35 +8,42 @@
 import Foundation
 
 final class MapController {
-    private let useCase: MapUseCaseInterface
+    private let mapUseCase: MapUseCaseInterface
+    private let userUseCase: UserUseCaseInterface
 
 
-    init(useCase: MapUseCaseInterface) {
-        self.useCase = useCase
+    init(mapUseCase: MapUseCaseInterface, userUseCase: UserUseCaseInterface) {
+        self.mapUseCase = mapUseCase
+        self.userUseCase = userUseCase
     }
 
 
     func onPlusButtonTapped() {
-        useCase.toggleFocusView()
+        mapUseCase.toggleFocusView()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        useCase.toggleFocusView()
+        mapUseCase.toggleFocusView()
     }
 
 
     func onAddLocationButtonTapped() {
-        useCase.showAddLocationView()
+        mapUseCase.showAddLocationView()
     }
 
 
     func onMenuButtonTapped() {
-        useCase.showMenuView()
+        mapUseCase.showMenuView()
     }
 
 
     func getCurrentLocation() {
-        useCase.getCurrentLocation()
+        mapUseCase.getCurrentLocation()
+    }
+
+
+    func getLaunchCount() {
+        userUseCase.getLaunchCount()
     }
 }

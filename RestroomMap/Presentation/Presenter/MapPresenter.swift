@@ -12,6 +12,7 @@ protocol MapPresenterInterface {
     func showAddLocationView()
     func showMenuView()
     func moveCurrentLocationPoint(model: CurrentLocationModel)
+    func showLocatePermissionView()
 }
 
 
@@ -42,5 +43,10 @@ final class MapPresenter: MapPresenterInterface {
 
     func moveCurrentLocationPoint(model: CurrentLocationModel) {
         viewModel.currentLocation = model
+    }
+
+
+    func showLocatePermissionView() {
+        viewModel.isShowLocatePermissionView = true
     }
 }
