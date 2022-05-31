@@ -70,11 +70,15 @@ struct MapView: View {
                         Text("'設定'から位置情報を許可してください")
                     }
                     .onAppear {
+                        controller.showIndicatorView()
                         controller.getCurrentLocation()
                         setRegion(
                             lat: viewModel.currentLocation.lat,
                             lng: viewModel.currentLocation.lng
                         )
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            controller.hideIndicatorView()
+                        }
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {

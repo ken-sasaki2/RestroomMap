@@ -42,7 +42,7 @@ final class MapUseCase: MapUseCaseInterface {
         if !validLocatePermission() {
             presenter.showLocationAlert()
         }
-        
+
         presenter.showAddLocationView()
     }
 
@@ -63,7 +63,7 @@ final class MapUseCase: MapUseCaseInterface {
         if !validLocatePermission() {
             presenter.showLocationAlert()
         }
-        
+
         presenter.moveCurrentLocationPoint(model: model)
     }
 

@@ -100,6 +100,7 @@
 		D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
 		D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */; };
 		D8AF8C1A2846347500533CC7 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C192846347500533CC7 /* IndicatorView.swift */; };
+		D8AF8C1C2846519400533CC7 /* IndicatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -212,6 +213,7 @@
 		D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountEntity.swift; sourceTree = "<group>"; };
 		D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D8AF8C192846347500533CC7 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorUseCase.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			children = (
 				D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */,
 				D8CE68E42838CCDF00C1EFD7 /* BillingUseCase.swift */,
+				D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */,
 				D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */,
 				D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */,
 				D8835FFB282FBE640048A495 /* MapUseCase.swift */,
@@ -786,6 +789,7 @@
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8CE68EB283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D8A9EDBF2841EDCC0011E703 /* ATTPermissionRepository.swift in Sources */,
+				D8AF8C1C2846519400533CC7 /* IndicatorUseCase.swift in Sources */,
 				D88360052830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8895ED5283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D8CE68EE283A328B00C1EFD7 /* MenuViewBuilder.swift in Sources */,

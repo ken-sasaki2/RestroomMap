@@ -10,11 +10,13 @@ import Foundation
 final class MapController {
     private let mapUseCase: MapUseCaseInterface
     private let userUseCase: UserUseCaseInterface
+    private let indicatorUseCase: IndicatorUseCaseInterface
 
 
-    init(mapUseCase: MapUseCaseInterface, userUseCase: UserUseCaseInterface) {
+    init(mapUseCase: MapUseCaseInterface, userUseCase: UserUseCaseInterface, indicatorUseCase: IndicatorUseCaseInterface) {
         self.mapUseCase = mapUseCase
         self.userUseCase = userUseCase
+        self.indicatorUseCase = indicatorUseCase
     }
 
 
@@ -48,7 +50,12 @@ final class MapController {
     }
 
 
-    func getLaunchCount() {
-        userUseCase.getLaunchCount()
+    func showIndicatorView() {
+        indicatorUseCase.showIndicatorViewFromMapView()
+    }
+
+
+    func hideIndicatorView() {
+        indicatorUseCase.hideIndicatorViewFromMapView()
     }
 }

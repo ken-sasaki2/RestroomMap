@@ -12,8 +12,9 @@ protocol MapPresenterInterface {
     func showAddLocationView()
     func showMenuView()
     func moveCurrentLocationPoint(model: CurrentLocationModel)
-    func showIndicatorView()
     func showLocationAlert()
+    func showIndicatorView()
+    func hideIndicatorView()
 }
 
 
@@ -47,12 +48,16 @@ final class MapPresenter: MapPresenterInterface {
     }
 
 
+    func showLocationAlert() {
+        viewModel.isShowLocationAlert = true
+    }
+
+
     func showIndicatorView() {
         viewModel.isShowIndicatorView = true
     }
 
-
-    func showLocationAlert() {
-        viewModel.isShowLocationAlert = true
+    func hideIndicatorView() {
+        viewModel.isShowIndicatorView = false
     }
 }

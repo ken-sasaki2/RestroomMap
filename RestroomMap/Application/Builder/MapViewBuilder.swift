@@ -36,6 +36,11 @@ final class MapViewBuilder {
                     mapPresenter: MapPresenter(
                         viewModel: MapViewModel()
                     )
+                ),
+                indicatorUseCase: IndicatorUseCase(
+                    mapPresenter: MapPresenter(
+                        viewModel: viewModel
+                    )
                 )
             ),
             lat: 35.65139,
