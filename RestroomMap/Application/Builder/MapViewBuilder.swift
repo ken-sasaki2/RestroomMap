@@ -33,9 +33,7 @@ final class MapViewBuilder {
                     repository: UserRepository(
                         dataStore: UserDataStore()
                     ),
-                    mapPresenter: MapPresenter(
-                        viewModel: MapViewModel()
-                    )
+                    rootViewPresenter: RootViewPresenter()
                 ),
                 indicatorUseCase: IndicatorUseCase(
                     mapPresenter: MapPresenter(

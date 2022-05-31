@@ -13,14 +13,12 @@ final class ApplicationBuilder {
     private init() {}
 
     func build() -> AppDelegateController {
-        let mapViewModel = MapViewModel()
         let controller = AppDelegateController(
             userUseCase: UserUseCase(
                 repository: UserRepository(
                     dataStore: UserDataStore()
                 ),
-                mapPresenter: MapPresenter(
-                    viewModel: mapViewModel)
+                rootViewPresenter: RootViewPresenter()
             )
         )
 
