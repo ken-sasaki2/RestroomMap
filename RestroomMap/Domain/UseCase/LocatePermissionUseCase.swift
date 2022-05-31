@@ -17,17 +17,20 @@ protocol LocatePermissionUseCaseInterface {
 final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
     private var locatePermissionRepository: LocatePermissionRepositoryInterface
     private let userRepository: UserRepositoryInterface
-    private let presenter: LocatePermissionPresenterinterface
+    private let locatePermissionPresenter: LocatePermissionPresenterInterface
+    private let rootViewPresenter: RootViewPresenterInterface
 
 
     init(
         locatePermissionRepository: LocatePermissionRepositoryInterface,
         userRepository: UserRepositoryInterface,
-        presenter: LocatePermissionPresenterinterface
+        locatePermissionPresenter: LocatePermissionPresenterInterface,
+        rootViewPresenter: RootViewPresenterInterface
     ) {
         self.locatePermissionRepository = locatePermissionRepository
         self.userRepository = userRepository
-        self.presenter = presenter
+        self.locatePermissionPresenter = locatePermissionPresenter
+        self.rootViewPresenter = rootViewPresenter
     }
 
 
@@ -44,9 +47,9 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
                 self.actionByAuthorizationStatus(status)
             }
         case .restricted:
-            presenter.showDeniedAlert()
+            locatePermissionPresenter.showDeniedAlert()
         case .denied:
-            presenter.showDeniedAlert()
+            locatePermissionPresenter.showDeniedAlert()
         case .authorizedAlways:
             startUpdatingLocation()
         case .authorizedWhenInUse:
@@ -76,11 +79,11 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
     func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
         userRepository.saveLocation(entity: entity)
-        presenter.doneLocatePermission()
+        rootViewPresenter.showATTPermissionView()
     }
 
 
     func didFailWithError(_ repository: LocatePermissionRepository) {
-        presenter.failLocatePermission()
+        locatePermissionPresenter.failLocatePermission()
     }
 }

@@ -16,12 +16,12 @@ protocol UserUseCaseInterface {
 
 final class UserUseCase: UserUseCaseInterface {
     private let repository: UserRepositoryInterface
-    private let mapPresenter: MapPresenterInterface
+    private let rootViewPresenter: RootViewPresenterInterface
 
 
-    init(repository: UserRepositoryInterface, mapPresenter: MapPresenterInterface) {
+    init(repository: UserRepositoryInterface, rootViewPresenter: RootViewPresenterInterface) {
         self.repository = repository
-        self.mapPresenter = mapPresenter
+        self.rootViewPresenter = rootViewPresenter
     }
 
 
@@ -34,7 +34,7 @@ final class UserUseCase: UserUseCaseInterface {
         let entity = repository.getLaunchCount()
 
         if validFirstLaunch(entity: entity) {
-            // Any action...
+            rootViewPresenter.showLocatePermissionView()
         }
     }
 

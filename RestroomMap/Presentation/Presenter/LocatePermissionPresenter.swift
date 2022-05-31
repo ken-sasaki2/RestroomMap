@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol LocatePermissionPresenterinterface {
+protocol LocatePermissionPresenterInterface {
     func showDeniedAlert()
     func doneLocatePermission()
     func failLocatePermission()
 }
 
 
-final class LocatePermissionPresenter: LocatePermissionPresenterinterface {
+final class LocatePermissionPresenter: LocatePermissionPresenterInterface {
     let viewModel: LocatePermissionViewModel
 
 
