@@ -31,7 +31,7 @@ final class UserDataStore: UserDataStoreInterface {
 
     func getLaunchCount() -> LaunchCountEntity {
         let launchCount = userDefaults.launchCount
-        let entity = LaunchCountEntity(launchCount: 1)
+        let entity = LaunchCountEntity(launchCount: launchCount)
 
         return entity
     }

@@ -14,10 +14,10 @@ protocol ATTPermissionUseCaseInterface {
 
 final class ATTPermissionUseCase: ATTPermissionUseCaseInterface {
     private let repository: ATTPermissionRepository
-    private let presenter: ATTPermissionPresenter
+    private let presenter: RootViewPresenterInterface
 
 
-    init(repository: ATTPermissionRepository, presenter: ATTPermissionPresenter) {
+    init(repository: ATTPermissionRepository, presenter: RootViewPresenterInterface) {
         self.repository = repository
         self.presenter = presenter
     }
@@ -29,7 +29,7 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInterface {
         if status == .notDetermined {
             await requestAuthorization()
         } else {
-            presenter.doneATTPermission()
+            presenter.showMapView()
         }
     }
 

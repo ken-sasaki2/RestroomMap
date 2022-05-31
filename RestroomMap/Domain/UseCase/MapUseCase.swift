@@ -89,7 +89,7 @@ final class MapUseCase: MapUseCaseInterface {
         case .authorizedWhenInUse:
             return true
         case .unknown:
-            return false
+            return true
         }
     }
 }

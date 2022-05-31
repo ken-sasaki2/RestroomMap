@@ -22,9 +22,7 @@ final class ATTPermissionViewBuilder {
                     repository: ATTPermissionRepository(
                         dataStore: ATTPermissionDataStore()
                     ),
-                    presenter: ATTPermissionPresenter(
-                        viewModel: viewModel
-                    )
+                    presenter: RootViewPresenter()
                 )
             )
         )
