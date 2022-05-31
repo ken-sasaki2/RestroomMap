@@ -18,12 +18,18 @@ protocol MapUseCaseInterface {
 
 final class MapUseCase: MapUseCaseInterface {
     private let presenter: MapPresenterInterface
-    private let repository: MapRepositoryInterface
+    private let mapRepository: MapRepositoryInterface
+    private let locatePermissionRepository: LocatePermissionRepositoryInterface
 
 
-    init(presenter: MapPresenterInterface, repository: MapRepositoryInterface) {
+    init(
+        presenter: MapPresenterInterface,
+        mapRepository: MapRepositoryInterface,
+        locatePermissionRepository: LocatePermissionRepositoryInterface
+    ) {
         self.presenter = presenter
-        self.repository = repository
+        self.mapRepository = mapRepository
+        self.locatePermissionRepository = locatePermissionRepository
     }
 
 
@@ -33,6 +39,10 @@ final class MapUseCase: MapUseCaseInterface {
 
 
     func showAddLocationView() {
+        if !validLocatePermission() {
+            presenter.showLocationAlert()
+        }
+        
         presenter.showAddLocationView()
     }
 
@@ -43,13 +53,43 @@ final class MapUseCase: MapUseCaseInterface {
 
 
     func getCurrentLocation() {
-        let entity = repository.getCurrentLocationEntity()
+        let entity = mapRepository.getCurrentLocationEntity()
         let model = CurrentLocationModelTranslator.translate(entity: entity)
         moveCurrentLocationPoint(model: model)
     }
 
 
     private func moveCurrentLocationPoint(model: CurrentLocationModel) {
+        if !validLocatePermission() {
+            presenter.showLocationAlert()
+        }
+        
         presenter.moveCurrentLocationPoint(model: model)
+    }
+
+
+    private func getAuthorizationStatusEntity() -> AuthorizationStatusEntity {
+        let entity = locatePermissionRepository.getAuthorizationStatus()
+        return entity
+    }
+
+
+    private func validLocatePermission() -> Bool {
+        let entity = getAuthorizationStatusEntity()
+
+        switch entity {
+        case .notDetermined:
+            return false
+        case .restricted:
+            return true
+        case .denied:
+            return false
+        case .authorizedAlways:
+            return true
+        case .authorizedWhenInUse:
+            return true
+        case .unknown:
+            return false
+        }
     }
 }

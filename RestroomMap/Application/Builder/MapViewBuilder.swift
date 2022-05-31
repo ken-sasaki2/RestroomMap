@@ -22,8 +22,11 @@ final class MapViewBuilder {
                     presenter: MapPresenter(
                         viewModel: viewModel
                     ),
-                    repository: MapRepository(
+                    mapRepository: MapRepository(
                         dataStore: MapDataStore()
+                    ),
+                    locatePermissionRepository: LocatePermissionRepository(
+                        dataStore: LocatePermissionDataStore()
                     )
                 ),
                 userUseCase: UserUseCase(

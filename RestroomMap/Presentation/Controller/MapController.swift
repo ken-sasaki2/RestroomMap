@@ -33,6 +33,11 @@ final class MapController {
     }
 
 
+    func onLocationButtonTapped() {
+        getCurrentLocation()
+    }
+
+
     func onMenuButtonTapped() {
         mapUseCase.showMenuView()
     }
