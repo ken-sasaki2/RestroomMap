@@ -98,6 +98,8 @@
 		D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* UserUseCase.swift */; };
 		D8A9EDD428420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
 		D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
+		D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */; };
+		D8AF8C1A2846347500533CC7 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C192846347500533CC7 /* IndicatorView.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -208,6 +210,8 @@
 		D8A9EDCD2841F8790011E703 /* ATTPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewModel.swift; sourceTree = "<group>"; };
 		D8A9EDD028420A2F0011E703 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountEntity.swift; sourceTree = "<group>"; };
+		D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		D8AF8C192846347500533CC7 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 		D849308F2829FCAC002DDFD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8AF8C182846345800533CC7 /* Indicator */,
 				D8360620282EAA4100CDD7F0 /* Button */,
 				D8835FF0282FBC830048A495 /* AddLocationView.swift */,
 				D8176FF52841E3C500C674EA /* ATTPermissionView.swift */,
@@ -573,6 +578,15 @@
 				D8836002282FDDB70048A495 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8AF8C182846345800533CC7 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */,
+				D8AF8C192846347500533CC7 /* IndicatorView.swift */,
+			);
+			path = Indicator;
 			sourceTree = "<group>";
 		};
 		D8CE68F6283A85F800C1EFD7 /* Const */ = {
@@ -768,6 +782,7 @@
 				D838A7A1283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D8E700342842F02A0046B391 /* ApplicationBuilder.swift in Sources */,
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
+				D8AF8C1A2846347500533CC7 /* IndicatorView.swift in Sources */,
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8CE68EB283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D8A9EDBF2841EDCC0011E703 /* ATTPermissionRepository.swift in Sources */,
@@ -781,6 +796,7 @@
 				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
 				D8A9EDCB2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */,
 				D8CE68E82838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
+				D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */,
 				D8E700322842E20B0046B391 /* AppDelegateController.swift in Sources */,
 				D8A9EDC22841EFC50011E703 /* ATTAuthorizationStatusEntity.swift in Sources */,
 				D838A7A4283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
