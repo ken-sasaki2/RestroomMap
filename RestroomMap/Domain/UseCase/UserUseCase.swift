@@ -34,7 +34,7 @@ final class UserUseCase: UserUseCaseInterface {
         let entity = repository.getLaunchCount()
 
         if validFirstLaunch(entity: entity) {
-            mapPresenter.showLocatePermissionView()
+            // Any action...
         }
     }
 

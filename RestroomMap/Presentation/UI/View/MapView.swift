@@ -73,7 +73,6 @@ struct MapView: View {
                             lat: viewModel.currentLocation.lat,
                             lng: viewModel.currentLocation.lng
                         )
-                        controller.getLaunchCount()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {
@@ -82,6 +81,11 @@ struct MapView: View {
                             }
                         } onAddButtonTapped: {
                             controller.onAddLocationButtonTapped()
+                        }
+                    }
+                    if viewModel.isShowIndicatorView {
+                        withAnimation {
+                            IndicatorView()
                         }
                     }
                 }

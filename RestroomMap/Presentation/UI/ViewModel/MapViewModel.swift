@@ -13,4 +13,5 @@ final class MapViewModel: ObservableObject {
     @Published var isShowAddLocationView = false
     @Published var currentLocation = CurrentLocationModel(lat: 0.0, lng: 0.0)
     @Published var isShowLocatePermissionView = false
+    @Published var isShowIndicatorView = false
 }
