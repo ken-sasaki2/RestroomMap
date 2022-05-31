@@ -18,4 +18,9 @@ final class AppDelegateController {
     func saveLaunchCount() {
         userUseCase.saveLaunchCount()
     }
+
+
+    func getLaunchCount() {
+        userUseCase.getLaunchCount()
+    }
 }
