@@ -41,6 +41,7 @@ final class MapUseCase: MapUseCaseInterface {
     func showAddLocationView() {
         if !validLocatePermission() {
             presenter.showLocationAlert()
+            return
         }
 
         presenter.showAddLocationView()
@@ -62,6 +63,7 @@ final class MapUseCase: MapUseCaseInterface {
     private func moveCurrentLocationPoint(model: CurrentLocationModel) {
         if !validLocatePermission() {
             presenter.showLocationAlert()
+            return
         }
 
         presenter.moveCurrentLocationPoint(model: model)
