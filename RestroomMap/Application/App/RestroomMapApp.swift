@@ -10,10 +10,18 @@ import SwiftUI
 @main
 struct RestroomMapApp: App {
     @UIApplicationDelegateAdaptor (AppDelegate.self) var appDelegate
+    @StateObject private var rootViewModel = RootViewModel.shared
 
     var body: some Scene {
         WindowGroup {
-            MapViewBuilder.shared.build()
+            switch rootViewModel.rootView {
+            case .location:
+                LocatePermissionViewBuilder.shared.build()
+            case .tracking:
+                ATTPermissionViewBuilder.shared.build()
+            case .map:
+                MapViewBuilder.shared.build()
+            }
         }
     }
 }
