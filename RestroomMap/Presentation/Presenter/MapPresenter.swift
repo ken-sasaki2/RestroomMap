@@ -8,7 +8,8 @@
 import Foundation
 
 protocol MapPresenterInterface {
-    func toggleFocusView()
+    func showFocusView()
+    func hideFocusView()
     func showAddLocationView()
     func showMenuView()
     func moveCurrentLocationPoint(model: CurrentLocationModel)
@@ -27,13 +28,18 @@ final class MapPresenter: MapPresenterInterface {
     }
 
 
-    func toggleFocusView() {
-        viewModel.isShowFocusView.toggle()
+    func showFocusView() {
+        viewModel.isShowFocusView = true
+    }
+
+
+    func hideFocusView() {
+        viewModel.isShowFocusView = false
     }
 
 
     func showAddLocationView() {
-        toggleFocusView()
+        hideFocusView()
         viewModel.isShowAddLocationView = true
     }
 

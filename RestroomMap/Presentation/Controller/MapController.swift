@@ -21,12 +21,12 @@ final class MapController {
 
 
     func onPlusButtonTapped() {
-        mapUseCase.toggleFocusView()
+        mapUseCase.showFocusView()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        mapUseCase.toggleFocusView()
+        mapUseCase.hideFocusView()
     }
 
 

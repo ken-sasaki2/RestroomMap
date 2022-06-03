@@ -9,7 +9,8 @@ import Foundation
 
 
 protocol MapUseCaseInterface {
-    func toggleFocusView()
+    func showFocusView()
+    func hideFocusView()
     func showAddLocationView()
     func showMenuView()
     func getCurrentLocation()
@@ -33,8 +34,13 @@ final class MapUseCase: MapUseCaseInterface {
     }
 
 
-    func toggleFocusView() {
-        presenter.toggleFocusView()
+    func showFocusView() {
+        presenter.showFocusView()
+    }
+
+
+    func hideFocusView() {
+        presenter.hideFocusView()
     }
 
 
