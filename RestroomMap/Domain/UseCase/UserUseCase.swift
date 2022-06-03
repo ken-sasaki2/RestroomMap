@@ -44,7 +44,7 @@ final class UserUseCase: UserUseCaseInterface {
     }
 
 
-    private func validFirstLaunch(entity: LaunchCountEntity) -> Bool {
+    func validFirstLaunch(entity: LaunchCountEntity) -> Bool {
         if entity.launchCount == 1 {
             return true
         } else {
