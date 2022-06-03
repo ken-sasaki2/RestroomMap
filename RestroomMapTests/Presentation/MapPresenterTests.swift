@@ -18,17 +18,19 @@ class MapPresenterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_toggleFocusView() throws {
+    func test_showFocusView() throws {
         let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showFocusView()
 
-        XCTContext.runActivity(named: "isShowFocusViewがtrueの場合") { _ in
-            presenter.toggleFocusView()
-            XCTAssertEqual(viewModel.isShowFocusView, true)
-        }
-        XCTContext.runActivity(named: "isShowFocusViewがfalseの場合") { _ in
-            presenter.toggleFocusView()
-            XCTAssertEqual(viewModel.isShowFocusView, false)
-        }
+        XCTAssertEqual(viewModel.isShowFocusView, true)
+    }
+
+
+    func test_hideFocusView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.hideFocusView()
+
+        XCTAssertEqual(viewModel.isShowFocusView, false)
     }
 
 

@@ -12,6 +12,11 @@
 		D8176FF22841D92A00C674EA /* TestConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF12841D92A00C674EA /* TestConst.swift */; };
 		D8176FF42841DA2700C674EA /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */; };
 		D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF52841E3C500C674EA /* ATTPermissionView.swift */; };
+		D81FC003284A102900C2CBEF /* IndicatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */; };
+		D81FC004284A107C00C2CBEF /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */; };
+		D81FC005284A109C00C2CBEF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
+		D81FC006284A10AD00C2CBEF /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C192846347500533CC7 /* IndicatorView.swift */; };
+		D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */; };
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
@@ -46,13 +51,13 @@
 		D85B0B6B2837728100E8062D /* LocatePermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7982833248000047D52 /* LocatePermissionViewModel.swift */; };
 		D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
 		D85B0B6D283772B400E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
-		D85B0B6E283772BE00E8062D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D85B0B6F283772C800E8062D /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FF0282FBC830048A495 /* AddLocationView.swift */; };
 		D85B0B70283772CD00E8062D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
 		D85B0B71283772D800E8062D /* MapFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEE282FB9250048A495 /* MapFocusView.swift */; };
 		D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */; };
 		D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B742837743C00E8062D /* CurrentLocationModelTranslatorTests.swift */; };
+		D87816852849FDC2009B9FB0 /* ATTPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF52841E3C500C674EA /* ATTPermissionView.swift */; };
 		D8835FED282FB59C0048A495 /* MapFocusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */; };
 		D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FEE282FB9250048A495 /* MapFocusView.swift */; };
 		D8835FF1282FBC830048A495 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8835FF0282FBC830048A495 /* AddLocationView.swift */; };
@@ -829,16 +834,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A9EDBD2841E8C30011E703 /* ATTPermissionUseCase.swift in Sources */,
+				D81FC003284A102900C2CBEF /* IndicatorUseCase.swift in Sources */,
 				D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
 				D8836000282FC5800048A495 /* MapViewBuilder.swift in Sources */,
 				D8835FF4282FBE020048A495 /* MapController.swift in Sources */,
 				D85B0B692837712900E8062D /* MapDataStoreTests.swift in Sources */,
 				D85B0B6B2837728100E8062D /* LocatePermissionViewModel.swift in Sources */,
+				D81FC005284A109C00C2CBEF /* MapView.swift in Sources */,
 				D85B0B6D283772B400E8062D /* MapRepository.swift in Sources */,
 				D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */,
 				D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */,
+				D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */,
 				D8835FFD282FBE640048A495 /* MapUseCase.swift in Sources */,
 				D85B0B6A2837720200E8062D /* MapDataStore.swift in Sources */,
+				D87816852849FDC2009B9FB0 /* ATTPermissionView.swift in Sources */,
 				D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */,
 				D8A9EDBC2841E8BE0011E703 /* ATTPermissionController.swift in Sources */,
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
@@ -851,7 +860,6 @@
 				D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */,
 				D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
-				D85B0B6E283772BE00E8062D /* MapView.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
@@ -864,11 +872,13 @@
 				D8CE68EC283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D8A9EDCC2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */,
+				D81FC006284A10AD00C2CBEF /* IndicatorView.swift in Sources */,
 				D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */,
 				D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */,
 				D8CE68EF283A328B00C1EFD7 /* MenuViewBuilder.swift in Sources */,
 				D8176FF22841D92A00C674EA /* TestConst.swift in Sources */,
 				D85B0B70283772CD00E8062D /* MenuView.swift in Sources */,
+				D81FC004284A107C00C2CBEF /* RootViewModel.swift in Sources */,
 				D8CE68DA2838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
 				D8176FF42841DA2700C674EA /* MenuPresenterTests.swift in Sources */,
 				D8835FFA282FBE370048A495 /* MapPresenter.swift in Sources */,
