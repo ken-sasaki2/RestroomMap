@@ -22,7 +22,7 @@ protocol LocatePermissionDataStoreDelegate: AnyObject {
 
 final class LocatePermissionDataStore: NSObject, LocatePermissionDataStoreInterface, CLLocationManagerDelegate {
     private let locationManager: CLLocationManager
-    private var statusEntity: AuthorizationStatusEntity
+    var statusEntity: AuthorizationStatusEntity
     weak var delegate: LocatePermissionDataStoreDelegate?
     var callback: ((AuthorizationStatusEntity) -> Void)?
 

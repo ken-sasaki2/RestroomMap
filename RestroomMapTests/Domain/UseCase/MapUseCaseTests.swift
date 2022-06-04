@@ -25,18 +25,18 @@ class MapUseCaseTests: XCTestCase {
         )
     }
 
-    
+
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    
+
     func test_getAuthorizationStatusEntity() throws {
         let status = useCase?.getAuthorizationStatusEntity()
         XCTAssert(status != nil)
     }
 
-    
+
     func test_validLocatePermission() throws {
         XCTContext.runActivity(named: "notDeterminedの場合") { _ in
             let result = useCase?.validLocatePermission(entity: .notDetermined)
