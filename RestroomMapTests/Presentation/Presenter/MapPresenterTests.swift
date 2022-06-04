@@ -59,4 +59,28 @@ class MapPresenterTests: XCTestCase {
         XCTAssertEqual(viewModel.currentLocation.lat, model.lat)
         XCTAssertEqual(viewModel.currentLocation.lng, model.lng)
     }
+
+
+    func test_showLocationAlert() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showLocationAlert()
+
+        XCTAssertEqual(viewModel.isShowLocationAlert, true)
+    }
+
+
+    func test_showIndicatorView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showIndicatorView()
+
+        XCTAssertEqual(viewModel.isShowIndicatorView, true)
+    }
+
+
+    func test_hideIndicatorView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.hideIndicatorView()
+
+        XCTAssertEqual(viewModel.isShowIndicatorView, false)
+    }
 }

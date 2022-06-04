@@ -606,9 +606,9 @@
 		D849309C2829FE04002DDFD2 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				D81FC010284A534400C2CBEF /* UserUseCaseTests.swift */,
-				D811B098284B104F000CA523 /* ShareUseCaseTests.swift */,
 				D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */,
+				D811B098284B104F000CA523 /* ShareUseCaseTests.swift */,
+				D81FC010284A534400C2CBEF /* UserUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -616,8 +616,8 @@
 		D849309D2829FE12002DDFD2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D85B0B682837712900E8062D /* MapDataStoreTests.swift */,
 				D811B09E284B2748000CA523 /* LocatePermissionDataStoreTests.swift */,
+				D85B0B682837712900E8062D /* MapDataStoreTests.swift */,
 				D811B0A0284B2937000CA523 /* UserDataStoreTests.swift */,
 			);
 			path = Data;
