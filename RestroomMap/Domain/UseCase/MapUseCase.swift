@@ -45,7 +45,9 @@ final class MapUseCase: MapUseCaseInterface {
 
 
     func showAddLocationView() {
-        if !validLocatePermission() {
+        let entity = getAuthorizationStatusEntity()
+
+        if !validLocatePermission(entity: entity) {
             presenter.showLocationAlert()
             return
         }
@@ -67,7 +69,9 @@ final class MapUseCase: MapUseCaseInterface {
 
 
     private func moveCurrentLocationPoint(model: CurrentLocationModel) {
-        if !validLocatePermission() {
+        let entity = getAuthorizationStatusEntity()
+
+        if !validLocatePermission(entity: entity) {
             presenter.showLocationAlert()
             return
         }
@@ -76,15 +80,13 @@ final class MapUseCase: MapUseCaseInterface {
     }
 
 
-    private func getAuthorizationStatusEntity() -> AuthorizationStatusEntity {
+    func getAuthorizationStatusEntity() -> AuthorizationStatusEntity {
         let entity = locatePermissionRepository.getAuthorizationStatus()
         return entity
     }
 
 
-    private func validLocatePermission() -> Bool {
-        let entity = getAuthorizationStatusEntity()
-
+    func validLocatePermission(entity: AuthorizationStatusEntity) -> Bool {
         switch entity {
         case .notDetermined:
             return false

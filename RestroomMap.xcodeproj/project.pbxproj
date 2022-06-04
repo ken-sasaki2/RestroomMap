@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B098284B104F000CA523 /* ShareUseCaseTests.swift */; };
+		D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */; };
 		D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */; };
 		D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FEF2841D65100C674EA /* MapPresenterTests.swift */; };
 		D8176FF22841D92A00C674EA /* TestConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF12841D92A00C674EA /* TestConst.swift */; };
@@ -164,6 +166,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D811B098284B104F000CA523 /* ShareUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareUseCaseTests.swift; sourceTree = "<group>"; };
+		D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCaseTests.swift; sourceTree = "<group>"; };
 		D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionPresenterTest.swift; sourceTree = "<group>"; };
 		D8176FEF2841D65100C674EA /* MapPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTests.swift; sourceTree = "<group>"; };
 		D8176FF12841D92A00C674EA /* TestConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConst.swift; sourceTree = "<group>"; };
@@ -599,6 +603,8 @@
 			isa = PBXGroup;
 			children = (
 				D81FC010284A534400C2CBEF /* UserUseCaseTests.swift */,
+				D811B098284B104F000CA523 /* ShareUseCaseTests.swift */,
+				D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -866,6 +872,7 @@
 				D85B0B692837712900E8062D /* MapDataStoreTests.swift in Sources */,
 				D85B0B6B2837728100E8062D /* LocatePermissionViewModel.swift in Sources */,
 				D81FC005284A109C00C2CBEF /* MapView.swift in Sources */,
+				D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */,
 				D85B0B6D283772B400E8062D /* MapRepository.swift in Sources */,
 				D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */,
 				D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */,
@@ -917,6 +924,7 @@
 				D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */,
 				D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
 				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
+				D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
 				D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
 				D8AF8C21284655CF00533CC7 /* RootViewPresenter.swift in Sources */,
