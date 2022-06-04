@@ -15,7 +15,7 @@ protocol UserDataStoreInterface {
 
 
 final class UserDataStore: UserDataStoreInterface {
-    private let userDefaults = UserDefaultsEntity()
+    let userDefaults = UserDefaultsEntity()
 
 
     func saveLocation(entity: CurrentLocationEntity) {

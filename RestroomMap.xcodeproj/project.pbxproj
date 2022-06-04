@@ -10,6 +10,7 @@
 		D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B098284B104F000CA523 /* ShareUseCaseTests.swift */; };
 		D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */; };
 		D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B09E284B2748000CA523 /* LocatePermissionDataStoreTests.swift */; };
+		D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B0A0284B2937000CA523 /* UserDataStoreTests.swift */; };
 		D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */; };
 		D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FEF2841D65100C674EA /* MapPresenterTests.swift */; };
 		D8176FF22841D92A00C674EA /* TestConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8176FF12841D92A00C674EA /* TestConst.swift */; };
@@ -170,6 +171,7 @@
 		D811B098284B104F000CA523 /* ShareUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareUseCaseTests.swift; sourceTree = "<group>"; };
 		D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCaseTests.swift; sourceTree = "<group>"; };
 		D811B09E284B2748000CA523 /* LocatePermissionDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionDataStoreTests.swift; sourceTree = "<group>"; };
+		D811B0A0284B2937000CA523 /* UserDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreTests.swift; sourceTree = "<group>"; };
 		D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionPresenterTest.swift; sourceTree = "<group>"; };
 		D8176FEF2841D65100C674EA /* MapPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTests.swift; sourceTree = "<group>"; };
 		D8176FF12841D92A00C674EA /* TestConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConst.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 			children = (
 				D85B0B682837712900E8062D /* MapDataStoreTests.swift */,
 				D811B09E284B2748000CA523 /* LocatePermissionDataStoreTests.swift */,
+				D811B0A0284B2937000CA523 /* UserDataStoreTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				D8895ED6283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D85B0B6F283772C800E8062D /* AddLocationView.swift in Sources */,
 				D81FC009284A4C7400C2CBEF /* ATTPermissionPresenterTests.swift in Sources */,
+				D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */,
 				D81FC00F284A512600C2CBEF /* RootViewModelTests.swift in Sources */,
 				D88360092830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8835FF7282FBE1D0048A495 /* MapViewModel.swift in Sources */,
