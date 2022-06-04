@@ -18,17 +18,19 @@ class MapPresenterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_toggleFocusView() throws {
+    func test_showFocusView() throws {
         let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showFocusView()
 
-        XCTContext.runActivity(named: "isShowFocusViewがtrueの場合") { _ in
-            presenter.toggleFocusView()
-            XCTAssertEqual(viewModel.isShowFocusView, true)
-        }
-        XCTContext.runActivity(named: "isShowFocusViewがfalseの場合") { _ in
-            presenter.toggleFocusView()
-            XCTAssertEqual(viewModel.isShowFocusView, false)
-        }
+        XCTAssertEqual(viewModel.isShowFocusView, true)
+    }
+
+
+    func test_hideFocusView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.hideFocusView()
+
+        XCTAssertEqual(viewModel.isShowFocusView, false)
     }
 
 
@@ -56,5 +58,29 @@ class MapPresenterTests: XCTestCase {
 
         XCTAssertEqual(viewModel.currentLocation.lat, model.lat)
         XCTAssertEqual(viewModel.currentLocation.lng, model.lng)
+    }
+
+
+    func test_showLocationAlert() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showLocationAlert()
+
+        XCTAssertEqual(viewModel.isShowLocationAlert, true)
+    }
+
+
+    func test_showIndicatorView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.showIndicatorView()
+
+        XCTAssertEqual(viewModel.isShowIndicatorView, true)
+    }
+
+
+    func test_hideIndicatorView() throws {
+        let presenter = MapPresenter(viewModel: viewModel)
+        presenter.hideIndicatorView()
+
+        XCTAssertEqual(viewModel.isShowIndicatorView, false)
     }
 }

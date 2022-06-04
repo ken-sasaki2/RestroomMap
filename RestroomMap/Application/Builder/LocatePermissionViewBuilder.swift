@@ -25,9 +25,10 @@ final class LocatePermissionViewBuilder {
                     userRepository: UserRepository(
                         dataStore: UserDataStore()
                     ),
-                    presenter: LocatePermissionPresenter(
+                    locatePermissionPresenter: LocatePermissionPresenter(
                         viewModel: viewModel
-                    )
+                    ),
+                    rootViewPresenter: RootViewPresenter()
                 )
             )
         )

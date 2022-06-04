@@ -47,7 +47,7 @@ struct MapView: View {
                                 }
                             }
                             MapToolBarButtonView(imageName: "location") {
-                                controller.getCurrentLocation()
+                                controller.onLocationButtonTapped()
                                 withAnimation {
                                     setRegion(lat: viewModel.currentLocation.lat, lng: viewModel.currentLocation.lng)
                                 }
@@ -64,12 +64,21 @@ struct MapView: View {
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
                     }
+                    .alert("確認", isPresented: $viewModel.isShowLocationAlert) {
+                        Button("OK") {}
+                    } message: {
+                        Text("'設定'から位置情報を許可してください")
+                    }
                     .onAppear {
+                        controller.showIndicatorView()
                         controller.getCurrentLocation()
                         setRegion(
                             lat: viewModel.currentLocation.lat,
                             lng: viewModel.currentLocation.lng
                         )
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            controller.hideIndicatorView()
+                        }
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {
@@ -78,6 +87,11 @@ struct MapView: View {
                             }
                         } onAddButtonTapped: {
                             controller.onAddLocationButtonTapped()
+                        }
+                    }
+                    if viewModel.isShowIndicatorView {
+                        withAnimation {
+                            IndicatorView()
                         }
                     }
                 }

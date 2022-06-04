@@ -9,7 +9,8 @@ import Foundation
 
 
 protocol MapUseCaseInterface {
-    func toggleFocusView()
+    func showFocusView()
+    func hideFocusView()
     func showAddLocationView()
     func showMenuView()
     func getCurrentLocation()
@@ -18,21 +19,39 @@ protocol MapUseCaseInterface {
 
 final class MapUseCase: MapUseCaseInterface {
     private let presenter: MapPresenterInterface
-    private let repository: MapRepositoryInterface
+    private let mapRepository: MapRepositoryInterface
+    private let locatePermissionRepository: LocatePermissionRepositoryInterface
 
 
-    init(presenter: MapPresenterInterface, repository: MapRepositoryInterface) {
+    init(
+        presenter: MapPresenterInterface,
+        mapRepository: MapRepositoryInterface,
+        locatePermissionRepository: LocatePermissionRepositoryInterface
+    ) {
         self.presenter = presenter
-        self.repository = repository
+        self.mapRepository = mapRepository
+        self.locatePermissionRepository = locatePermissionRepository
     }
 
 
-    func toggleFocusView() {
-        presenter.toggleFocusView()
+    func showFocusView() {
+        presenter.showFocusView()
+    }
+
+
+    func hideFocusView() {
+        presenter.hideFocusView()
     }
 
 
     func showAddLocationView() {
+        let entity = getAuthorizationStatusEntity()
+
+        if !validLocatePermission(entity: entity) {
+            presenter.showLocationAlert()
+            return
+        }
+
         presenter.showAddLocationView()
     }
 
@@ -43,13 +62,44 @@ final class MapUseCase: MapUseCaseInterface {
 
 
     func getCurrentLocation() {
-        let entity = repository.getCurrentLocationEntity()
+        let entity = mapRepository.getCurrentLocationEntity()
         let model = CurrentLocationModelTranslator.translate(entity: entity)
         moveCurrentLocationPoint(model: model)
     }
 
 
     private func moveCurrentLocationPoint(model: CurrentLocationModel) {
+        let entity = getAuthorizationStatusEntity()
+
+        if !validLocatePermission(entity: entity) {
+            presenter.showLocationAlert()
+            return
+        }
+
         presenter.moveCurrentLocationPoint(model: model)
+    }
+
+
+    func getAuthorizationStatusEntity() -> AuthorizationStatusEntity {
+        let entity = locatePermissionRepository.getAuthorizationStatus()
+        return entity
+    }
+
+
+    func validLocatePermission(entity: AuthorizationStatusEntity) -> Bool {
+        switch entity {
+        case .notDetermined:
+            return false
+        case .restricted:
+            return true
+        case .denied:
+            return false
+        case .authorizedAlways:
+            return true
+        case .authorizedWhenInUse:
+            return true
+        case .unknown:
+            return true
+        }
     }
 }
