@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ATTPermissionView: View {
-    let viewModel: ATTPermissionViewModel
     let controller: ATTPermissionController
 
     var body: some View {
