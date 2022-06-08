@@ -7,13 +7,7 @@
 
 import Foundation
 
-
-protocol ATTPermissionPresenterInterface {
-    func doneATTPermission()
-}
-
-
-final class ATTPermissionPresenter: ATTPermissionPresenterInterface {
+final class ATTPermissionPresenter: ATTPermissionUseCaseOutput {
     let viewModel: ATTPermissionViewModel
 
 
@@ -21,7 +15,8 @@ final class ATTPermissionPresenter: ATTPermissionPresenterInterface {
         self.viewModel = viewModel
     }
 
-    func doneATTPermission() {
+
+    func completeATTPermission() {
         viewModel.isDoneATTPermission = true
     }
 }

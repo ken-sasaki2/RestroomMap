@@ -7,19 +7,24 @@
 
 import Foundation
 
-
-protocol ATTPermissionUseCaseInterface {
+protocol ATTPermissionUseCaseInput {
     func getAuthorizationStatus() async
 }
 
-final class ATTPermissionUseCase: ATTPermissionUseCaseInterface {
+
+protocol ATTPermissionUseCaseOutput {
+    func completeATTPermission()
+}
+
+
+final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
+    private let output: ATTPermissionUseCaseOutput
     private let repository: ATTPermissionRepository
-    private let presenter: RootViewPresenterInterface
 
 
-    init(repository: ATTPermissionRepository, presenter: RootViewPresenterInterface) {
+    init(output: ATTPermissionUseCaseOutput, repository: ATTPermissionRepository) {
+        self.output = output
         self.repository = repository
-        self.presenter = presenter
     }
 
 
@@ -29,7 +34,7 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInterface {
         if status == .notDetermined {
             await requestAuthorization()
         } else {
-            presenter.showMapView()
+            output.completeATTPermission()
         }
     }
 

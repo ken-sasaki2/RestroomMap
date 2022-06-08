@@ -39,7 +39,7 @@ final class ATTPermissionDataStore: ATTPermissionDataStoreInterface {
 
 
     func requestAuthorization() async {
-        return await withCheckedContinuation { continuation in
+        await withCheckedContinuation { continuation in
             ATTrackingManager.requestTrackingAuthorization { _ in
                 continuation.resume(returning: ())
             }
