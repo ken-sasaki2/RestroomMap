@@ -102,10 +102,6 @@
 		D8A9EDC52841F6B20011E703 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9EDC42841F6B20011E703 /* AppTrackingTransparency.framework */; };
 		D8A9EDC82841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */; };
 		D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */; };
-		D8A9EDCB2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDCA2841F8490011E703 /* ATTPermissionPresenter.swift */; };
-		D8A9EDCC2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDCA2841F8490011E703 /* ATTPermissionPresenter.swift */; };
-		D8A9EDCE2841F8790011E703 /* ATTPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDCD2841F8790011E703 /* ATTPermissionViewModel.swift */; };
-		D8A9EDCF2841F8790011E703 /* ATTPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDCD2841F8790011E703 /* ATTPermissionViewModel.swift */; };
 		D8A9EDD128420A2F0011E703 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* UserUseCase.swift */; };
 		D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* UserUseCase.swift */; };
 		D8A9EDD428420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
@@ -229,8 +225,6 @@
 		D8A9EDC42841F6B20011E703 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		D8A9EDC62841F6D00011E703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewBuilder.swift; sourceTree = "<group>"; };
-		D8A9EDCA2841F8490011E703 /* ATTPermissionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionPresenter.swift; sourceTree = "<group>"; };
-		D8A9EDCD2841F8790011E703 /* ATTPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewModel.swift; sourceTree = "<group>"; };
 		D8A9EDD028420A2F0011E703 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountEntity.swift; sourceTree = "<group>"; };
 		D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -479,7 +473,6 @@
 		D84930902829FCB3002DDFD2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D8A9EDCD2841F8790011E703 /* ATTPermissionViewModel.swift */,
 				D838A7982833248000047D52 /* LocatePermissionViewModel.swift */,
 				D8835FF5282FBE1D0048A495 /* MapViewModel.swift */,
 				D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */,
@@ -562,7 +555,6 @@
 		D84930972829FD6D002DDFD2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D8A9EDCA2841F8490011E703 /* ATTPermissionPresenter.swift */,
 				D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */,
 				D8835FF8282FBE370048A495 /* MapPresenter.swift */,
 				D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */,
@@ -815,7 +807,6 @@
 				D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */,
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
 				D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
-				D8A9EDCE2841F8790011E703 /* ATTPermissionViewModel.swift in Sources */,
 				D8CE68F4283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
 				D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */,
 				D8A9EDC82841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
@@ -848,7 +839,6 @@
 				D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */,
 				D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
-				D8A9EDCB2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */,
 				D8CE68E82838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D8AF8C20284655CF00533CC7 /* RootViewPresenter.swift in Sources */,
 				D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */,
@@ -914,7 +904,6 @@
 				D8CE68EC283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D81FC011284A534400C2CBEF /* UserUseCaseTests.swift in Sources */,
-				D8A9EDCC2841F8490011E703 /* ATTPermissionPresenter.swift in Sources */,
 				D81FC006284A10AD00C2CBEF /* IndicatorView.swift in Sources */,
 				D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */,
 				D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */,
@@ -928,7 +917,6 @@
 				D8A9EDC02841EDCC0011E703 /* ATTPermissionRepository.swift in Sources */,
 				D8A9EDC32841EFC50011E703 /* ATTAuthorizationStatusEntity.swift in Sources */,
 				D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */,
-				D8A9EDCF2841F8790011E703 /* ATTPermissionViewModel.swift in Sources */,
 				D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */,
 				D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
 				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
