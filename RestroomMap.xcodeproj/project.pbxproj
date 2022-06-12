@@ -44,6 +44,13 @@
 		D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */; };
 		D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */; };
 		D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */; };
+		D84188BD285634F100CD2AFE /* ApplicationBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188BC285634F100CD2AFE /* ApplicationBuilderTests.swift */; };
+		D84188BE285634FA00CD2AFE /* ApplicationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E700332842F02A0046B391 /* ApplicationBuilder.swift */; };
+		D84188BF285635AF00CD2AFE /* AppDelegateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E700312842E20B0046B391 /* AppDelegateController.swift */; };
+		D84188C12856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C02856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift */; };
+		D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */; };
+		D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */; };
+		D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */; };
 		D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305D2829841A002DDFD2 /* RestroomMapApp.swift */; };
 		D84930602829841A002DDFD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D84930622829841B002DDFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84930612829841B002DDFD2 /* Assets.xcassets */; };
@@ -190,6 +197,11 @@
 		D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationStatusEntity.swift; sourceTree = "<group>"; };
 		D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilder.swift; sourceTree = "<group>"; };
 		D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTPermissionPresenter.swift; sourceTree = "<group>"; };
+		D84188BC285634F100CD2AFE /* ApplicationBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationBuilderTests.swift; sourceTree = "<group>"; };
+		D84188C02856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewBuilderTests.swift; sourceTree = "<group>"; };
+		D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilderTests.swift; sourceTree = "<group>"; };
+		D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBuilderTests.swift; sourceTree = "<group>"; };
+		D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewBuilderTests.swift; sourceTree = "<group>"; };
 		D849305A2829841A002DDFD2 /* RestroomMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestroomMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D849305D2829841A002DDFD2 /* RestroomMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapApp.swift; sourceTree = "<group>"; };
 		D849305F2829841A002DDFD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -320,6 +332,18 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		D84188BB285634D900CD2AFE /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D84188BC285634F100CD2AFE /* ApplicationBuilderTests.swift */,
+				D84188C02856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift */,
+				D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */,
+				D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */,
+				D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		D84930512829841A002DDFD2 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				D8176FF12841D92A00C674EA /* TestConst.swift */,
+				D84188BB285634D900CD2AFE /* Builder */,
 				D8176FEC2841D3CA00C674EA /* Presentation */,
 				D849309A2829FDF4002DDFD2 /* Domain */,
 				D849309D2829FE12002DDFD2 /* Data */,
@@ -868,7 +893,9 @@
 				D8A9EDBD2841E8C30011E703 /* ATTPermissionUseCase.swift in Sources */,
 				D81FC003284A102900C2CBEF /* IndicatorUseCase.swift in Sources */,
 				D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
+				D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */,
 				D8836000282FC5800048A495 /* MapViewBuilder.swift in Sources */,
+				D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */,
 				D8835FF4282FBE020048A495 /* MapController.swift in Sources */,
 				D85B0B692837712900E8062D /* MapDataStoreTests.swift in Sources */,
 				D85B0B6B2837728100E8062D /* LocatePermissionViewModel.swift in Sources */,
@@ -887,6 +914,7 @@
 				D8A9EDBB2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
+				D84188BD285634F100CD2AFE /* ApplicationBuilderTests.swift in Sources */,
 				D8CE68F5283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
 				D85B0B71283772D800E8062D /* MapFocusView.swift in Sources */,
 				D8895ED32835323C0079C2AA /* UserDataStore.swift in Sources */,
@@ -900,11 +928,14 @@
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D88360062830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8895ED6283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
+				D84188BE285634FA00CD2AFE /* ApplicationBuilder.swift in Sources */,
 				D85B0B6F283772C800E8062D /* AddLocationView.swift in Sources */,
 				D81FC009284A4C7400C2CBEF /* ATTPermissionPresenterTests.swift in Sources */,
 				D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */,
 				D81FC00F284A512600C2CBEF /* RootViewModelTests.swift in Sources */,
+				D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */,
 				D88360092830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
+				D84188BF285635AF00CD2AFE /* AppDelegateController.swift in Sources */,
 				D8835FF7282FBE1D0048A495 /* MapViewModel.swift in Sources */,
 				D838A7A8283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
 				D8CE68EC283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
@@ -933,6 +964,7 @@
 				D8CE68D42837950D00C1EFD7 /* MenuViewModel.swift in Sources */,
 				D8CE68DD2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */,
 				D8CE68F2283A3CDF00C1EFD7 /* ShareSheetView.swift in Sources */,
+				D84188C12856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift in Sources */,
 				D85B0B672837684300E8062D /* CurrentLocationModelTranslator.swift in Sources */,
 				D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
 				D8CE68F9283A865800C1EFD7 /* Const.swift in Sources */,
