@@ -8,9 +8,9 @@
 import Foundation
 
 final class AppDelegateController {
-    private let userUseCase: UserUseCaseInterface
+    private let userUseCase: UserUseCaseInput
 
-    init(userUseCase: UserUseCaseInterface) {
+    init(userUseCase: UserUseCaseInput) {
         self.userUseCase = userUseCase
     }
 

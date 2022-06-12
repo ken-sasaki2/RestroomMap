@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol MapUseCaseInterface {
+protocol MapUseCaseInput {
     func showFocusView()
     func hideFocusView()
     func showAddLocationView()
@@ -17,30 +17,42 @@ protocol MapUseCaseInterface {
 }
 
 
-final class MapUseCase: MapUseCaseInterface {
-    private let presenter: MapPresenterInterface
+protocol MapUseCaseOutput {
+    func showFocusView()
+    func hideFocusView()
+    func showAddLocationView()
+    func showMenuView()
+    func moveCurrentLocationPoint(model: CurrentLocationModel)
+    func showLocationAlert()
+    func showIndicatorView()
+    func hideIndicatorView()
+}
+
+
+final class MapUseCase: MapUseCaseInput {
+    private let output: MapUseCaseOutput
     private let mapRepository: MapRepositoryInterface
     private let locatePermissionRepository: LocatePermissionRepositoryInterface
 
 
     init(
-        presenter: MapPresenterInterface,
+        output: MapUseCaseOutput,
         mapRepository: MapRepositoryInterface,
         locatePermissionRepository: LocatePermissionRepositoryInterface
     ) {
-        self.presenter = presenter
+        self.output = output
         self.mapRepository = mapRepository
         self.locatePermissionRepository = locatePermissionRepository
     }
 
 
     func showFocusView() {
-        presenter.showFocusView()
+        output.showFocusView()
     }
 
 
     func hideFocusView() {
-        presenter.hideFocusView()
+        output.hideFocusView()
     }
 
 
@@ -48,16 +60,16 @@ final class MapUseCase: MapUseCaseInterface {
         let entity = getAuthorizationStatusEntity()
 
         if !validLocatePermission(entity: entity) {
-            presenter.showLocationAlert()
+            output.showLocationAlert()
             return
         }
 
-        presenter.showAddLocationView()
+        output.showAddLocationView()
     }
 
 
     func showMenuView() {
-        presenter.showMenuView()
+        output.showMenuView()
     }
 
 
@@ -72,11 +84,11 @@ final class MapUseCase: MapUseCaseInterface {
         let entity = getAuthorizationStatusEntity()
 
         if !validLocatePermission(entity: entity) {
-            presenter.showLocationAlert()
+            output.showLocationAlert()
             return
         }
 
-        presenter.moveCurrentLocationPoint(model: model)
+        output.moveCurrentLocationPoint(model: model)
     }
 
 

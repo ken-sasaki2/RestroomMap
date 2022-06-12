@@ -14,36 +14,19 @@ final class MapViewBuilder {
 
     func build() -> MapView {
         let viewModel = MapViewModel()
+        let presenter = MapPresenter(viewModel: viewModel)
 
-        let view = MapView(
-            viewModel: viewModel,
-            controller: MapController(
-                mapUseCase: MapUseCase(
-                    presenter: MapPresenter(
-                        viewModel: viewModel
-                    ),
-                    mapRepository: MapRepository(
-                        dataStore: MapDataStore()
-                    ),
-                    locatePermissionRepository: LocatePermissionRepository(
-                        dataStore: LocatePermissionDataStore()
-                    )
-                ),
-                userUseCase: UserUseCase(
-                    repository: UserRepository(
-                        dataStore: UserDataStore()
-                    ),
-                    rootViewPresenter: RootViewPresenter()
-                ),
-                indicatorUseCase: IndicatorUseCase(
-                    mapPresenter: MapPresenter(
-                        viewModel: viewModel
-                    )
-                )
-            ),
-            lat: 35.65139,
-            lng: 139.63679
-        )
+        let mapDataStore = MapDataStore()
+        let mapRepository = MapRepository(dataStore: mapDataStore)
+        let locatePermissionDataStore = LocatePermissionDataStore()
+        let locatePermissionRepository = LocatePermissionRepository(dataStore: locatePermissionDataStore)
+
+        let mapUseCaseInput = MapUseCase(output: presenter, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+        let indicatorUseCaseInput = IndicatorUseCase(indicatorOutput: presenter)
+
+        let controller = MapController(mapUseCaseInput: mapUseCaseInput, indicatorUseCaseInput: indicatorUseCaseInput)
+
+        let view = MapView(viewModel: viewModel, controller: controller)
 
         return view
     }

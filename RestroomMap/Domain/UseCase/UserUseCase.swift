@@ -7,21 +7,27 @@
 
 import Foundation
 
-protocol UserUseCaseInterface {
+
+protocol UserUseCaseInput {
     func saveLocation()
     func getLaunchCount()
     func saveLaunchCount()
 }
 
 
-final class UserUseCase: UserUseCaseInterface {
+protocol UserUseCaseOutput {
+    func showLocatePermissionView()
+}
+
+
+final class UserUseCase: UserUseCaseInput {
+    private let output: UserUseCaseOutput
     private let repository: UserRepositoryInterface
-    private let rootViewPresenter: RootViewPresenterInterface
 
 
-    init(repository: UserRepositoryInterface, rootViewPresenter: RootViewPresenterInterface) {
+    init(output: UserUseCaseOutput, repository: UserRepositoryInterface) {
+        self.output = output
         self.repository = repository
-        self.rootViewPresenter = rootViewPresenter
     }
 
 
@@ -34,7 +40,7 @@ final class UserUseCase: UserUseCaseInterface {
         let entity = repository.getLaunchCount()
 
         if validFirstLaunch(entity: entity) {
-            rootViewPresenter.showLocatePermissionView()
+            output.showLocatePermissionView()
         }
     }
 

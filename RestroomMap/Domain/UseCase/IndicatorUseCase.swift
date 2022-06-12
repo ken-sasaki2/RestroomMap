@@ -8,25 +8,33 @@
 import Foundation
 
 
-protocol IndicatorUseCaseInterface {
-    func showIndicatorViewFromMapView()
-    func hideIndicatorViewFromMapView()
+protocol IndicatorUseCaseInput {
+    func showIndicator()
+    func hideIndicator()
 }
 
 
-final class IndicatorUseCase: IndicatorUseCaseInterface {
-    private let mapPresenter: MapPresenterInterface
+protocol IndicatorUseCaseOutput {
+    func showIndicatorView()
+    func hideIndicatorView()
+}
 
-    init(mapPresenter: MapPresenterInterface) {
-        self.mapPresenter = mapPresenter
+
+final class IndicatorUseCase: IndicatorUseCaseInput {
+    private let indicatorOutput: IndicatorUseCaseOutput
+
+
+    init(indicatorOutput: IndicatorUseCaseOutput) {
+        self.indicatorOutput = indicatorOutput
     }
 
 
-    func showIndicatorViewFromMapView() {
-        mapPresenter.showIndicatorView()
+    func showIndicator() {
+        indicatorOutput.showIndicatorView()
     }
 
-    func hideIndicatorViewFromMapView() {
-        mapPresenter.hideIndicatorView()
+
+    func hideIndicator() {
+        indicatorOutput.hideIndicatorView()
     }
 }
