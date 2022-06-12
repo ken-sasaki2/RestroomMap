@@ -7,29 +7,38 @@
 
 import Foundation
 
-protocol MenuPresenterInterface {
-    func showShareSheetView(model: SharePostModel)
-}
 
-
-final class MenuPresenter: MenuPresenterInterface {
+final class MenuPresenter {
     private let viewModel: MenuViewModel
-
 
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
     }
+}
 
 
+extension MenuPresenter: PinTypeUseCaseOutput {
+
+}
+
+
+extension MenuPresenter: ShareUseCaseOutput {
     func showShareSheetView(model: SharePostModel) {
         viewModel.isShowShareSheetView = true
         viewModel.shareText = model.shareText
         viewModel.shareImage = model.shareImage
         viewModel.shareUrl = model.shareUrl
     }
+}
 
 
+extension MenuPresenter: InquiryUseCaseOutput {
     func showInquiryView() {
         viewModel.isShowInquiryView = true
     }
+}
+
+
+extension MenuPresenter: BillingUseCaseOutput {
+
 }

@@ -7,21 +7,26 @@
 
 import Foundation
 
-protocol InquiryUseCaseInterface {
+protocol InquiryUseCaseInput {
+    func show()
+}
+
+
+protocol InquiryUseCaseOutput {
     func showInquiryView()
 }
 
 
-final class InquiryUseCase: InquiryUseCaseInterface {
-    private let presenter: MenuPresenter
+final class InquiryUseCase: InquiryUseCaseInput {
+    private let output: InquiryUseCaseOutput
 
 
-    init(presenter: MenuPresenter) {
-        self.presenter = presenter
+    init(output: InquiryUseCaseOutput) {
+        self.output = output
     }
 
 
-    func showInquiryView() {
-        presenter.showInquiryView()
+    func show() {
+        output.showInquiryView()
     }
 }

@@ -8,15 +8,20 @@
 import Foundation
 
 
-protocol PinTypeUseCaseInterface {
+protocol PinTypeUseCaseInput {
 
 }
 
 
-final class PinTypeUseCase: PinTypeUseCaseInterface {
-    private let presenter: MenuPresenter
+protocol PinTypeUseCaseOutput {
 
-    init(presenter: MenuPresenter) {
-        self.presenter = presenter
+}
+
+
+final class PinTypeUseCase: PinTypeUseCaseInput {
+    private let output: PinTypeUseCaseOutput
+
+    init(output: PinTypeUseCaseOutput) {
+        self.output = output
     }
 }

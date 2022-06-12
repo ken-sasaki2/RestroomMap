@@ -7,21 +7,27 @@
 
 import Foundation
 
-protocol ShareUseCaseInterface {
+
+protocol ShareUseCaseInput {
     func showShareSheetView(model: SharePostModel)
 }
 
 
-final class ShareUseCase: ShareUseCaseInterface {
-    private let presenter: MenuPresenter
+protocol ShareUseCaseOutput {
+    func showShareSheetView(model: SharePostModel)
+}
 
 
-    init(presenter: MenuPresenter) {
-        self.presenter = presenter
+final class ShareUseCase: ShareUseCaseInput {
+    private let output: ShareUseCaseOutput
+
+
+    init(output: ShareUseCaseOutput) {
+        self.output = output
     }
 
 
     func showShareSheetView(model: SharePostModel) {
-        presenter.showShareSheetView(model: model)
+        output.showShareSheetView(model: model)
     }
 }

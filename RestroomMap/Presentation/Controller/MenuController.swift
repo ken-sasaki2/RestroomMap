@@ -8,25 +8,25 @@
 import Foundation
 
 final class MenuController {
-    private let pinTypeUseCase: PinTypeUseCaseInterface
-    private let reviewUseCase: ReviewUseCaseInterface
-    private let shareUseCase: ShareUseCaseInterface
-    private let inquiryUseCase: InquiryUseCaseInterface
-    private let billingUseCase: BillingUseCaseInterface
+    private let pinTypeUseCaseInput: PinTypeUseCaseInput
+    private let reviewUseCaseInput: ReviewUseCaseInput
+    private let shareUseCaseInput: ShareUseCaseInput
+    private let inquiryUseCaseInput: InquiryUseCaseInput
+    private let billingUseCaseInput: BillingUseCaseInput
 
 
     init(
-        pinTypeUseCase: PinTypeUseCaseInterface,
-        reviewUseCase: ReviewUseCaseInterface,
-        shareUseCase: ShareUseCaseInterface,
-        inquiryUseCase: InquiryUseCaseInterface,
-        billingUseCase: BillingUseCaseInterface
+        pinTypeUseCaseInput: PinTypeUseCaseInput,
+        reviewUseCaseInput: ReviewUseCaseInput,
+        shareUseCaseInput: ShareUseCaseInput,
+        inquiryUseCaseInput: InquiryUseCaseInput,
+        billingUseCaseInput: BillingUseCaseInput
     ) {
-        self.pinTypeUseCase = pinTypeUseCase
-        self.reviewUseCase = reviewUseCase
-        self.shareUseCase = shareUseCase
-        self.inquiryUseCase = inquiryUseCase
-        self.billingUseCase = billingUseCase
+        self.pinTypeUseCaseInput = pinTypeUseCaseInput
+        self.reviewUseCaseInput = reviewUseCaseInput
+        self.shareUseCaseInput = shareUseCaseInput
+        self.inquiryUseCaseInput = inquiryUseCaseInput
+        self.billingUseCaseInput = billingUseCaseInput
     }
 
     func onShareButtonTapped() {
@@ -36,15 +36,15 @@ final class MenuController {
             shareUrl: Const.shareUrl
         )
 
-        shareUseCase.showShareSheetView(model: model)
+        shareUseCaseInput.showShareSheetView(model: model)
     }
 
     func onReviewButtontapped() {
-        reviewUseCase.requestReview()
+        reviewUseCaseInput.requestReview()
     }
 
 
     func onInquiryButtonTapped() {
-        inquiryUseCase.showInquiryView()
+        inquiryUseCaseInput.show()
     }
 }
