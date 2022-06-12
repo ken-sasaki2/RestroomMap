@@ -14,7 +14,7 @@ protocol LocatePermissionUseCaseInput {
 }
 
 
-protocol LocatePermissionPresenterOutput {
+protocol LocatePermissionUseCaseOutput {
     func statusDenied()
     func successLocatePermission()
     func failLocatePermission()
@@ -24,13 +24,13 @@ protocol LocatePermissionPresenterOutput {
 final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     private var locatePermissionRepository: LocatePermissionRepositoryInterface
     private let userRepository: UserRepositoryInterface
-    private let output: LocatePermissionPresenterOutput
+    private let output: LocatePermissionUseCaseOutput
 
 
     init(
         locatePermissionRepository: LocatePermissionRepositoryInterface,
         userRepository: UserRepositoryInterface,
-        output: LocatePermissionPresenterOutput
+        output: LocatePermissionUseCaseOutput
 
     ) {
         self.locatePermissionRepository = locatePermissionRepository

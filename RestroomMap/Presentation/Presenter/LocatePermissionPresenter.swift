@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class LocatePermissionPresenter: LocatePermissionPresenterOutput {
+final class LocatePermissionPresenter: LocatePermissionUseCaseOutput {
     let viewModel: LocatePermissionViewModel
 
 
