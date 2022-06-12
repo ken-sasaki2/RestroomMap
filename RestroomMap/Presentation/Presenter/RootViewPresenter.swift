@@ -31,10 +31,3 @@ final class RootViewPresenter: RootViewPresenterInterface {
         RootViewModel.shared.changeRootView(rootView: .map)
     }
 }
-
-
-extension RootViewPresenter: ATTPermissionUseCaseOutput {
-    func completeATTPermission() {
-        RootViewModel.shared.changeRootView(rootView: .map)
-    }
-}

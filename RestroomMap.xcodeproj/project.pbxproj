@@ -42,6 +42,8 @@
 		D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */; };
 		D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */; };
 		D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */; };
+		D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */; };
+		D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */; };
 		D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305D2829841A002DDFD2 /* RestroomMapApp.swift */; };
 		D84930602829841A002DDFD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D84930622829841B002DDFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84930612829841B002DDFD2 /* Assets.xcassets */; };
@@ -187,6 +189,7 @@
 		D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionDataStore.swift; sourceTree = "<group>"; };
 		D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationStatusEntity.swift; sourceTree = "<group>"; };
 		D838A7AC2833251000047D52 /* LocatePermissionViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilder.swift; sourceTree = "<group>"; };
+		D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTPermissionPresenter.swift; sourceTree = "<group>"; };
 		D849305A2829841A002DDFD2 /* RestroomMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestroomMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D849305D2829841A002DDFD2 /* RestroomMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapApp.swift; sourceTree = "<group>"; };
 		D849305F2829841A002DDFD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -555,6 +558,7 @@
 		D84930972829FD6D002DDFD2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */,
 				D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */,
 				D8835FF8282FBE370048A495 /* MapPresenter.swift */,
 				D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */,
@@ -801,6 +805,7 @@
 				D8895ED22835323C0079C2AA /* UserDataStore.swift in Sources */,
 				D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */,
 				D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
+				D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
 				D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */,
 				D8835FF9282FBE370048A495 /* MapPresenter.swift in Sources */,
 				D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */,
@@ -889,6 +894,7 @@
 				D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */,
 				D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
+				D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
