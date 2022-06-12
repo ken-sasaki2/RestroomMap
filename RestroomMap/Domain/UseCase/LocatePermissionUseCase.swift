@@ -8,29 +8,34 @@
 
 import SwiftUI
 
-protocol LocatePermissionUseCaseInterface {
+protocol LocatePermissionUseCaseInput {
     func getAuthorizationStatus()
     func openSettingPage()
 }
 
 
-final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
+protocol LocatePermissionPresenterOutput {
+    func statusDenied()
+    func successLocatePermission()
+    func failLocatePermission()
+}
+
+
+final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     private var locatePermissionRepository: LocatePermissionRepositoryInterface
     private let userRepository: UserRepositoryInterface
-    private let locatePermissionPresenter: LocatePermissionPresenterInterface
-    private let rootViewPresenter: RootViewPresenterInterface
+    private let output: LocatePermissionPresenterOutput
 
 
     init(
         locatePermissionRepository: LocatePermissionRepositoryInterface,
         userRepository: UserRepositoryInterface,
-        locatePermissionPresenter: LocatePermissionPresenterInterface,
-        rootViewPresenter: RootViewPresenterInterface
+        output: LocatePermissionPresenterOutput
+
     ) {
         self.locatePermissionRepository = locatePermissionRepository
         self.userRepository = userRepository
-        self.locatePermissionPresenter = locatePermissionPresenter
-        self.rootViewPresenter = rootViewPresenter
+        self.output = output
     }
 
 
@@ -47,9 +52,9 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
                 self.actionByAuthorizationStatus(status)
             }
         case .restricted:
-            locatePermissionPresenter.showDeniedAlert()
+            output.statusDenied()
         case .denied:
-            locatePermissionPresenter.showDeniedAlert()
+            output.statusDenied()
         case .authorizedAlways:
             startUpdatingLocation()
         case .authorizedWhenInUse:
@@ -79,11 +84,11 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
     func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
         userRepository.saveLocation(entity: entity)
-        rootViewPresenter.showATTPermissionView()
+        output.successLocatePermission()
     }
 
 
     func didFailWithError(_ repository: LocatePermissionRepository) {
-        locatePermissionPresenter.failLocatePermission()
+        output.failLocatePermission()
     }
 }
