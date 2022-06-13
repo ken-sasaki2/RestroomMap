@@ -8,7 +8,6 @@
 import XCTest
 
 class MenuPresenterTests: XCTestCase {
-    private let viewModel = MenuViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,6 +18,7 @@ class MenuPresenterTests: XCTestCase {
     }
 
     func test_showShareSheetView() throws {
+        let viewModel = MenuViewModel()
         let model = SharePostModel(shareText: TestConst.shareText, shareImage: TestConst.shareImage, shareUrl: TestConst.shareUrl)
 
         let presenter = MenuPresenter(viewModel: viewModel)
@@ -32,6 +32,7 @@ class MenuPresenterTests: XCTestCase {
 
 
     func test_showInquiryView() throws {
+        let viewModel = MenuViewModel()
         let presenter = MenuPresenter(viewModel: viewModel)
         presenter.showInquiryView()
 
