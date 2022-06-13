@@ -12,17 +12,7 @@ class MapUseCaseTests: XCTestCase {
     private let viewModel = MapViewModel()
 
     override func setUpWithError() throws {
-        useCase = MapUseCase(
-            presenter: MapPresenter(
-                viewModel: viewModel
-            ),
-            mapRepository: MapRepository(
-                dataStore: MapDataStore()
-            ),
-            locatePermissionRepository: LocatePermissionRepository(
-                dataStore: LocatePermissionDataStore()
-            )
-        )
+
     }
 
 

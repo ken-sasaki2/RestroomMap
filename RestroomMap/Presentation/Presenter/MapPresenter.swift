@@ -51,11 +51,11 @@ extension MapPresenter: MapUseCaseOutput {
 
 
 extension MapPresenter: IndicatorUseCaseOutput {
-    func showIndicatorView() {
+    func show() {
         viewModel.isShowIndicatorView = true
     }
 
-    func hideIndicatorView() {
+    func hide() {
         viewModel.isShowIndicatorView = false
     }
 }

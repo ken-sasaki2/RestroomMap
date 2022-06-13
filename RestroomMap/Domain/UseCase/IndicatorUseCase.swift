@@ -9,14 +9,14 @@ import Foundation
 
 
 protocol IndicatorUseCaseInput {
-    func showIndicator()
-    func hideIndicator()
+    func show()
+    func hide()
 }
 
 
 protocol IndicatorUseCaseOutput {
-    func showIndicatorView()
-    func hideIndicatorView()
+    func show()
+    func hide()
 }
 
 
@@ -29,12 +29,12 @@ final class IndicatorUseCase: IndicatorUseCaseInput {
     }
 
 
-    func showIndicator() {
-        indicatorOutput.showIndicatorView()
+    func show() {
+        indicatorOutput.show()
     }
 
 
-    func hideIndicator() {
-        indicatorOutput.hideIndicatorView()
+    func hide() {
+        indicatorOutput.hide()
     }
 }

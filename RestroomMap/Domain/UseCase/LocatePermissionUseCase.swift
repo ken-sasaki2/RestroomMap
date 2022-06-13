@@ -31,7 +31,6 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
         locatePermissionRepository: LocatePermissionRepositoryInterface,
         userRepository: UserRepositoryInterface,
         output: LocatePermissionUseCaseOutput
-
     ) {
         self.locatePermissionRepository = locatePermissionRepository
         self.userRepository = userRepository
@@ -41,15 +40,15 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
 
     func getAuthorizationStatus() {
         let status = locatePermissionRepository.getAuthorizationStatus()
-        actionByAuthorizationStatus(status)
+        actionPerStatus(status)
     }
 
 
-    private func actionByAuthorizationStatus(_ status: AuthorizationStatusEntity) {
+    private func actionPerStatus(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
             locatePermissionRepository.requestWhenInUse { status in
-                self.actionByAuthorizationStatus(status)
+                self.actionPerStatus(status)
             }
         case .restricted:
             output.statusDenied()

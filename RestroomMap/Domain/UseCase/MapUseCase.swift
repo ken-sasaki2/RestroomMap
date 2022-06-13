@@ -24,8 +24,6 @@ protocol MapUseCaseOutput {
     func showMenuView()
     func moveCurrentLocationPoint(model: CurrentLocationModel)
     func showLocationAlert()
-    func showIndicatorView()
-    func hideIndicatorView()
 }
 
 

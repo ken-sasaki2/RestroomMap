@@ -49,11 +49,11 @@ final class MapController {
 
 
     func showIndicatorView() {
-        indicatorUseCaseInput.showIndicator()
+        indicatorUseCaseInput.show()
     }
 
 
     func hideIndicatorView() {
-        indicatorUseCaseInput.hideIndicator()
+        indicatorUseCaseInput.hide()
     }
 }

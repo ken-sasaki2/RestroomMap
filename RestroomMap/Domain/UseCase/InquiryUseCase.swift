@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InquiryUseCaseInput {
-    func show()
+    func showInquiryView()
 }
 
 
@@ -26,7 +26,7 @@ final class InquiryUseCase: InquiryUseCaseInput {
     }
 
 
-    func show() {
+    func showInquiryView() {
         output.showInquiryView()
     }
 }
