@@ -17,11 +17,10 @@ class ATTPermissionPresenterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_doneATTPermission() throws {
-        let viewModel = ATTPermissionViewModel()
-        let presenter = ATTPermissionPresenter(viewModel: viewModel)
-        presenter.doneATTPermission()
-
-        XCTAssertEqual(viewModel.isDoneATTPermission, true)
+    func test_completeATTPermission() throws {
+        let shared = RootViewModel.shared
+        shared.changeRootView(rootView: .map)
+        let expect = shared.rootView
+        XCTAssertEqual(expect, .map)
     }
 }
