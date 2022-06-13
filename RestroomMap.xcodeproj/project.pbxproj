@@ -51,6 +51,7 @@
 		D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */; };
 		D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */; };
 		D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */; };
+		D84188CA2856C22B00CD2AFE /* LaunchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C92856C22B00CD2AFE /* LaunchPresenterTests.swift */; };
 		D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305D2829841A002DDFD2 /* RestroomMapApp.swift */; };
 		D84930602829841A002DDFD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D84930622829841B002DDFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84930612829841B002DDFD2 /* Assets.xcassets */; };
@@ -202,6 +203,7 @@
 		D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilderTests.swift; sourceTree = "<group>"; };
 		D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBuilderTests.swift; sourceTree = "<group>"; };
 		D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewBuilderTests.swift; sourceTree = "<group>"; };
+		D84188C92856C22B00CD2AFE /* LaunchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenterTests.swift; sourceTree = "<group>"; };
 		D849305A2829841A002DDFD2 /* RestroomMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestroomMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D849305D2829841A002DDFD2 /* RestroomMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapApp.swift; sourceTree = "<group>"; };
 		D849305F2829841A002DDFD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */,
 				D8176FEF2841D65100C674EA /* MapPresenterTests.swift */,
 				D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */,
+				D84188C92856C22B00CD2AFE /* LaunchPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -342,6 +345,13 @@
 				D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		D84188C82856B48700CD2AFE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		D84930512829841A002DDFD2 = {
@@ -394,6 +404,7 @@
 			children = (
 				D8176FF12841D92A00C674EA /* TestConst.swift */,
 				D84188BB285634D900CD2AFE /* Builder */,
+				D84188C82856B48700CD2AFE /* Mock */,
 				D8176FEC2841D3CA00C674EA /* Presentation */,
 				D849309A2829FDF4002DDFD2 /* Domain */,
 				D849309D2829FE12002DDFD2 /* Data */,
@@ -910,6 +921,7 @@
 				D87816852849FDC2009B9FB0 /* ATTPermissionView.swift in Sources */,
 				D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */,
 				D8A9EDBC2841E8BE0011E703 /* ATTPermissionController.swift in Sources */,
+				D84188CA2856C22B00CD2AFE /* LaunchPresenterTests.swift in Sources */,
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D8A9EDBB2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
