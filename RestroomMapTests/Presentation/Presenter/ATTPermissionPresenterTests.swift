@@ -20,7 +20,6 @@ class ATTPermissionPresenterTests: XCTestCase {
     func test_completeATTPermission() throws {
         let shared = RootViewModel.shared
         shared.changeRootView(rootView: .map)
-        let expect = shared.rootView
-        XCTAssertEqual(expect, .map)
+        XCTAssertEqual(shared.rootView, .map)
     }
 }
