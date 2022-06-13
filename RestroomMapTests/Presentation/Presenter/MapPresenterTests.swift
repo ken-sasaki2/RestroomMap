@@ -8,7 +8,6 @@
 import XCTest
 
 class MapPresenterTests: XCTestCase {
-    private let viewModel = MapViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,6 +18,7 @@ class MapPresenterTests: XCTestCase {
     }
 
     func test_showFocusView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.showFocusView()
 
@@ -27,6 +27,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_hideFocusView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.hideFocusView()
 
@@ -35,6 +36,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_showAddLocationView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.showAddLocationView()
 
@@ -43,6 +45,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_showMenuView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.showMenuView()
 
@@ -51,6 +54,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_moveCurrentLocationPoint() throws {
+        let viewModel = MapViewModel()
         let model = CurrentLocationModel(lat: TestConst.lat, lng: TestConst.lng)
 
         let presenter = MapPresenter(viewModel: viewModel)
@@ -62,6 +66,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_showLocationAlert() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.showLocationAlert()
 
@@ -70,6 +75,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_showIndicatorView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.showIndicatorView()
 
@@ -78,6 +84,7 @@ class MapPresenterTests: XCTestCase {
 
 
     func test_hideIndicatorView() throws {
+        let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
         presenter.hideIndicatorView()
 

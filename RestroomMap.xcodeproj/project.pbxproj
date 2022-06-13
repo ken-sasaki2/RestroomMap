@@ -308,10 +308,10 @@
 			isa = PBXGroup;
 			children = (
 				D81FC008284A4C7300C2CBEF /* ATTPermissionPresenterTests.swift */,
+				D84188C92856C22B00CD2AFE /* LaunchPresenterTests.swift */,
 				D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */,
 				D8176FEF2841D65100C674EA /* MapPresenterTests.swift */,
 				D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */,
-				D84188C92856C22B00CD2AFE /* LaunchPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -595,10 +595,10 @@
 			isa = PBXGroup;
 			children = (
 				D84188B82855FC9A00CD2AFE /* ATTPermissionPresenter.swift */,
+				D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */,
 				D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */,
 				D8835FF8282FBE370048A495 /* MapPresenter.swift */,
 				D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */,
-				D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
