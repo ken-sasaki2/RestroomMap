@@ -9,7 +9,6 @@ import Foundation
 
 protocol ATTPermissionUseCaseInput {
     func getAuthorizationStatus() async
-    func actionPerStatus(_ status: ATTAuthorizationStatusEntity) async
 }
 
 
