@@ -362,8 +362,9 @@
 		D84188C82856B48700CD2AFE /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				D8BAD89A285A06D300E2CA1D /* Presenter */,
-				D8BAD899285A06C800E2CA1D /* Domain */,
+				D8BAD8912859FD4100E2CA1D /* Output */,
+				D8BAD898285A06BF00E2CA1D /* UseCase */,
+				D8BAD895285A010800E2CA1D /* Repository */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -689,13 +690,13 @@
 			path = Indicator;
 			sourceTree = "<group>";
 		};
-		D8BAD8912859FD4100E2CA1D /* Presenter */ = {
+		D8BAD8912859FD4100E2CA1D /* Output */ = {
 			isa = PBXGroup;
 			children = (
 				D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */,
 				D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */,
 			);
-			name = Presenter;
+			name = Output;
 			sourceTree = "<group>";
 		};
 		D8BAD895285A010800E2CA1D /* Repository */ = {
@@ -712,23 +713,6 @@
 				D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */,
 			);
 			name = UseCase;
-			sourceTree = "<group>";
-		};
-		D8BAD899285A06C800E2CA1D /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				D8BAD898285A06BF00E2CA1D /* UseCase */,
-				D8BAD895285A010800E2CA1D /* Repository */,
-			);
-			name = Domain;
-			sourceTree = "<group>";
-		};
-		D8BAD89A285A06D300E2CA1D /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				D8BAD8912859FD4100E2CA1D /* Presenter */,
-			);
-			name = Presenter;
 			sourceTree = "<group>";
 		};
 		D8CE68F6283A85F800C1EFD7 /* Const */ = {
