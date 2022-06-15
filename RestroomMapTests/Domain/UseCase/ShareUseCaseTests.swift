@@ -12,7 +12,7 @@ class ShareUseCaseTests: XCTestCase {
     private let viewModel = MenuViewModel()
 
     override func setUpWithError() throws {
-        useCase = ShareUseCase(presenter: MenuPresenter(viewModel: viewModel))
+
     }
 
     override func tearDownWithError() throws {

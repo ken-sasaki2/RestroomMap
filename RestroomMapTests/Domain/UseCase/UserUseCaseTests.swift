@@ -11,7 +11,7 @@ class UserUseCaseTests: XCTestCase {
     private var useCase: UserUseCase?
 
     override func setUpWithError() throws {
-        useCase = UserUseCase(repository: UserRepository(dataStore: UserDataStore()), rootViewPresenter: RootViewPresenter())
+
     }
 
     override func tearDownWithError() throws {

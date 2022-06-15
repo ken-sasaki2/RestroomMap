@@ -9,6 +9,7 @@ import Foundation
 
 protocol ATTPermissionUseCaseInput {
     func getAuthorizationStatus() async
+    func actionPerStatus(_ status: ATTAuthorizationStatusEntity) async
 }
 
 
@@ -19,10 +20,10 @@ protocol ATTPermissionUseCaseOutput {
 
 final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
     private let output: ATTPermissionUseCaseOutput
-    private let repository: ATTPermissionRepository
+    private let repository: ATTPermissionRepositoryInterface
 
 
-    init(output: ATTPermissionUseCaseOutput, repository: ATTPermissionRepository) {
+    init(output: ATTPermissionUseCaseOutput, repository: ATTPermissionRepositoryInterface) {
         self.output = output
         self.repository = repository
     }
@@ -30,7 +31,11 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
 
     func getAuthorizationStatus() async {
         let status = repository.getAuthorizationStatus()
+        await actionPerStatus(status)
+    }
 
+
+    func actionPerStatus(_ status: ATTAuthorizationStatusEntity) async {
         if status == .notDetermined {
             await requestAuthorization()
         } else {
@@ -39,7 +44,7 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
     }
 
 
-    private func requestAuthorization() async {
+    func requestAuthorization() async {
         await repository.requestAuthorization()
         await getAuthorizationStatus()
     }
