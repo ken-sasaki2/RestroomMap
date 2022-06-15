@@ -128,6 +128,8 @@
 		D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */; };
 		D8BAD89F285A161700E2CA1D /* IndicatorUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */; };
 		D8BAD8A1285A165F00E2CA1D /* MockIndicatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */; };
+		D8BAD8A3285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8A2285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift */; };
+		D8BAD8A5285A1AB800E2CA1D /* InquiryUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8A4285A1AB800E2CA1D /* InquiryUseCaseTests.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -261,6 +263,8 @@
 		D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionUseCase.swift; sourceTree = "<group>"; };
 		D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorUseCaseTests.swift; sourceTree = "<group>"; };
 		D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIndicatorOutput.swift; sourceTree = "<group>"; };
+		D8BAD8A2285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInquiryUseCaseOutput.swift; sourceTree = "<group>"; };
+		D8BAD8A4285A1AB800E2CA1D /* InquiryUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryUseCaseTests.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -363,8 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				D8BAD8912859FD4100E2CA1D /* Output */,
-				D8BAD898285A06BF00E2CA1D /* UseCase */,
 				D8BAD895285A010800E2CA1D /* Repository */,
+				D8BAD898285A06BF00E2CA1D /* UseCase */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -654,10 +658,11 @@
 			isa = PBXGroup;
 			children = (
 				D824610E2857893B004AC989 /* ATTPermissionUseCaseTests.swift */,
+				D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */,
+				D8BAD8A4285A1AB800E2CA1D /* InquiryUseCaseTests.swift */,
 				D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */,
 				D811B098284B104F000CA523 /* ShareUseCaseTests.swift */,
 				D81FC010284A534400C2CBEF /* UserUseCaseTests.swift */,
-				D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 			children = (
 				D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */,
 				D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */,
+				D8BAD8A2285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift */,
 			);
 			name = Output;
 			sourceTree = "<group>";
@@ -943,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BAD8A5285A1AB800E2CA1D /* InquiryUseCaseTests.swift in Sources */,
 				D8A9EDBD2841E8C30011E703 /* ATTPermissionUseCase.swift in Sources */,
 				D81FC003284A102900C2CBEF /* IndicatorUseCase.swift in Sources */,
 				D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
@@ -979,6 +986,7 @@
 				D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
 				D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
+				D8BAD8A3285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D8BAD8A1285A165F00E2CA1D /* MockIndicatorOutput.swift in Sources */,
