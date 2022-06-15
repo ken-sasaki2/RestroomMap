@@ -16,8 +16,8 @@ protocol LocatePermissionRepositoryInterface {
 
 
 protocol LocatePermissionRepositoryDelegate: AnyObject {
-    func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity)
-    func didFailWithError(_ repository: LocatePermissionRepository)
+    func didUpdatedLocation(_ entity: CurrentLocationEntity)
+    func didFailWithError()
 }
 
 
@@ -52,12 +52,12 @@ final class LocatePermissionRepository: LocatePermissionRepositoryInterface {
 
 
 extension LocatePermissionRepository: LocatePermissionDataStoreDelegate {
-    func didUpdatedLocation(_ dataStore: LocatePermissionDataStore, entity: CurrentLocationEntity) {
-        delegate?.didUpdatedLocation(self, entity: entity)
+    func didUpdatedLocation(_ entity: CurrentLocationEntity) {
+        delegate?.didUpdatedLocation(entity)
     }
 
 
-    func didFailWithError(_ dataStore: LocatePermissionDataStore) {
-        delegate?.didFailWithError(self)
+    func didFailWithError() {
+        delegate?.didFailWithError()
     }
 }

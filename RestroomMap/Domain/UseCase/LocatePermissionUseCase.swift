@@ -44,7 +44,7 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     }
 
 
-    private func actionPerStatus(_ status: AuthorizationStatusEntity) {
+    func actionPerStatus(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
             locatePermissionRepository.requestWhenInUse { status in
@@ -64,7 +64,7 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     }
 
 
-    private func startUpdatingLocation() {
+    func startUpdatingLocation() {
         locatePermissionRepository.delegate = self
         locatePermissionRepository.startUpdatingLocation()
     }
@@ -81,13 +81,13 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
 
 
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
-    func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
+    func didUpdatedLocation(_ entity: CurrentLocationEntity) {
         userRepository.saveLocation(entity: entity)
         output.successLocatePermission()
     }
 
 
-    func didFailWithError(_ repository: LocatePermissionRepository) {
+    func didFailWithError() {
         output.failLocatePermission()
     }
 }
