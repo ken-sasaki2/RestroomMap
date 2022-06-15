@@ -38,12 +38,12 @@ final class ATTPermissionUseCaseTests: XCTestCase {
 
 
     func test_actionPerStatus_statusがnotDeterminedではない場合() async throws {
-        let presenter = MockATTPermissionPresenter()
+        let output = MockATTPermissionPresenter()
         let repository = MockATTPermissionRepository()
-        let useCase = ATTPermissionUseCase(output: presenter, repository: repository)
+        let useCase = ATTPermissionUseCase(output: output, repository: repository)
 
         await useCase.actionPerStatus(.authorized)
-        XCTAssertEqual(presenter.isCompleteATTPermissionCalled, true)
+        XCTAssertEqual(output.isCompleteATTPermissionCalled, true)
     }
 
 
