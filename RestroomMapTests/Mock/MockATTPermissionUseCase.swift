@@ -9,7 +9,7 @@ import Foundation
 
 final class MockATTPermissionUseCase: ATTPermissionUseCaseInput {
     let repository = MockATTPermissionRepository()
-    let output = MockATTPermissionPresenter()
+    let output = MockATTPermissionOutput()
 
 
     var isGetAuthorizationStatusCalled = false

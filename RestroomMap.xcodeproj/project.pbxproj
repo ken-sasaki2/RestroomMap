@@ -123,7 +123,7 @@
 		D8AF8C1E284654EC00533CC7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */; };
 		D8AF8C20284655CF00533CC7 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */; };
 		D8AF8C21284655CF00533CC7 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */; };
-		D8BAD8942859FD8D00E2CA1D /* MockATTPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8932859FD8D00E2CA1D /* MockATTPermissionPresenter.swift */; };
+		D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */; };
 		D8BAD897285A013500E2CA1D /* MockATTPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */; };
 		D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */; };
 		D8BAD89F285A161700E2CA1D /* IndicatorUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */; };
@@ -256,7 +256,7 @@
 		D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorUseCase.swift; sourceTree = "<group>"; };
 		D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
-		D8BAD8932859FD8D00E2CA1D /* MockATTPermissionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionPresenter.swift; sourceTree = "<group>"; };
+		D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionOutput.swift; sourceTree = "<group>"; };
 		D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionRepository.swift; sourceTree = "<group>"; };
 		D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionUseCase.swift; sourceTree = "<group>"; };
 		D8BAD89E285A161700E2CA1D /* IndicatorUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorUseCaseTests.swift; sourceTree = "<group>"; };
@@ -692,7 +692,7 @@
 		D8BAD8912859FD4100E2CA1D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D8BAD8932859FD8D00E2CA1D /* MockATTPermissionPresenter.swift */,
+				D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */,
 				D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */,
 			);
 			name = Presenter;
@@ -1032,7 +1032,7 @@
 				D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
 				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */,
-				D8BAD8942859FD8D00E2CA1D /* MockATTPermissionPresenter.swift in Sources */,
+				D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
 				D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
 				D8AF8C21284655CF00533CC7 /* LaunchPresenter.swift in Sources */,

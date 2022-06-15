@@ -38,7 +38,7 @@ final class ATTPermissionUseCaseTests: XCTestCase {
 
 
     func test_actionPerStatus_statusがnotDeterminedではない場合() async throws {
-        let output = MockATTPermissionPresenter()
+        let output = MockATTPermissionOutput()
         let repository = MockATTPermissionRepository()
         let useCase = ATTPermissionUseCase(output: output, repository: repository)
 
