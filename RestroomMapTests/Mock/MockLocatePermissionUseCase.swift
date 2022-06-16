@@ -22,22 +22,12 @@ final class MockLocatePermissionUseCase: LocatePermissionUseCaseInput {
     var isActionPerStatusCalled = false
     func actionPerStatus(_ status: AuthorizationStatusEntity) {
         isActionPerStatusCalled = true
-
-        if status == .authorizedAlways {
-            startUpdatingLocation()
-        }
-
-        if status == .authorizedWhenInUse {
-            startUpdatingLocation()
-        }
     }
 
 
     var isStartUpdatingLocationCalled = false
     func startUpdatingLocation() {
         isStartUpdatingLocationCalled = true
-
-        locatePermissionRepository.startUpdatingLocation()
     }
 
 

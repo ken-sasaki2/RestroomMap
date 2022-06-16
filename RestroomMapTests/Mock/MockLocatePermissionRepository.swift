@@ -9,19 +9,21 @@ import Foundation
 
 final class MockLocatePermissionRepository: LocatePermissionRepositoryInterface {
     var delegate: LocatePermissionRepositoryDelegate?
+    var entity: AuthorizationStatusEntity = .unknown
 
-
+    
     var isGetAuthorizationStatusCalled = false
     func getAuthorizationStatus() -> AuthorizationStatusEntity {
         isGetAuthorizationStatusCalled = true
 
-        return .authorizedWhenInUse
+        return entity
     }
 
 
     var isRequestWhenInUseCalled = false
     func requestWhenInUse(_ complication: @escaping (AuthorizationStatusEntity) -> Void) {
         isRequestWhenInUseCalled = true
+        complication(.restricted)
     }
 
 

@@ -722,7 +722,6 @@
 			children = (
 				D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */,
 				D8BAD8A8285A1C7200E2CA1D /* MockLocatePermissionRepository.swift */,
-				D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */,
 				D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */,
 			);
 			name = Repository;
@@ -732,6 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */,
+				D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";

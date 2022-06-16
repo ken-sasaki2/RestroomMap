@@ -17,13 +17,20 @@ final class LocatePermissionUseCaseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_getAuthorizationStatus() throws {
-        let useCase = MockLocatePermissionUseCase()
-        let repository = useCase.locatePermissionRepository
+    func test_startUpdatingLocationIfCan() throws {
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        locatePermissionRepository.entity = .restricted
+        let userRepository = MockUserRepository()
+        let output = MockLocatePermissionUseCaseOutput()
+        let useCase = LocatePermissionUseCase(
+            locatePermissionRepository: locatePermissionRepository,
+            userRepository: userRepository,
+            output: output
+        )
 
-        useCase.getAuthorizationStatus()
-        XCTAssertEqual(repository.isGetAuthorizationStatusCalled, true)
-        XCTAssertEqual(useCase.isActionPerStatusCalled, true)
+        useCase.startUpdatingLocationIfCan()
+        XCTAssertEqual(locatePermissionRepository.isGetAuthorizationStatusCalled, true)
+        XCTAssertEqual(output.isStatusDeniedCalled, true)
     }
 
 
@@ -39,6 +46,7 @@ final class LocatePermissionUseCaseTests: XCTestCase {
 
         useCase.actionPerStatus(.notDetermined)
         XCTAssertEqual(locatePermissionRepository.isRequestWhenInUseCalled, true)
+        XCTAssertEqual(output.isStatusDeniedCalled, true)
     }
 
 
@@ -73,34 +81,47 @@ final class LocatePermissionUseCaseTests: XCTestCase {
 
 
     func test_actionPerStatus_ステータスがauthorizedAlwaysの場合() {
-        let useCase = MockLocatePermissionUseCase()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let userRepository = MockUserRepository()
+        let output = MockLocatePermissionUseCaseOutput()
+        let useCase = LocatePermissionUseCase(
+            locatePermissionRepository: locatePermissionRepository,
+            userRepository: userRepository,
+            output: output
+        )
 
         useCase.actionPerStatus(.authorizedAlways)
-        XCTAssertEqual(useCase.isStartUpdatingLocationCalled, true)
+        XCTAssertEqual(locatePermissionRepository.isStartUpdatingLocationCalled, true)
     }
 
 
     func test_actionPerStatus_ステータスがauthorizedWhenInUseの場合() {
-        let useCase = MockLocatePermissionUseCase()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let userRepository = MockUserRepository()
+        let output = MockLocatePermissionUseCaseOutput()
+        let useCase = LocatePermissionUseCase(
+            locatePermissionRepository: locatePermissionRepository,
+            userRepository: userRepository,
+            output: output
+        )
 
         useCase.actionPerStatus(.authorizedWhenInUse)
-        XCTAssertEqual(useCase.isStartUpdatingLocationCalled, true)
+        XCTAssertEqual(locatePermissionRepository.isStartUpdatingLocationCalled, true)
     }
 
 
     func test_startUpdatingLocation() throws {
-        let useCase = MockLocatePermissionUseCase()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let userRepository = MockUserRepository()
+        let output = MockLocatePermissionUseCaseOutput()
+        let useCase = LocatePermissionUseCase(
+            locatePermissionRepository: locatePermissionRepository,
+            userRepository: userRepository,
+            output: output
+        )
 
         useCase.startUpdatingLocation()
-        XCTAssertEqual(useCase.isStartUpdatingLocationCalled, true)
-    }
-
-
-    func test_openSettingPage() throws {
-        let useCase = MockLocatePermissionUseCase()
-
-        useCase.openSettingPage()
-        XCTAssertEqual(useCase.isOpenSettingPageCaled, true)
+        XCTAssertEqual(locatePermissionRepository.isStartUpdatingLocationCalled, true)
     }
 
 
