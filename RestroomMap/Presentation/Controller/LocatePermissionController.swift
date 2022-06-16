@@ -17,7 +17,7 @@ final class LocatePermissionController {
 
 
     func onNextPageButtonTapped() {
-        useCaseInput.getAuthorizationStatus()
+        useCaseInput.startUpdatingLocationIfCan()
     }
 
 

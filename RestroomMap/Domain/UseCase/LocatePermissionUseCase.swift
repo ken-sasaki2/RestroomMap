@@ -9,7 +9,7 @@
 import SwiftUI
 
 protocol LocatePermissionUseCaseInput {
-    func getAuthorizationStatus()
+    func startUpdatingLocationIfCan()
     func openSettingPage()
 }
 
@@ -38,7 +38,7 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     }
 
 
-    func getAuthorizationStatus() {
+    func startUpdatingLocationIfCan() {
         let status = locatePermissionRepository.getAuthorizationStatus()
         actionPerStatus(status)
     }

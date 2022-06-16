@@ -13,12 +13,9 @@ final class MockLocatePermissionUseCase: LocatePermissionUseCaseInput {
     let output = MockLocatePermissionUseCaseOutput()
 
 
-    var isGetAuthorizationStatusCalled = false
-    func getAuthorizationStatus() {
-        isGetAuthorizationStatusCalled = true
-
-        let status = locatePermissionRepository.getAuthorizationStatus()
-        actionPerStatus(status)
+    var isStartUpdatingLocationIfCanCalled = false
+    func startUpdatingLocationIfCan() {
+        isStartUpdatingLocationIfCanCalled = true
     }
 
 
