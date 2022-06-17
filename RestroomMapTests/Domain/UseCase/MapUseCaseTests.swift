@@ -8,21 +8,9 @@
 import XCTest
 
 class MapUseCaseTests: XCTestCase {
-    private var useCase: MapUseCase?
-    private let viewModel = MapViewModel()
 
     override func setUpWithError() throws {
-        useCase = MapUseCase(
-            presenter: MapPresenter(
-                viewModel: viewModel
-            ),
-            mapRepository: MapRepository(
-                dataStore: MapDataStore()
-            ),
-            locatePermissionRepository: LocatePermissionRepository(
-                dataStore: LocatePermissionDataStore()
-            )
-        )
+
     }
 
 
@@ -31,36 +19,173 @@ class MapUseCaseTests: XCTestCase {
     }
 
 
-    func test_getAuthorizationStatusEntity() throws {
-        let status = useCase?.getAuthorizationStatusEntity()
-        XCTAssert(status != nil)
+    func test_showFocusView() throws {
+        let output = MockMapUseCaseOutput()
+        let mapRepository = MockMapRepository()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        useCase.showFocusView()
+        XCTAssertEqual(output.isShowFocusViewCalled, true)
     }
 
 
-    func test_validLocatePermission() throws {
-        XCTContext.runActivity(named: "notDeterminedの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .notDetermined)
-            XCTAssertEqual(result, false)
-        }
-        XCTContext.runActivity(named: "restrictedの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .restricted)
-            XCTAssertEqual(result, true)
-        }
-        XCTContext.runActivity(named: "deniedの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .denied)
-            XCTAssertEqual(result, false)
-        }
-        XCTContext.runActivity(named: "authorizedAlwaysの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .authorizedAlways)
-            XCTAssertEqual(result, true)
-        }
-        XCTContext.runActivity(named: "authorizedWhenInUseの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .authorizedWhenInUse)
-            XCTAssertEqual(result, true)
-        }
-        XCTContext.runActivity(named: "unknownの場合") { _ in
-            let result = useCase?.validLocatePermission(entity: .unknown)
-            XCTAssertEqual(result, true)
-        }
+    func test_hideFocusView() throws {
+        let output = MockMapUseCaseOutput()
+        let mapRepository = MockMapRepository()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        useCase.hideFocusView()
+        XCTAssertEqual(output.isHideFocusViewCalled, true)
+    }
+
+
+    func test_showAddLocationViewIfCan_validLocatePermissionの返り値がfalseの場合() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        locatePermissionRepository.entity = .notDetermined
+        useCase.showAddLocationViewIfCan()
+        XCTAssertEqual(output.isShowLocationAlertCalled, true)
+    }
+
+
+    func test_showAddLocationViewIfCan_validLocatePermissionの返り値がtrueの場合() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        locatePermissionRepository.entity = .authorizedWhenInUse
+        useCase.showAddLocationViewIfCan()
+        XCTAssertEqual(output.isShowAddLocationViewCalled, true)
+    }
+
+
+    func test_showMenuView() throws {
+        let output = MockMapUseCaseOutput()
+        let mapRepository = MockMapRepository()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        useCase.showMenuView()
+        XCTAssertEqual(output.isShowMenuViewCalled, true)
+    }
+
+
+    func test_getCurrentLocation() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        useCase.getCurrentLocation()
+        XCTAssertEqual(output.isMoveCurrentLocationPointCalled, true)
+    }
+
+
+    func test_moveCurrentLocationPointIfCan_validLocatePermissionの返り値がfalseの場合() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        locatePermissionRepository.entity = .notDetermined
+        let model = CurrentLocationModel(lat: TestConst.lat, lng: TestConst.lng)
+        useCase.moveCurrentLocationPointIfCan(model: model)
+        XCTAssertEqual(output.isShowLocationAlertCalled, true)
+    }
+
+
+    func test_moveCurrentLocationPointIfCan_validLocatePermissionの返り値がtrueの場合() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        locatePermissionRepository.entity = .authorizedWhenInUse
+        let model = CurrentLocationModel(lat: TestConst.lat, lng: TestConst.lng)
+        useCase.moveCurrentLocationPointIfCan(model: model)
+        XCTAssertEqual(output.isMoveCurrentLocationPointCalled, true)
+    }
+
+
+    func test_getAuthorizationStatusEntity() throws {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.getAuthorizationStatusEntity()
+        XCTAssertEqual(result, .unknown)
+    }
+
+
+    func test_validLocatePermission_entityがnotDeterminedの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .notDetermined)
+        XCTAssertEqual(result, false)
+    }
+
+
+    func test_validLocatePermission_entityがrestrictedの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .restricted)
+        XCTAssertEqual(result, true)
+    }
+
+
+    func test_validLocatePermission_entityがdeniedの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .denied)
+        XCTAssertEqual(result, false)
+    }
+
+
+    func test_validLocatePermission_entityがauthorizedAlwaysの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .authorizedAlways)
+        XCTAssertEqual(result, true)
+    }
+
+
+    func test_validLocatePermission_entityがauthorizedWhenInUseの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .authorizedWhenInUse)
+        XCTAssertEqual(result, true)
+    }
+
+
+    func test_validLocatePermission_entityがunknownの場合() {
+        let output = MockMapUseCaseOutput()
+        let locatePermissionRepository = MockLocatePermissionRepository()
+        let mapRepository = MockMapRepository()
+        let useCase = MapUseCase(output: output, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
+
+        let result = useCase.validLocatePermission(entity: .unknown)
+        XCTAssertEqual(result, true)
     }
 }

@@ -13,14 +13,11 @@ final class ApplicationBuilder {
     private init() {}
 
     func build() -> AppDelegateController {
-        let controller = AppDelegateController(
-            userUseCase: UserUseCase(
-                repository: UserRepository(
-                    dataStore: UserDataStore()
-                ),
-                rootViewPresenter: RootViewPresenter()
-            )
-        )
+        let presenter = LaunchPresenter()
+        let dataStore = UserDataStore()
+        let repository = UserRepository(dataStore: dataStore)
+        let useCase = UserUseCase(output: presenter, repository: repository)
+        let controller = AppDelegateController(userUseCaseInput: useCase)
 
         return controller
     }

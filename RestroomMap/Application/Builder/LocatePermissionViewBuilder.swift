@@ -13,25 +13,22 @@ final class LocatePermissionViewBuilder {
     private init() {}
 
     func build() -> LocatePermissionView {
-        let viewModel = LocatePermissionViewModel()
+        let locatePermissionDataStore = LocatePermissionDataStore()
+        let userDataStore = UserDataStore()
+        let locatePermissionRepository = LocatePermissionRepository(dataStore: locatePermissionDataStore)
+        let userRepository = UserRepository(dataStore: userDataStore)
 
-        let view = LocatePermissionView(
-            viewModel: viewModel,
-            controller: LocatePermissionController(
-                useCase: LocatePermissionUseCase(
-                    locatePermissionRepository: LocatePermissionRepository(
-                        dataStore: LocatePermissionDataStore()
-                    ),
-                    userRepository: UserRepository(
-                        dataStore: UserDataStore()
-                    ),
-                    locatePermissionPresenter: LocatePermissionPresenter(
-                        viewModel: viewModel
-                    ),
-                    rootViewPresenter: RootViewPresenter()
-                )
-            )
+        let viewModel = LocatePermissionViewModel()
+        let presenter = LocatePermissionPresenter(viewModel: viewModel)
+
+        let useCase = LocatePermissionUseCase(
+            locatePermissionRepository: locatePermissionRepository,
+            userRepository: userRepository,
+            output: presenter
         )
+
+        let controller = LocatePermissionController(useCaseInput: useCase)
+        let view = LocatePermissionView(viewModel: viewModel, controller: controller)
 
         return view
     }

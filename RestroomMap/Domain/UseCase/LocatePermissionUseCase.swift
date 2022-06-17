@@ -8,48 +8,52 @@
 
 import SwiftUI
 
-protocol LocatePermissionUseCaseInterface {
-    func getAuthorizationStatus()
+protocol LocatePermissionUseCaseInput {
+    func startUpdatingLocationIfCan()
     func openSettingPage()
 }
 
 
-final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
+protocol LocatePermissionUseCaseOutput {
+    func statusDenied()
+    func successLocatePermission()
+    func failLocatePermission()
+}
+
+
+final class LocatePermissionUseCase: LocatePermissionUseCaseInput {
     private var locatePermissionRepository: LocatePermissionRepositoryInterface
     private let userRepository: UserRepositoryInterface
-    private let locatePermissionPresenter: LocatePermissionPresenterInterface
-    private let rootViewPresenter: RootViewPresenterInterface
+    private let output: LocatePermissionUseCaseOutput
 
 
     init(
         locatePermissionRepository: LocatePermissionRepositoryInterface,
         userRepository: UserRepositoryInterface,
-        locatePermissionPresenter: LocatePermissionPresenterInterface,
-        rootViewPresenter: RootViewPresenterInterface
+        output: LocatePermissionUseCaseOutput
     ) {
         self.locatePermissionRepository = locatePermissionRepository
         self.userRepository = userRepository
-        self.locatePermissionPresenter = locatePermissionPresenter
-        self.rootViewPresenter = rootViewPresenter
+        self.output = output
     }
 
 
-    func getAuthorizationStatus() {
+    func startUpdatingLocationIfCan() {
         let status = locatePermissionRepository.getAuthorizationStatus()
-        actionByAuthorizationStatus(status)
+        actionPerStatus(status)
     }
 
 
-    private func actionByAuthorizationStatus(_ status: AuthorizationStatusEntity) {
+    func actionPerStatus(_ status: AuthorizationStatusEntity) {
         switch status {
         case .notDetermined:
             locatePermissionRepository.requestWhenInUse { status in
-                self.actionByAuthorizationStatus(status)
+                self.actionPerStatus(status)
             }
         case .restricted:
-            locatePermissionPresenter.showDeniedAlert()
+            output.statusDenied()
         case .denied:
-            locatePermissionPresenter.showDeniedAlert()
+            output.statusDenied()
         case .authorizedAlways:
             startUpdatingLocation()
         case .authorizedWhenInUse:
@@ -60,7 +64,7 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
     }
 
 
-    private func startUpdatingLocation() {
+    func startUpdatingLocation() {
         locatePermissionRepository.delegate = self
         locatePermissionRepository.startUpdatingLocation()
     }
@@ -77,13 +81,13 @@ final class LocatePermissionUseCase: LocatePermissionUseCaseInterface {
 
 
 extension LocatePermissionUseCase: LocatePermissionRepositoryDelegate {
-    func didUpdatedLocation(_ repository: LocatePermissionRepository, entity: CurrentLocationEntity) {
+    func didUpdatedLocation(_ entity: CurrentLocationEntity) {
         userRepository.saveLocation(entity: entity)
-        rootViewPresenter.showATTPermissionView()
+        output.successLocatePermission()
     }
 
 
-    func didFailWithError(_ repository: LocatePermissionRepository) {
-        locatePermissionPresenter.failLocatePermission()
+    func didFailWithError() {
+        output.failLocatePermission()
     }
 }

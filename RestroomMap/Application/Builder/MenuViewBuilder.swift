@@ -14,37 +14,23 @@ final class MenuViewBuilder {
 
     func build() -> MenuView {
         let viewModel = MenuViewModel()
+        let presenter = MenuPresenter(viewModel: viewModel)
 
-        let view = MenuView(
-            viewModel: viewModel,
-            controller: MenuController(
-                pinTypeUseCase: PinTypeUseCase(
-                    presenter: MenuPresenter(
-                        viewModel: viewModel
-                    )
-                ),
-                reviewUseCase: ReviewUseCase(
-                    presenter: MenuPresenter(
-                        viewModel: viewModel
-                    )
-                ),
-                shareUseCase: ShareUseCase(
-                    presenter: MenuPresenter(
-                        viewModel: viewModel
-                    )
-                ),
-                inquiryUseCase: InquiryUseCase(
-                    presenter: MenuPresenter(
-                        viewModel: viewModel
-                    )
-                ),
-                billingUseCase: BillingUseCase(
-                    presenter: MenuPresenter(
-                        viewModel: viewModel
-                    )
-                )
-            )
+        let pinTypeUseCaseInput = PinTypeUseCase(output: presenter)
+        let reviewUseCaseInput = ReviewUseCase()
+        let shareUseCaseInput = ShareUseCase(output: presenter)
+        let inquiryUseCaseInput = InquiryUseCase(output: presenter)
+        let billingUseCaseInput = BillingUseCase(output: presenter)
+
+        let controller = MenuController(
+            pinTypeUseCaseInput: pinTypeUseCaseInput,
+            reviewUseCaseInput: reviewUseCaseInput,
+            shareUseCaseInput: shareUseCaseInput,
+            inquiryUseCaseInput: inquiryUseCaseInput,
+            billingUseCaseInput: billingUseCaseInput
         )
+
+        let view = MenuView(viewModel: viewModel, controller: controller)
 
         return view
     }

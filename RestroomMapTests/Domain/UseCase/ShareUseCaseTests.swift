@@ -8,11 +8,9 @@
 import XCTest
 
 class ShareUseCaseTests: XCTestCase {
-    private var useCase: ShareUseCase?
-    private let viewModel = MenuViewModel()
 
     override func setUpWithError() throws {
-        useCase = ShareUseCase(presenter: MenuPresenter(viewModel: viewModel))
+
     }
 
     override func tearDownWithError() throws {
@@ -20,12 +18,11 @@ class ShareUseCaseTests: XCTestCase {
     }
 
     func test_showShareSheetView() throws {
+        let output = MockShareUseCaseOutput()
+        let useCase = ShareUseCase(output: output)
         let model = SharePostModel(shareText: TestConst.shareText, shareImage: TestConst.shareUrl, shareUrl: TestConst.shareUrl)
-        useCase?.showShareSheetView(model: model)
 
-        XCTAssertEqual(viewModel.isShowShareSheetView, true)
-        XCTAssertEqual(viewModel.shareText, model.shareText)
-        XCTAssertEqual(viewModel.shareImage, model.shareImage)
-        XCTAssertEqual(viewModel.shareUrl, model.shareUrl)
+        useCase.showShareSheetView(model: model)
+        XCTAssertEqual(output.isShowShareSheetViewCalled, true)
     }
 }

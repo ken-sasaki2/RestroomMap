@@ -9,17 +9,17 @@ import Foundation
 
 
 final class ATTPermissionController {
-    private let useCase: ATTPermissionUseCaseInterface
+    private let useCaseInput: ATTPermissionUseCaseInput
 
 
-    init(useCase: ATTPermissionUseCaseInterface) {
-        self.useCase = useCase
+    init(useCaseInput: ATTPermissionUseCaseInput) {
+        self.useCaseInput = useCaseInput
     }
 
 
     func onNextPegeButtonTapped() {
         Task {
-            await useCase.getAuthorizationStatus()
+            await useCaseInput.completeATTPermissionIfCan()
         }
     }
 }

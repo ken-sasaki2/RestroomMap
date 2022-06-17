@@ -7,27 +7,17 @@
 
 import Foundation
 
-protocol MapPresenterInterface {
-    func showFocusView()
-    func hideFocusView()
-    func showAddLocationView()
-    func showMenuView()
-    func moveCurrentLocationPoint(model: CurrentLocationModel)
-    func showLocationAlert()
-    func showIndicatorView()
-    func hideIndicatorView()
-}
 
-
-final class MapPresenter: MapPresenterInterface {
+final class MapPresenter {
     let viewModel: MapViewModel
-
 
     init(viewModel: MapViewModel) {
         self.viewModel = viewModel
     }
+}
 
 
+extension MapPresenter: MapUseCaseOutput {
     func showFocusView() {
         viewModel.isShowFocusView = true
     }
@@ -57,13 +47,15 @@ final class MapPresenter: MapPresenterInterface {
     func showLocationAlert() {
         viewModel.isShowLocationAlert = true
     }
+}
 
 
-    func showIndicatorView() {
+extension MapPresenter: IndicatorUseCaseOutput {
+    func show() {
         viewModel.isShowIndicatorView = true
     }
 
-    func hideIndicatorView() {
+    func hide() {
         viewModel.isShowIndicatorView = false
     }
 }

@@ -7,18 +7,12 @@
 
 import StoreKit
 
-protocol ReviewUseCaseInterface {
+protocol ReviewUseCaseInput {
     func requestReview()
 }
 
-final class ReviewUseCase: ReviewUseCaseInterface {
-    private let presenter: MenuPresenter
 
-
-    init(presenter: MenuPresenter) {
-        self.presenter = presenter
-    }
-
+final class ReviewUseCase: ReviewUseCaseInput {
 
     func requestReview() {
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {

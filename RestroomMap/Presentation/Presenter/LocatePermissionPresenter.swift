@@ -7,14 +7,8 @@
 
 import Foundation
 
-protocol LocatePermissionPresenterInterface {
-    func showDeniedAlert()
-    func doneLocatePermission()
-    func failLocatePermission()
-}
 
-
-final class LocatePermissionPresenter: LocatePermissionPresenterInterface {
+final class LocatePermissionPresenter: LocatePermissionUseCaseOutput {
     let viewModel: LocatePermissionViewModel
 
 
@@ -23,13 +17,13 @@ final class LocatePermissionPresenter: LocatePermissionPresenterInterface {
     }
 
 
-    func showDeniedAlert() {
+    func statusDenied() {
         viewModel.isShowDeniedAlert = true
     }
 
 
-    func doneLocatePermission() {
-        viewModel.isDoneLocatePermission = true
+    func successLocatePermission() {
+        RootViewModel.shared.changeRootView(rootView: .tracking)
     }
 
 

@@ -7,15 +7,20 @@
 
 import Foundation
 
-protocol BillingUseCaseInterface {
+protocol BillingUseCaseInput {
 
 }
 
 
-final class BillingUseCase: BillingUseCaseInterface {
-    private let presenter: MenuPresenter
+protocol BillingUseCaseOutput {
 
-    init(presenter: MenuPresenter) {
-        self.presenter = presenter
+}
+
+
+final class BillingUseCase: BillingUseCaseInput {
+    private let output: BillingUseCaseOutput
+
+    init(output: BillingUseCaseOutput) {
+        self.output = output
     }
 }

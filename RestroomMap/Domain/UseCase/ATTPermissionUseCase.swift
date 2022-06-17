@@ -7,35 +7,44 @@
 
 import Foundation
 
-
-protocol ATTPermissionUseCaseInterface {
-    func getAuthorizationStatus() async
+protocol ATTPermissionUseCaseInput {
+    func completeATTPermissionIfCan() async
 }
 
-final class ATTPermissionUseCase: ATTPermissionUseCaseInterface {
-    private let repository: ATTPermissionRepository
-    private let presenter: RootViewPresenterInterface
+
+protocol ATTPermissionUseCaseOutput {
+    func completeATTPermission()
+}
 
 
-    init(repository: ATTPermissionRepository, presenter: RootViewPresenterInterface) {
+final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
+    private let output: ATTPermissionUseCaseOutput
+    private let repository: ATTPermissionRepositoryInterface
+
+
+    init(output: ATTPermissionUseCaseOutput, repository: ATTPermissionRepositoryInterface) {
+        self.output = output
         self.repository = repository
-        self.presenter = presenter
     }
 
 
-    func getAuthorizationStatus() async {
+    func completeATTPermissionIfCan() async {
         let status = repository.getAuthorizationStatus()
+        await actionPerStatus(status)
+    }
 
+
+    func actionPerStatus(_ status: ATTAuthorizationStatusEntity) async {
         if status == .notDetermined {
             await requestAuthorization()
         } else {
-            presenter.showMapView()
+            output.completeATTPermission()
         }
     }
 
 
-    private func requestAuthorization() async {
+    func requestAuthorization() async {
         await repository.requestAuthorization()
-        await getAuthorizationStatus()
+        await completeATTPermissionIfCan()
     }
 }

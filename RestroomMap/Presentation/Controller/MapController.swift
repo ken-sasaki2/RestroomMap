@@ -8,30 +8,28 @@
 import Foundation
 
 final class MapController {
-    private let mapUseCase: MapUseCaseInterface
-    private let userUseCase: UserUseCaseInterface
-    private let indicatorUseCase: IndicatorUseCaseInterface
+    private let mapUseCaseInput: MapUseCaseInput
+    private let indicatorUseCaseInput: IndicatorUseCaseInput
 
 
-    init(mapUseCase: MapUseCaseInterface, userUseCase: UserUseCaseInterface, indicatorUseCase: IndicatorUseCaseInterface) {
-        self.mapUseCase = mapUseCase
-        self.userUseCase = userUseCase
-        self.indicatorUseCase = indicatorUseCase
+    init(mapUseCaseInput: MapUseCaseInput, indicatorUseCaseInput: IndicatorUseCaseInput) {
+        self.mapUseCaseInput = mapUseCaseInput
+        self.indicatorUseCaseInput = indicatorUseCaseInput
     }
 
 
     func onPlusButtonTapped() {
-        mapUseCase.showFocusView()
+        mapUseCaseInput.showFocusView()
     }
 
 
     func onCancelAddLocationButtonTapped() {
-        mapUseCase.hideFocusView()
+        mapUseCaseInput.hideFocusView()
     }
 
 
     func onAddLocationButtonTapped() {
-        mapUseCase.showAddLocationView()
+        mapUseCaseInput.showAddLocationViewIfCan()
     }
 
 
@@ -41,21 +39,21 @@ final class MapController {
 
 
     func onMenuButtonTapped() {
-        mapUseCase.showMenuView()
+        mapUseCaseInput.showMenuView()
     }
 
 
     func getCurrentLocation() {
-        mapUseCase.getCurrentLocation()
+        mapUseCaseInput.getCurrentLocation()
     }
 
 
     func showIndicatorView() {
-        indicatorUseCase.showIndicatorViewFromMapView()
+        indicatorUseCaseInput.show()
     }
 
 
     func hideIndicatorView() {
-        indicatorUseCase.hideIndicatorViewFromMapView()
+        indicatorUseCaseInput.hide()
     }
 }

@@ -8,19 +8,20 @@
 import Foundation
 
 final class LocatePermissionController {
-    private let useCase: LocatePermissionUseCaseInterface
+    private let useCaseInput: LocatePermissionUseCaseInput
 
-    init(useCase: LocatePermissionUseCaseInterface) {
-        self.useCase = useCase
+
+    init(useCaseInput: LocatePermissionUseCaseInput) {
+        self.useCaseInput = useCaseInput
     }
 
 
     func onNextPageButtonTapped() {
-        useCase.getAuthorizationStatus()
+        useCaseInput.startUpdatingLocationIfCan()
     }
 
 
     func onGoToSettingPageButtonTapped() {
-        useCase.openSettingPage()
+        useCaseInput.openSettingPage()
     }
 }

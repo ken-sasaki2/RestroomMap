@@ -8,7 +8,6 @@
 import XCTest
 
 class LocatePermissionPresenterTest: XCTestCase {
-    private let viewModel = LocatePermissionViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,26 +17,20 @@ class LocatePermissionPresenterTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_showDeniedAlert() throws {
+    func test_statusDenied() throws {
+        let viewModel = LocatePermissionViewModel()
         let presenter = LocatePermissionPresenter(viewModel: viewModel)
-        presenter.showDeniedAlert()
 
+        presenter.statusDenied()
         XCTAssertEqual(viewModel.isShowDeniedAlert, true)
     }
 
 
-    func test_doneLocatePermission() throws {
-        let presenter = LocatePermissionPresenter(viewModel: viewModel)
-        presenter.doneLocatePermission()
-
-        XCTAssertEqual(viewModel.isDoneLocatePermission, true)
-    }
-
-
     func test_failLocatePermission() throws {
+        let viewModel = LocatePermissionViewModel()
         let presenter = LocatePermissionPresenter(viewModel: viewModel)
-        presenter.failLocatePermission()
 
+        presenter.failLocatePermission()
         XCTAssertEqual(viewModel.isShowFailLocatePermissionAlert, true)
     }
 }

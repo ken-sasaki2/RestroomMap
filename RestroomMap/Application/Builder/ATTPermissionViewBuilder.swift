@@ -13,19 +13,12 @@ final class ATTPermissionViewBuilder {
     private init() {}
 
     func build() -> ATTPermissionView {
-        let viewModel = ATTPermissionViewModel()
-
-        let view = ATTPermissionView(
-            viewModel: viewModel,
-            controller: ATTPermissionController(
-                useCase: ATTPermissionUseCase(
-                    repository: ATTPermissionRepository(
-                        dataStore: ATTPermissionDataStore()
-                    ),
-                    presenter: RootViewPresenter()
-                )
-            )
-        )
+        let dataStore = ATTPermissionDataStore()
+        let repository = ATTPermissionRepository(dataStore: dataStore)
+        let presenter = ATTPermissionPresenter()
+        let useCase = ATTPermissionUseCase(output: presenter, repository: repository)
+        let controller = ATTPermissionController(useCaseInput: useCase)
+        let view = ATTPermissionView(controller: controller)
 
         return view
     }
