@@ -17,13 +17,13 @@ class UserDataStoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+
     func test_getLaunchCount() throws {
         let dataStore = UserDataStore()
         let expect = dataStore.userDefaults.launchCount + 1
 
         dataStore.saveLaunchCount()
         let result = dataStore.getLaunchCount()
-
         XCTAssertEqual(result.launchCount, expect)
     }
 }
