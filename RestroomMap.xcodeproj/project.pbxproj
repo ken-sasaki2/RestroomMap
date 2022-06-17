@@ -29,6 +29,7 @@
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
 		D836EF49285C21BE00A2D006 /* MockUserUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */; };
+		D836EF4B285C28DA00A2D006 /* MockShareUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */; };
 		D838A7992833248000047D52 /* LocatePermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A7982833248000047D52 /* LocatePermissionViewModel.swift */; };
 		D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */; };
 		D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */; };
@@ -205,6 +206,7 @@
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserUseCaseOutput.swift; sourceTree = "<group>"; };
+		D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareUseCaseOutput.swift; sourceTree = "<group>"; };
 		D838A7982833248000047D52 /* LocatePermissionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewModel.swift; sourceTree = "<group>"; };
 		D838A79A2833249500047D52 /* LocatePermissionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionPresenter.swift; sourceTree = "<group>"; };
 		D838A79D2833249D00047D52 /* LocatePermissionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatePermissionController.swift; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 				D8BAD8A2285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift */,
 				D8BAD8AC285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift */,
 				D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */,
+				D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */,
 			);
 			name = Output;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
 				D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
+				D836EF4B285C28DA00A2D006 /* MockShareUseCaseOutput.swift in Sources */,
 				D8BAD8A3285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
