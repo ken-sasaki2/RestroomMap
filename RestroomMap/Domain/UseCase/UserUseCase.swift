@@ -9,7 +9,6 @@ import Foundation
 
 
 protocol UserUseCaseInput {
-    func saveLocation()
     func getLaunchCount()
     func saveLaunchCount()
 }
@@ -28,11 +27,6 @@ final class UserUseCase: UserUseCaseInput {
     init(output: UserUseCaseOutput, repository: UserRepositoryInterface) {
         self.output = output
         self.repository = repository
-    }
-
-
-    func saveLocation() {
-        repository.saveLaunchCount()
     }
 
 

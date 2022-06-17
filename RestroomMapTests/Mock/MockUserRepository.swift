@@ -8,6 +8,8 @@
 import Foundation
 
 final class MockUserRepository: UserRepositoryInterface {
+    let entity = LaunchCountEntity(launchCount: 1)
+
 
     var isSaveLocationCalled = false
     func saveLocation(entity: CurrentLocationEntity) {
@@ -24,7 +26,6 @@ final class MockUserRepository: UserRepositoryInterface {
     var isGetLaunchCountCalled = false
     func getLaunchCount() -> LaunchCountEntity {
         isGetLaunchCountCalled = true
-        let entity = LaunchCountEntity(launchCount: 1)
 
         return entity
     }

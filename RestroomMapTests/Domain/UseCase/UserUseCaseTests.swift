@@ -19,18 +19,45 @@ class UserUseCaseTests: XCTestCase {
     }
 
 
-    func test_validFirstLaunch() throws {
-        XCTContext.runActivity(named: "launchCountが1の場合") { _ in
-            let entity = LaunchCountEntity(launchCount: 1)
-            let result = useCase?.validFirstLaunch(entity: entity)
+    func test_getLaunchCount() throws {
+        let output = MockUserUseCaseOutput()
+        let repository = MockUserRepository()
+        let useCase = UserUseCase(output: output, repository: repository)
 
-            XCTAssertEqual(result, true)
-        }
-        XCTContext.runActivity(named: "launchCountが1ではない場合") { _ in
-            let entity = LaunchCountEntity(launchCount: 2)
-            let result = useCase?.validFirstLaunch(entity: entity)
+        useCase.getLaunchCount()
+        XCTAssertEqual(repository.isGetLaunchCountCalled, true)
+        XCTAssertEqual(output.isShowLocatePermissionViewCalled, true)
+    }
 
-            XCTAssertEqual(result, false)
-        }
+
+    func test_saveLocation() throws {
+        let output = MockUserUseCaseOutput()
+        let repository = MockUserRepository()
+        let useCase = UserUseCase(output: output, repository: repository)
+
+        useCase.saveLaunchCount()
+        XCTAssertEqual(repository.isSaveLaunchCountCalled, true)
+    }
+
+
+    func test_validFirstLaunch_初回起動の場合() throws {
+        let output = MockUserUseCaseOutput()
+        let repository = MockUserRepository()
+        let useCase = UserUseCase(output: output, repository: repository)
+        let entity = LaunchCountEntity(launchCount: 1)
+
+        let result = useCase.validFirstLaunch(entity: entity)
+        XCTAssertEqual(result, true)
+    }
+
+
+    func test_validFirstLaunch_初回起動ではない場合() throws {
+        let output = MockUserUseCaseOutput()
+        let repository = MockUserRepository()
+        let useCase = UserUseCase(output: output, repository: repository)
+        let entity = LaunchCountEntity(launchCount: 2)
+
+        let result = useCase.validFirstLaunch(entity: entity)
+        XCTAssertEqual(result, false)
     }
 }
