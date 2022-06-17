@@ -26,13 +26,6 @@ class LocatePermissionPresenterTest: XCTestCase {
     }
 
 
-    func test_successLocatePermission() throws {
-        let shared = RootViewModel.shared
-        shared.changeRootView(rootView: .tracking)
-        XCTAssertEqual(shared.rootView, .tracking)
-    }
-
-
     func test_failLocatePermission() throws {
         let viewModel = LocatePermissionViewModel()
         let presenter = LocatePermissionPresenter(viewModel: viewModel)
