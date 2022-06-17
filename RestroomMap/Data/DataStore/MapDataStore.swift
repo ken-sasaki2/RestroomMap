@@ -13,7 +13,7 @@ protocol MapDataStoreInterface {
 
 
 final class MapDataStore: MapDataStoreInterface {
-    private let userDefaults = UserDefaultsEntity()
+    let userDefaults = UserDefaultsEntity()
 
 
     func getCurrentLocationEntity() -> CurrentLocationEntity {
