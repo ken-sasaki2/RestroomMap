@@ -8,19 +8,19 @@
 import Foundation
 
 final class AppDelegateController {
-    private let userUseCase: UserUseCaseInput
+    private let userUseCaseInput: UserUseCaseInput
 
-    init(userUseCase: UserUseCaseInput) {
-        self.userUseCase = userUseCase
+    init(userUseCaseInput: UserUseCaseInput) {
+        self.userUseCaseInput = userUseCaseInput
     }
 
 
     func saveLaunchCount() {
-        userUseCase.saveLaunchCount()
+        userUseCaseInput.saveLaunchCount()
     }
 
 
     func getLaunchCount() {
-        userUseCase.getLaunchCount()
+        userUseCaseInput.getLaunchCount()
     }
 }

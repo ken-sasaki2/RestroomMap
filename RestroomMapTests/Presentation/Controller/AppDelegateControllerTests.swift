@@ -20,7 +20,7 @@ class AppDelegateControllerTests: XCTestCase {
 
     func test_saveLaunchCount() throws {
         let useCase = MockUserUseCase()
-        let controller = AppDelegateController(userUseCase: useCase)
+        let controller = AppDelegateController(userUseCaseInput: useCase)
 
         controller.saveLaunchCount()
         XCTAssertEqual(useCase.isSaveLaunchCountCalled, true)
@@ -29,7 +29,7 @@ class AppDelegateControllerTests: XCTestCase {
 
     func test_getLaunchCount() throws {
         let useCase = MockUserUseCase()
-        let controller = AppDelegateController(userUseCase: useCase)
+        let controller = AppDelegateController(userUseCaseInput: useCase)
 
         controller.getLaunchCount()
         XCTAssertEqual(useCase.isGetLaunchCountCalled, true)

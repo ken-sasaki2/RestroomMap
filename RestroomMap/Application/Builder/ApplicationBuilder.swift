@@ -17,7 +17,7 @@ final class ApplicationBuilder {
         let dataStore = UserDataStore()
         let repository = UserRepository(dataStore: dataStore)
         let useCase = UserUseCase(output: presenter, repository: repository)
-        let controller = AppDelegateController(userUseCase: useCase)
+        let controller = AppDelegateController(userUseCaseInput: useCase)
 
         return controller
     }
