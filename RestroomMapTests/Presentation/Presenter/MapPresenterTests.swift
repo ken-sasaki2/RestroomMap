@@ -20,8 +20,8 @@ class MapPresenterTests: XCTestCase {
     func test_showFocusView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.showFocusView()
 
+        presenter.showFocusView()
         XCTAssertEqual(viewModel.isShowFocusView, true)
     }
 
@@ -29,8 +29,8 @@ class MapPresenterTests: XCTestCase {
     func test_hideFocusView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.hideFocusView()
 
+        presenter.hideFocusView()
         XCTAssertEqual(viewModel.isShowFocusView, false)
     }
 
@@ -38,8 +38,9 @@ class MapPresenterTests: XCTestCase {
     func test_showAddLocationView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.showAddLocationView()
 
+        presenter.showAddLocationView()
+        XCTAssertEqual(viewModel.isShowFocusView, false)
         XCTAssertEqual(viewModel.isShowAddLocationView, true)
     }
 
@@ -47,29 +48,28 @@ class MapPresenterTests: XCTestCase {
     func test_showMenuView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.showMenuView()
 
+        presenter.showMenuView()
         XCTAssertEqual(viewModel.isShowMenuView, true)
     }
 
 
     func test_moveCurrentLocationPoint() throws {
         let viewModel = MapViewModel()
-        let model = CurrentLocationModel(lat: TestConst.lat, lng: TestConst.lng)
-
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.moveCurrentLocationPoint(model: model)
 
-        XCTAssertEqual(viewModel.currentLocation.lat, model.lat)
-        XCTAssertEqual(viewModel.currentLocation.lng, model.lng)
+        let model = CurrentLocationModel(lat: TestConst.lat, lng: TestConst.lng)
+        presenter.moveCurrentLocationPoint(model: model)
+        XCTAssertEqual(viewModel.currentLocation.lat, 35.65139)
+        XCTAssertEqual(viewModel.currentLocation.lng, 139.63679)
     }
 
 
     func test_showLocationAlert() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.showLocationAlert()
 
+        presenter.showLocationAlert()
         XCTAssertEqual(viewModel.isShowLocationAlert, true)
     }
 
@@ -77,8 +77,8 @@ class MapPresenterTests: XCTestCase {
     func test_showIndicatorView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.show()
 
+        presenter.show()
         XCTAssertEqual(viewModel.isShowIndicatorView, true)
     }
 
@@ -86,8 +86,8 @@ class MapPresenterTests: XCTestCase {
     func test_hideIndicatorView() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
-        presenter.hide()
 
+        presenter.hide()
         XCTAssertEqual(viewModel.isShowIndicatorView, false)
     }
 }
