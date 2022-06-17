@@ -20,7 +20,7 @@ class ATTPermissionControllerTests: XCTestCase {
     func test_onNextPegeButtonTapped() throws {
         let useCase = MockATTPermissionUseCase()
         let controler = ATTPermissionController(useCaseInput: useCase)
-        
+
         Task {
             controler.onNextPegeButtonTapped()
             XCTAssertEqual(useCase.isCompleteATTPermissionIfCanCalled, true)
