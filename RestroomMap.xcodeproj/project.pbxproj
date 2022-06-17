@@ -156,6 +156,8 @@
 		D8C8136B285C670C00695401 /* MockATTPermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8136A285C670C00695401 /* MockATTPermissionDataStore.swift */; };
 		D8C8136D285C799700695401 /* LocatePermissionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */; };
 		D8C8136F285C7A4700695401 /* MockLocatePermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */; };
+		D8C81373285C9A0100695401 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81372285C9A0100695401 /* UserRepositoryTests.swift */; };
+		D8C81375285C9A5F00695401 /* MockUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81374285C9A5F00695401 /* MockUserDataStore.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -317,6 +319,8 @@
 		D8C8136A285C670C00695401 /* MockATTPermissionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionDataStore.swift; sourceTree = "<group>"; };
 		D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionRepositoryTests.swift; sourceTree = "<group>"; };
 		D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocatePermissionDataStore.swift; sourceTree = "<group>"; };
+		D8C81372285C9A0100695401 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
+		D8C81374285C9A5F00695401 /* MockUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDataStore.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -810,6 +814,7 @@
 			children = (
 				D8C81367285C662900695401 /* ATTPermissionRepositoryTests.swift */,
 				D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */,
+				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 			children = (
 				D8C8136A285C670C00695401 /* MockATTPermissionDataStore.swift */,
 				D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */,
+				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -1075,6 +1081,7 @@
 				D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */,
 				D8C81365285C610000695401 /* MockBillingUseCase.swift in Sources */,
 				D8835FFD282FBE640048A495 /* MapUseCase.swift in Sources */,
+				D8C81375285C9A5F00695401 /* MockUserDataStore.swift in Sources */,
 				D8C8135F285C60D900695401 /* MockReviewUseCase.swift in Sources */,
 				D85B0B6A2837720200E8062D /* MapDataStore.swift in Sources */,
 				D87816852849FDC2009B9FB0 /* ATTPermissionView.swift in Sources */,
@@ -1121,6 +1128,7 @@
 				D8C8134F285C51E400695401 /* ATTPermissionControllerTests.swift in Sources */,
 				D88360092830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D84188BF285635AF00CD2AFE /* AppDelegateController.swift in Sources */,
+				D8C81373285C9A0100695401 /* UserRepositoryTests.swift in Sources */,
 				D8BAD8AD285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift in Sources */,
 				D836EF4F285C3BBD00A2D006 /* MockMapRepository.swift in Sources */,
 				D8835FF7282FBE1D0048A495 /* MapViewModel.swift in Sources */,
