@@ -29,7 +29,7 @@ final class MapController {
 
 
     func onAddLocationButtonTapped() {
-        mapUseCaseInput.showAddLocationView()
+        mapUseCaseInput.showAddLocationViewIfCan()
     }
 
 

@@ -11,7 +11,7 @@ import Foundation
 protocol MapUseCaseInput {
     func showFocusView()
     func hideFocusView()
-    func showAddLocationView()
+    func showAddLocationViewIfCan()
     func showMenuView()
     func getCurrentLocation()
 }
@@ -54,7 +54,7 @@ final class MapUseCase: MapUseCaseInput {
     }
 
 
-    func showAddLocationView() {
+    func showAddLocationViewIfCan() {
         let entity = getAuthorizationStatusEntity()
 
         if !validLocatePermission(entity: entity) {
@@ -74,11 +74,11 @@ final class MapUseCase: MapUseCaseInput {
     func getCurrentLocation() {
         let entity = mapRepository.getCurrentLocationEntity()
         let model = CurrentLocationModelTranslator.translate(entity: entity)
-        moveCurrentLocationPoint(model: model)
+        moveCurrentLocationPointIfCan(model: model)
     }
 
 
-    private func moveCurrentLocationPoint(model: CurrentLocationModel) {
+    func moveCurrentLocationPointIfCan(model: CurrentLocationModel) {
         let entity = getAuthorizationStatusEntity()
 
         if !validLocatePermission(entity: entity) {
