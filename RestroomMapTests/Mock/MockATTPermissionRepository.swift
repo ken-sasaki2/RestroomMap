@@ -9,13 +9,14 @@ import Foundation
 
 
 final class MockATTPermissionRepository: ATTPermissionRepositoryInterface {
+    var entity: ATTAuthorizationStatusEntity = .authorized
     var isGetAuthorizationStatusCalled = false
     var isRequestAuthorizationCalled = false
 
 
     func getAuthorizationStatus() -> ATTAuthorizationStatusEntity {
         isGetAuthorizationStatusCalled = true
-        return .authorized
+        return entity
     }
 
 

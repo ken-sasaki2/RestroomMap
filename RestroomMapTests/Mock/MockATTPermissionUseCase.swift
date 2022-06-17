@@ -12,32 +12,20 @@ final class MockATTPermissionUseCase: ATTPermissionUseCaseInput {
     let output = MockATTPermissionOutput()
 
 
-    var isGetAuthorizationStatusCalled = false
-    func getAuthorizationStatus() async {
-        isGetAuthorizationStatusCalled = true
-
-        let status = repository.getAuthorizationStatus()
-        await actionPerStatus(status)
+    var isCompleteATTPermissionIfCanCalled = false
+    func completeATTPermissionIfCan() async {
+        isCompleteATTPermissionIfCanCalled = true
     }
 
 
     var isActionPerStatusCalled = false
     func actionPerStatus(_ status: ATTAuthorizationStatusEntity) async {
         isActionPerStatusCalled = true
-
-        if status == .notDetermined {
-            await requestAuthorization()
-        } else {
-            output.completeATTPermission()
-        }
     }
 
 
     var isRequestAuthorizationCalled = false
     func requestAuthorization() async {
         isRequestAuthorizationCalled = true
-
-        await repository.requestAuthorization()
-        await getAuthorizationStatus()
     }
 }

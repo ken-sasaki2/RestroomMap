@@ -19,7 +19,7 @@ final class ATTPermissionController {
 
     func onNextPegeButtonTapped() {
         Task {
-            await useCaseInput.getAuthorizationStatus()
+            await useCaseInput.completeATTPermissionIfCan()
         }
     }
 }

@@ -552,11 +552,11 @@
 		D84930912829FCCC002DDFD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D8E700312842E20B0046B391 /* AppDelegateController.swift */,
+				D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */,
 				D838A79D2833249D00047D52 /* LocatePermissionController.swift */,
 				D8835FF2282FBE020048A495 /* MapController.swift */,
 				D8CE68CC283794BC00C1EFD7 /* MenuController.swift */,
-				D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */,
-				D8E700312842E20B0046B391 /* AppDelegateController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

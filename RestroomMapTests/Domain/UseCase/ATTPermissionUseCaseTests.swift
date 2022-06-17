@@ -18,22 +18,25 @@ final class ATTPermissionUseCaseTests: XCTestCase {
     }
 
 
-    func test_getAuthorizationStatus() async throws {
-        let useCase = MockATTPermissionUseCase()
-        let repository = useCase.repository
+    func test_completeATTPermissionIfCan() async throws {
+        let output = MockATTPermissionOutput()
+        let repository = MockATTPermissionRepository()
+        let useCase = ATTPermissionUseCase(output: output, repository: repository)
 
-        await useCase.getAuthorizationStatus()
+        await useCase.completeATTPermissionIfCan()
         XCTAssertEqual(repository.isGetAuthorizationStatusCalled, true)
-        XCTAssertEqual(useCase.isActionPerStatusCalled, true)
+        XCTAssertEqual(output.isCompleteATTPermissionCalled, true)
     }
 
 
     func test_actionPerStatus_statusがnotDeterminedの場合() async throws {
-        let useCase = MockATTPermissionUseCase()
+        let output = MockATTPermissionOutput()
+        let repository = MockATTPermissionRepository()
+        let useCase = ATTPermissionUseCase(output: output, repository: repository)
 
         await useCase.actionPerStatus(.notDetermined)
-        XCTAssertEqual(useCase.isActionPerStatusCalled, true)
-        XCTAssertEqual(useCase.isRequestAuthorizationCalled, true)
+        XCTAssertEqual(repository.isRequestAuthorizationCalled, true)
+        XCTAssertEqual(output.isCompleteATTPermissionCalled, true)
     }
 
 
@@ -48,11 +51,12 @@ final class ATTPermissionUseCaseTests: XCTestCase {
 
 
     func test_requestAuthorization() async {
-        let useCase = MockATTPermissionUseCase()
-        let repository = useCase.repository
+        let output = MockATTPermissionOutput()
+        let repository = MockATTPermissionRepository()
+        let useCase = ATTPermissionUseCase(output: output, repository: repository)
 
         await useCase.requestAuthorization()
         XCTAssertEqual(repository.isRequestAuthorizationCalled, true)
-        XCTAssertEqual(useCase.isGetAuthorizationStatusCalled, true)
+        XCTAssertEqual(output.isCompleteATTPermissionCalled, true)
     }
 }

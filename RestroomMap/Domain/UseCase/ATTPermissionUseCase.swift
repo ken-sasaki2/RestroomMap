@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ATTPermissionUseCaseInput {
-    func getAuthorizationStatus() async
+    func completeATTPermissionIfCan() async
 }
 
 
@@ -28,7 +28,7 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
     }
 
 
-    func getAuthorizationStatus() async {
+    func completeATTPermissionIfCan() async {
         let status = repository.getAuthorizationStatus()
         await actionPerStatus(status)
     }
@@ -45,6 +45,6 @@ final class ATTPermissionUseCase: ATTPermissionUseCaseInput {
 
     func requestAuthorization() async {
         await repository.requestAuthorization()
-        await getAuthorizationStatus()
+        await completeATTPermissionIfCan()
     }
 }
