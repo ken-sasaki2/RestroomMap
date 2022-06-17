@@ -17,44 +17,25 @@ class LocatePermissionDataStoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+
     func test_getAuthorizationStatus() throws {
         let dataStore = LocatePermissionDataStore()
 
-        XCTContext.runActivity(named: "notDeterminedの場合") { _ in
-            dataStore.statusEntity = .notDetermined
-            let status = dataStore.getAuthorizationStatus()
+        dataStore.statusEntity = .authorizedAlways
+        let result = dataStore.getAuthorizationStatus()
+        XCTAssertEqual(result, .authorizedAlways)
+    }
 
-            XCTAssertEqual(status, .notDetermined)
-        }
-        XCTContext.runActivity(named: "restrictedの場合") { _ in
-            dataStore.statusEntity = .restricted
-            let status = dataStore.getAuthorizationStatus()
 
-            XCTAssertEqual(status, .restricted)
-        }
-        XCTContext.runActivity(named: "deniedの場合") { _ in
-            dataStore.statusEntity = .denied
-            let status = dataStore.getAuthorizationStatus()
+    func test_requestWhenInUse() throws {
+        let dataStore = LocatePermissionDataStore()
 
-            XCTAssertEqual(status, .denied)
-        }
-        XCTContext.runActivity(named: "authorizedAlwaysの場合") { _ in
-            dataStore.statusEntity = .authorizedAlways
-            let status = dataStore.getAuthorizationStatus()
+        let exp = XCTestExpectation(description: "wait async.")
 
-            XCTAssertEqual(status, .authorizedAlways)
+        dataStore.requestWhenInUse { _ in
+            XCTAssertNotNil(dataStore.callback)
+            exp.fulfill()
         }
-        XCTContext.runActivity(named: "authorizedWhenInUseの場合") { _ in
-            dataStore.statusEntity = .authorizedWhenInUse
-            let status = dataStore.getAuthorizationStatus()
-
-            XCTAssertEqual(status, .authorizedWhenInUse)
-        }
-        XCTContext.runActivity(named: "unknownの場合") { _ in
-            dataStore.statusEntity = .unknown
-            let status = dataStore.getAuthorizationStatus()
-
-            XCTAssertEqual(status, .unknown)
-        }
+        wait(for: [exp], timeout: 10.0)
     }
 }
