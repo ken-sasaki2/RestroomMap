@@ -15,10 +15,10 @@ protocol ATTPermissionRepositoryInterface {
 
 
 final class ATTPermissionRepository: ATTPermissionRepositoryInterface {
-    private let dataStore: ATTPermissionDataStore
+    private let dataStore: ATTPermissionDataStoreInterface
 
 
-    init(dataStore: ATTPermissionDataStore) {
+    init(dataStore: ATTPermissionDataStoreInterface) {
         self.dataStore = dataStore
     }
 
