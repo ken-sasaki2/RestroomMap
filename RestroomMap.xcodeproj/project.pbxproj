@@ -428,8 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				D8BAD8912859FD4100E2CA1D /* Output */,
-				D8BAD895285A010800E2CA1D /* Repository */,
 				D8BAD898285A06BF00E2CA1D /* UseCase */,
+				D8BAD895285A010800E2CA1D /* Repository */,
 				D8C81369285C66F300695401 /* DataStore */,
 			);
 			path = Mock;
@@ -818,8 +818,8 @@
 			children = (
 				D8C81367285C662900695401 /* ATTPermissionRepositoryTests.swift */,
 				D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */,
-				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
 				D8C81376285C9CB700695401 /* MapRepositoryTests.swift */,
+				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -829,8 +829,8 @@
 			children = (
 				D8C8136A285C670C00695401 /* MockATTPermissionDataStore.swift */,
 				D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */,
-				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
 				D8C81378285C9D2300695401 /* MockMapDataStore.swift */,
+				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
