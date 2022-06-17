@@ -29,6 +29,7 @@ final class MenuController {
         self.billingUseCaseInput = billingUseCaseInput
     }
 
+
     func onShareButtonTapped() {
         let model = SharePostModel(
             shareText: Const.shareText,
@@ -38,6 +39,7 @@ final class MenuController {
 
         shareUseCaseInput.showShareSheetView(model: model)
     }
+
 
     func onReviewButtontapped() {
         reviewUseCaseInput.requestReview()
