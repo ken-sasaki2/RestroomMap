@@ -139,6 +139,12 @@
 		D8BAD8AB285A1D9C00E2CA1D /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */; };
 		D8BAD8AD285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8AC285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift */; };
 		D8BAD8AF285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */; };
+		D8C8134D285C51A800695401 /* AppDelegateControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8134C285C51A800695401 /* AppDelegateControllerTests.swift */; };
+		D8C8134F285C51E400695401 /* ATTPermissionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8134E285C51E400695401 /* ATTPermissionControllerTests.swift */; };
+		D8C81351285C520100695401 /* LocatePermissionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81350285C520100695401 /* LocatePermissionControllerTests.swift */; };
+		D8C81353285C520F00695401 /* MapControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81352285C520F00695401 /* MapControllerTests.swift */; };
+		D8C81355285C521D00695401 /* MenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81354285C521D00695401 /* MenuControllerTests.swift */; };
+		D8C81357285C534500695401 /* MockUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81356285C534500695401 /* MockUserUseCase.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -283,6 +289,12 @@
 		D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		D8BAD8AC285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocatePermissionUseCaseOutput.swift; sourceTree = "<group>"; };
 		D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocatePermissionUseCase.swift; sourceTree = "<group>"; };
+		D8C8134C285C51A800695401 /* AppDelegateControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateControllerTests.swift; sourceTree = "<group>"; };
+		D8C8134E285C51E400695401 /* ATTPermissionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionControllerTests.swift; sourceTree = "<group>"; };
+		D8C81350285C520100695401 /* LocatePermissionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionControllerTests.swift; sourceTree = "<group>"; };
+		D8C81352285C520F00695401 /* MapControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapControllerTests.swift; sourceTree = "<group>"; };
+		D8C81354285C521D00695401 /* MenuControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuControllerTests.swift; sourceTree = "<group>"; };
+		D8C81356285C534500695401 /* MockUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserUseCase.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -333,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				D81FC00D284A511400C2CBEF /* ViewModel */,
+				D8C8134B285C515900695401 /* Controller */,
 				D81FC00C284A510000C2CBEF /* Presenter */,
 			);
 			path = Presentation;
@@ -744,8 +757,21 @@
 			children = (
 				D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */,
 				D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */,
+				D8C81356285C534500695401 /* MockUserUseCase.swift */,
 			);
 			name = UseCase;
+			sourceTree = "<group>";
+		};
+		D8C8134B285C515900695401 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8C8134C285C51A800695401 /* AppDelegateControllerTests.swift */,
+				D8C8134E285C51E400695401 /* ATTPermissionControllerTests.swift */,
+				D8C81350285C520100695401 /* LocatePermissionControllerTests.swift */,
+				D8C81352285C520F00695401 /* MapControllerTests.swift */,
+				D8C81354285C521D00695401 /* MenuControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D8CE68F6283A85F800C1EFD7 /* Const */ = {
@@ -983,6 +1009,7 @@
 				D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
 				D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */,
 				D8836000282FC5800048A495 /* MapViewBuilder.swift in Sources */,
+				D8C8134D285C51A800695401 /* AppDelegateControllerTests.swift in Sources */,
 				D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */,
 				D8835FF4282FBE020048A495 /* MapController.swift in Sources */,
 				D85B0B692837712900E8062D /* MapDataStoreTests.swift in Sources */,
@@ -1005,8 +1032,10 @@
 				D8A9EDBB2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
+				D8C81357285C534500695401 /* MockUserUseCase.swift in Sources */,
 				D84188BD285634F100CD2AFE /* ApplicationBuilderTests.swift in Sources */,
 				D8BAD8AB285A1D9C00E2CA1D /* MockUserRepository.swift in Sources */,
+				D8C81353285C520F00695401 /* MapControllerTests.swift in Sources */,
 				D8CE68F5283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
 				D85B0B71283772D800E8062D /* MapFocusView.swift in Sources */,
 				D8895ED32835323C0079C2AA /* UserDataStore.swift in Sources */,
@@ -1031,6 +1060,7 @@
 				D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */,
 				D81FC00F284A512600C2CBEF /* RootViewModelTests.swift in Sources */,
 				D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */,
+				D8C8134F285C51E400695401 /* ATTPermissionControllerTests.swift in Sources */,
 				D88360092830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D84188BF285635AF00CD2AFE /* AppDelegateController.swift in Sources */,
 				D8BAD8AD285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift in Sources */,
@@ -1040,6 +1070,7 @@
 				D8CE68EC283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D81FC011284A534400C2CBEF /* UserUseCaseTests.swift in Sources */,
+				D8C81355285C521D00695401 /* MenuControllerTests.swift in Sources */,
 				D81FC006284A10AD00C2CBEF /* IndicatorView.swift in Sources */,
 				D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */,
 				D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */,
@@ -1056,6 +1087,7 @@
 				D85B0B752837743C00E8062D /* CurrentLocationModelTranslatorTests.swift in Sources */,
 				D85B0B72283772E100E8062D /* MapFocusButtonView.swift in Sources */,
 				D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
+				D8C81351285C520100695401 /* LocatePermissionControllerTests.swift in Sources */,
 				D836EF4D285C3BA600A2D006 /* MockMapUseCaseOutput.swift in Sources */,
 				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */,
