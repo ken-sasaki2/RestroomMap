@@ -158,6 +158,8 @@
 		D8C81375285C9A5F00695401 /* MockUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81374285C9A5F00695401 /* MockUserDataStore.swift */; };
 		D8C81377285C9CB700695401 /* MapRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81376285C9CB700695401 /* MapRepositoryTests.swift */; };
 		D8C81379285C9D2300695401 /* MockMapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C81378285C9D2300695401 /* MockMapDataStore.swift */; };
+		D8C8137B285F247100695401 /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8137A285F247100695401 /* AddLocationController.swift */; };
+		D8C8137C285F247100695401 /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8137A285F247100695401 /* AddLocationController.swift */; };
 		D8CE68CD283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CC283794BC00C1EFD7 /* MenuController.swift */; };
 		D8CE68D0283794E500C1EFD7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */; };
@@ -321,6 +323,7 @@
 		D8C81374285C9A5F00695401 /* MockUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDataStore.swift; sourceTree = "<group>"; };
 		D8C81376285C9CB700695401 /* MapRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryTests.swift; sourceTree = "<group>"; };
 		D8C81378285C9D2300695401 /* MockMapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapDataStore.swift; sourceTree = "<group>"; };
+		D8C8137A285F247100695401 /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
 		D8CE68CC283794BC00C1EFD7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -603,6 +606,7 @@
 				D838A79D2833249D00047D52 /* LocatePermissionController.swift */,
 				D8835FF2282FBE020048A495 /* MapController.swift */,
 				D8CE68CC283794BC00C1EFD7 /* MenuController.swift */,
+				D8C8137A285F247100695401 /* AddLocationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1024,6 +1028,7 @@
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
 				D8AF8C1A2846347500533CC7 /* IndicatorView.swift in Sources */,
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
+				D8C8137B285F247100695401 /* AddLocationController.swift in Sources */,
 				D8CE68EB283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
 				D8A9EDBF2841EDCC0011E703 /* ATTPermissionRepository.swift in Sources */,
 				D8AF8C1C2846519400533CC7 /* IndicatorUseCase.swift in Sources */,
@@ -1117,6 +1122,7 @@
 				D8BAD8A1285A165F00E2CA1D /* MockIndicatorOutput.swift in Sources */,
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D88360062830BAC70048A495 /* LocatePermissionView.swift in Sources */,
+				D8C8137C285F247100695401 /* AddLocationController.swift in Sources */,
 				D8895ED6283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D84188BE285634FA00CD2AFE /* ApplicationBuilder.swift in Sources */,
 				D8BAD8AF285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift in Sources */,
