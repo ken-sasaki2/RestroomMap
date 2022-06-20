@@ -55,6 +55,7 @@
 		D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */; };
 		D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */; };
 		D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */; };
+		D84328482860683E003333EE /* CheckBoxButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84328472860683E003333EE /* CheckBoxButtonView.swift */; };
 		D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305D2829841A002DDFD2 /* RestroomMapApp.swift */; };
 		D84930602829841A002DDFD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849305F2829841A002DDFD2 /* MapView.swift */; };
 		D84930622829841B002DDFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84930612829841B002DDFD2 /* Assets.xcassets */; };
@@ -245,6 +246,7 @@
 		D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatePermissionViewBuilderTests.swift; sourceTree = "<group>"; };
 		D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBuilderTests.swift; sourceTree = "<group>"; };
 		D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewBuilderTests.swift; sourceTree = "<group>"; };
+		D84328472860683E003333EE /* CheckBoxButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButtonView.swift; sourceTree = "<group>"; };
 		D849305A2829841A002DDFD2 /* RestroomMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestroomMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D849305D2829841A002DDFD2 /* RestroomMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomMapApp.swift; sourceTree = "<group>"; };
 		D849305F2829841A002DDFD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -401,10 +403,11 @@
 		D8360620282EAA4100CDD7F0 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				D84328472860683E003333EE /* CheckBoxButtonView.swift */,
 				D8835FEC282FB59C0048A495 /* MapFocusButtonView.swift */,
 				D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */,
-				D88360072830BEAC0048A495 /* PermissionButtonView.swift */,
 				D8CE68D82838CA7700C1EFD7 /* MenuButtonView.swift */,
+				D88360072830BEAC0048A495 /* PermissionButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */,
 				D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D8CE68F4283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
+				D84328482860683E003333EE /* CheckBoxButtonView.swift in Sources */,
 				D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */,
 				D8A9EDC82841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
 				D8835FEF282FB9260048A495 /* MapFocusView.swift in Sources */,
