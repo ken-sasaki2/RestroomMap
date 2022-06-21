@@ -36,6 +36,8 @@
 		D822F45C28616526008D0B7F /* LocationRequestToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822F45A28616526008D0B7F /* LocationRequestToFirestore.swift */; };
 		D822F45E28616644008D0B7F /* LocationAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822F45D28616644008D0B7F /* LocationAddPresenter.swift */; };
 		D822F45F28616644008D0B7F /* LocationAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822F45D28616644008D0B7F /* LocationAddPresenter.swift */; };
+		D822F46228617E7C008D0B7F /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D822F46128617E7C008D0B7F /* GoogleService-Info-Debug.plist */; };
+		D822F46328617E7C008D0B7F /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D822F46128617E7C008D0B7F /* GoogleService-Info-Debug.plist */; };
 		D824610F2857893B004AC989 /* ATTPermissionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824610E2857893B004AC989 /* ATTPermissionUseCaseTests.swift */; };
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
@@ -244,6 +246,7 @@
 		D822F456286163CE008D0B7F /* LocationAddDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddDataStore.swift; sourceTree = "<group>"; };
 		D822F45A28616526008D0B7F /* LocationRequestToFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestToFirestore.swift; sourceTree = "<group>"; };
 		D822F45D28616644008D0B7F /* LocationAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenter.swift; sourceTree = "<group>"; };
+		D822F46128617E7C008D0B7F /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		D824610E2857893B004AC989 /* ATTPermissionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionUseCaseTests.swift; sourceTree = "<group>"; };
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
@@ -303,7 +306,6 @@
 		D8A9EDBE2841EDCC0011E703 /* ATTPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionRepository.swift; sourceTree = "<group>"; };
 		D8A9EDC12841EFC50011E703 /* ATTAuthorizationStatusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTAuthorizationStatusEntity.swift; sourceTree = "<group>"; };
 		D8A9EDC42841F6B20011E703 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
-		D8A9EDC62841F6D00011E703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewBuilder.swift; sourceTree = "<group>"; };
 		D8A9EDD028420A2F0011E703 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountEntity.swift; sourceTree = "<group>"; };
@@ -488,7 +490,6 @@
 		D849305C2829841A002DDFD2 /* RestroomMap */ = {
 			isa = PBXGroup;
 			children = (
-				D8A9EDC62841F6D00011E703 /* Info.plist */,
 				D84930952829FD47002DDFD2 /* Application */,
 				D849308C2829FC85002DDFD2 /* Presentation */,
 				D849308B2829FC82002DDFD2 /* Domain */,
@@ -731,6 +732,7 @@
 		D84930992829FDC1002DDFD2 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D822F46128617E7C008D0B7F /* GoogleService-Info-Debug.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -986,6 +988,7 @@
 			files = (
 				D84930652829841B002DDFD2 /* Preview Assets.xcassets in Resources */,
 				D84930622829841B002DDFD2 /* Assets.xcassets in Resources */,
+				D822F46228617E7C008D0B7F /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +996,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D822F46328617E7C008D0B7F /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1383,7 +1387,7 @@
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RestroomMap/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "本アプリで地点情報を利用するには、位置情報取得を許可する必要があります。";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "無関係な広告を表示されにくくします";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1417,7 +1421,7 @@
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RestroomMap/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "本アプリで地点情報を利用するには、位置情報取得を許可する必要があります。";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "無関係な広告を表示されにくくします";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
