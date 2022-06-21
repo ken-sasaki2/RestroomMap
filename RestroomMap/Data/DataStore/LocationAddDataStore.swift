@@ -16,8 +16,14 @@ protocol LocationAddDataStoreInterface {
 final class LocationAddDataStore: LocationAddDataStoreInterface {
     private let request = LocationRequestToFirestore()
 
-    
+
     func saveLocation(_ model: LocationAddInputModel) {
-        request.save(model)
+        Task {
+            do {
+                try await request.save(model)
+            } catch {
+
+            }
+        }
     }
 }

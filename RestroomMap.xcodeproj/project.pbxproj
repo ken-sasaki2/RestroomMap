@@ -123,6 +123,8 @@
 		D88B1AA92861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B1AA82861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift */; };
 		D88B1AAA2861C95A000F5C0D /* LocationAddViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D806CBDC286075C600EDBD18 /* LocationAddViewBuilder.swift */; };
 		D88B1AAB2861C960000F5C0D /* CheckBoxButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84328472860683E003333EE /* CheckBoxButtonView.swift */; };
+		D88B1AAD2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */; };
+		D88B1AAE2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */; };
 		D8A9EDB62841E6AA0011E703 /* ATTPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */; };
 		D8A9EDB82841E8370011E703 /* ATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */; };
 		D8A9EDBA2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */; };
@@ -305,6 +307,7 @@
 		D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEntity.swift; sourceTree = "<group>"; };
 		D8895ED7283536D20079C2AA /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D88B1AA82861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestToFirestoreTests.swift; sourceTree = "<group>"; };
+		D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionController.swift; sourceTree = "<group>"; };
 		D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionDataStore.swift; sourceTree = "<group>"; };
@@ -741,6 +744,7 @@
 		D84930992829FDC1002DDFD2 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -1022,6 +1026,7 @@
 			files = (
 				D84930652829841B002DDFD2 /* Preview Assets.xcassets in Resources */,
 				D84930622829841B002DDFD2 /* Assets.xcassets in Resources */,
+				D88B1AAD2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,6 +1034,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88B1AAE2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
