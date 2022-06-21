@@ -1,5 +1,5 @@
 //
-//  AddLocationView.swift
+//  LocationAddView.swift
 //  RestroomMap
 //
 //  Created by sasaki.ken on 2022/05/14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddLocationView: View {
+struct LocationAddView: View {
     @State private var name = ""
     @State private var isOpen24Hour = false
     @State private var openDate = Date()
@@ -25,6 +25,7 @@ struct AddLocationView: View {
     @State private var isPowderRoom = false
     @State private var isParking = false
     @State private var memo = ""
+    let controller: LocationAddController
 
     var body: some View {
         GeometryReader { geometry in
@@ -148,7 +149,7 @@ struct AddLocationView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("登録") {
-                            print("登録")
+                            controller.onAddButtonTapped(name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
                         }
                     }
                 }
@@ -158,8 +159,8 @@ struct AddLocationView: View {
     }
 }
 
-struct AddLocationView_Previews: PreviewProvider {
+struct LocationAddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddLocationView()
+        LocationAddViewBuilder.shared.build()
     }
 }

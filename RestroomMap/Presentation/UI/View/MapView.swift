@@ -59,7 +59,7 @@ struct MapView: View {
                         }
                     }
                     .sheet(isPresented: $viewModel.isShowAddLocationView) {
-                        AddLocationView()
+                        LocationAddViewBuilder.shared.build()
                     }
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()

@@ -14,6 +14,7 @@ protocol LocatePermissionDataStoreInterface {
     func startUpdatingLocation()
 }
 
+
 protocol LocatePermissionDataStoreDelegate: AnyObject {
     func didUpdatedLocation(_ entity: CurrentLocationEntity)
     func didFailWithError()
