@@ -10,8 +10,8 @@ import Foundation
 struct LocationAddInputModel {
     var name: String
     var isOpen24Hour: Bool
-    var openDate: Double
-    var closeDate: Double
+    var openDate: String
+    var closeDate: String
     var holiday: String?
     var isWesternStyle: Bool
     var isJapaneseStyle: Bool

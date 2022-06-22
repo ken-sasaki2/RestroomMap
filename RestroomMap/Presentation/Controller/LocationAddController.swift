@@ -18,11 +18,17 @@ final class LocationAddController {
 
     func onAddButtonTapped(name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?) {
 
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        formatter.timeZone = TimeZone.init(identifier: "Asia/Tokyo")
+        let open = formatter.string(from: openDate)
+        let close = formatter.string(from: closeDate)
+
         let model = LocationAddInputModel(
             name: name,
             isOpen24Hour: isOpen24Hour,
-            openDate: openDate.timeIntervalSince1970,
-            closeDate: closeDate.timeIntervalSince1970,
+            openDate: open,
+            closeDate: close,
             holiday: holiday,
             isWesternStyle: isWesternStyle,
             isJapaneseStyle: isJapaneseStyle,
