@@ -46,6 +46,8 @@ final class LocationAddController {
             memo: memo
         )
 
-        useCaseInput.saveLocation(model)
+        Task {
+            await useCaseInput.saveLocation(model)
+        }
     }
 }

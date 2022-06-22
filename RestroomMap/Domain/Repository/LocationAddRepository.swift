@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol LocationAddRepositoryInterface {
-    func saveLocation(_ model: LocationAddInputModel)
+    func saveLocation(_ model: LocationAddInputModel) async throws
 }
 
 
@@ -22,7 +22,11 @@ final class LocationAddRepository: LocationAddRepositoryInterface {
     }
 
 
-    func saveLocation(_ model: LocationAddInputModel) {
-        dataStore.saveLocation(model)
+    func saveLocation(_ model: LocationAddInputModel) async throws {
+        do {
+            try await dataStore.saveLocation(model)
+        } catch {
+            throw error
+        }
     }
 }

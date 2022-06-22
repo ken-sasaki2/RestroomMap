@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LocationAddUseCaseInput {
-    func saveLocation(_ model: LocationAddInputModel)
+    func saveLocation(_ model: LocationAddInputModel) async
 }
 
 
@@ -28,8 +28,15 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
     }
 
 
-    func saveLocation(_ model: LocationAddInputModel) {
-        repository.saveLocation(model)
+    func saveLocation(_ model: LocationAddInputModel) async {
+        do {
+            try await repository.saveLocation(model)
+            // call output
+            return
+        } catch {
+            // call output
+            return
+        }
     }
 
 }

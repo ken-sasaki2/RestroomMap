@@ -675,13 +675,12 @@
 				D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */,
 				D8CE68E12838CCB700C1EFD7 /* InquiryUseCase.swift */,
 				D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */,
+				D822F44F28616215008D0B7F /* LocationAddUseCase.swift */,
 				D8835FFB282FBE640048A495 /* MapUseCase.swift */,
 				D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */,
 				D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */,
 				D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */,
 				D8A9EDD028420A2F0011E703 /* UserUseCase.swift */,
-				D822F44F28616215008D0B7F /* LocationAddUseCase.swift */,
-				D822F4532861639A008D0B7F /* LocationAddRepository.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -691,8 +690,9 @@
 			children = (
 				D8A9EDBE2841EDCC0011E703 /* ATTPermissionRepository.swift */,
 				D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */,
-				D8895ED7283536D20079C2AA /* UserRepository.swift */,
+				D822F4532861639A008D0B7F /* LocationAddRepository.swift */,
 				D85B0B5F28375C2F00E8062D /* MapRepository.swift */,
+				D8895ED7283536D20079C2AA /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";

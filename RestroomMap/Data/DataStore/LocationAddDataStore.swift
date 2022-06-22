@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol LocationAddDataStoreInterface {
-    func saveLocation(_ model: LocationAddInputModel)
+    func saveLocation(_ model: LocationAddInputModel) async throws
 }
 
 
@@ -17,13 +17,11 @@ final class LocationAddDataStore: LocationAddDataStoreInterface {
     private let request = LocationRequestToFirestore()
 
 
-    func saveLocation(_ model: LocationAddInputModel) {
-        Task {
-            do {
-                try await request.save(model)
-            } catch {
-
-            }
+    func saveLocation(_ model: LocationAddInputModel) async throws {
+        do {
+            try await request.save(model)
+        } catch {
+            throw error
         }
     }
 }
