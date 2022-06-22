@@ -43,15 +43,17 @@ struct LocationAddView: View {
                                 isOpen24Hour.toggle()
                             }
                         }
-                        HStack {
-                            Text("開始時刻")
-                            Spacer()
-                            DatePicker("", selection: $openDate, displayedComponents: .hourAndMinute)
-                        }
-                        HStack {
-                            Text("終了時刻")
-                            Spacer()
-                            DatePicker("", selection: $closeDate, displayedComponents: .hourAndMinute)
+                        if !isOpen24Hour {
+                            HStack {
+                                Text("開始時刻")
+                                Spacer()
+                                DatePicker("", selection: $openDate, displayedComponents: .hourAndMinute)
+                            }
+                            HStack {
+                                Text("終了時刻")
+                                Spacer()
+                                DatePicker("", selection: $closeDate, displayedComponents: .hourAndMinute)
+                            }
                         }
                     }
                     Section("休業日") {
