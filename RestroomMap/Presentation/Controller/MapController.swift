@@ -48,12 +48,7 @@ final class MapController {
     }
 
 
-    func showIndicatorView() {
-        indicatorUseCaseInput.show()
-    }
-
-
-    func hideIndicatorView() {
-        indicatorUseCaseInput.hide()
+    func toggleIndicator() {
+        indicatorUseCaseInput.toggleIndicator()
     }
 }
