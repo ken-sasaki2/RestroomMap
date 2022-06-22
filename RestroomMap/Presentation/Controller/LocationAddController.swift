@@ -16,7 +16,7 @@ final class LocationAddController {
         self.useCaseInput = useCaseInput
     }
 
-    func onAddButtonTapped(name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?) {
+    func onAddButtonTapped(lat: Double, lng: Double, name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?) {
 
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
@@ -25,6 +25,8 @@ final class LocationAddController {
         let close = formatter.string(from: closeDate)
 
         let model = LocationAddInputModel(
+            lat: lat,
+            lng: lng,
             name: name,
             isOpen24Hour: isOpen24Hour,
             openDate: open,

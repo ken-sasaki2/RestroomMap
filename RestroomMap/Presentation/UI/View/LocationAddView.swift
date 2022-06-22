@@ -25,6 +25,8 @@ struct LocationAddView: View {
     @State private var isPowderRoom = false
     @State private var isParking = false
     @State private var memo = ""
+    let lat: Double
+    let lng: Double
     let controller: LocationAddController
 
     var body: some View {
@@ -149,7 +151,7 @@ struct LocationAddView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("登録") {
-                            controller.onAddButtonTapped(name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
+                            controller.onAddButtonTapped(lat: lat, lng: lng, name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
                         }
                     }
                 }
@@ -161,6 +163,6 @@ struct LocationAddView: View {
 
 struct LocationAddView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationAddViewBuilder.shared.build()
+        LocationAddViewBuilder.shared.build(lat: 35.65139, lng: 139.63679)
     }
 }

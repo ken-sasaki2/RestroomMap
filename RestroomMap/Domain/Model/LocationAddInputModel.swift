@@ -8,6 +8,8 @@
 import Foundation
 
 struct LocationAddInputModel {
+    var lat: Double
+    var lng: Double
     var name: String
     var isOpen24Hour: Bool
     var openDate: String
