@@ -10,10 +10,12 @@ import Foundation
 
 final class LocationAddController {
     private let useCaseInput: LocationAddUseCaseInput
+    private let indicatorUseCaseInput: IndicatorUseCaseInput
 
 
-    init(useCaseInput: LocationAddUseCaseInput) {
+    init(useCaseInput: LocationAddUseCaseInput, indicatorUseCaseInput: IndicatorUseCaseInput) {
         self.useCaseInput = useCaseInput
+        self.indicatorUseCaseInput = indicatorUseCaseInput
     }
 
     func onAddButtonTapped(lat: Double, lng: Double, name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?) {
@@ -50,4 +52,13 @@ final class LocationAddController {
             await useCaseInput.saveLocation(model)
         }
     }
+
+
+    func showIndicator() {
+        indicatorUseCaseInput.toggleIndicator()
+    }
 }
+
+// 登録ボタンタップでIndicator表示
+// 登録完了でモーダル閉じる
+// テスト書く

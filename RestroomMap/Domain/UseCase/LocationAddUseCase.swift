@@ -13,7 +13,8 @@ protocol LocationAddUseCaseInput {
 
 
 protocol LocationAddUseCaseOutput {
-
+    func successSaveLocation()
+    func failSaveLocation()
 }
 
 
@@ -31,10 +32,10 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
     func saveLocation(_ model: LocationAddInputModel) async {
         do {
             try await repository.saveLocation(model)
-            // call output
+            output.successSaveLocation()
             return
         } catch {
-            // call output
+            output.failSaveLocation()
             return
         }
     }

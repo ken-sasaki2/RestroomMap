@@ -8,5 +8,27 @@
 import Foundation
 
 final class LocationAddPresenter: LocationAddUseCaseOutput {
+    private let viewModel: LocationAddViewModel
 
+
+    init(viewModel: LocationAddViewModel) {
+        self.viewModel = viewModel
+    }
+
+
+    func successSaveLocation() {
+        toggleIndicator()
+    }
+
+
+    func failSaveLocation() {
+        toggleIndicator()
+    }
+}
+
+
+extension LocationAddPresenter: IndicatorUseCaseOutput {
+    func toggleIndicator() {
+        viewModel.isShowIndicatorView.toggle()
+    }
 }

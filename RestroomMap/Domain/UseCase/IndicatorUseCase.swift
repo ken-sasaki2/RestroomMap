@@ -9,32 +9,25 @@ import Foundation
 
 
 protocol IndicatorUseCaseInput {
-    func show()
-    func hide()
+    func toggleIndicator()
 }
 
 
 protocol IndicatorUseCaseOutput {
-    func show()
-    func hide()
+    func toggleIndicator()
 }
 
 
 final class IndicatorUseCase: IndicatorUseCaseInput {
-    private let indicatorOutput: IndicatorUseCaseOutput
+    private let output: IndicatorUseCaseOutput
 
 
-    init(indicatorOutput: IndicatorUseCaseOutput) {
-        self.indicatorOutput = indicatorOutput
+    init(output: IndicatorUseCaseOutput) {
+        self.output = output
     }
 
 
-    func show() {
-        indicatorOutput.show()
-    }
-
-
-    func hide() {
-        indicatorOutput.hide()
+    func toggleIndicator() {
+        output.toggleIndicator()
     }
 }

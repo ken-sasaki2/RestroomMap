@@ -15,10 +15,13 @@ final class LocationAddViewBuilder {
     func build(lat: Double, lng: Double) -> LocationAddView {
         let dataStore = LocationAddDataStore()
         let repository = LocationAddRepository(dataStore: dataStore)
-        let presenter = LocationAddPresenter()
+
+        let viewModel = LocationAddViewModel()
+        let presenter = LocationAddPresenter(viewModel: viewModel)
         let useCase = LocationAddUseCase(repository: repository, output: presenter)
-        let controller = LocationAddController(useCaseInput: useCase)
-        let view = LocationAddView(lat: lat, lng: lng, controller: controller)
+        let indicatorUseCase = IndicatorUseCase(output: presenter)
+        let controller = LocationAddController(useCaseInput: useCase, indicatorUseCaseInput: indicatorUseCase)
+        let view = LocationAddView(lat: lat, lng: lng, controller: controller, viewModel: viewModel)
 
         return view
     }

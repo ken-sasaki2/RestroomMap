@@ -28,6 +28,7 @@ struct LocationAddView: View {
     let lat: Double
     let lng: Double
     let controller: LocationAddController
+    @ObservedObject var viewModel: LocationAddViewModel
 
     var body: some View {
         GeometryReader { geometry in
@@ -153,12 +154,18 @@ struct LocationAddView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("登録") {
+                            controller.showIndicator()
                             controller.onAddButtonTapped(lat: lat, lng: lng, name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
                         }
                     }
                 }
             }
             .environment(\.locale, Locale(identifier: "ja_JP"))
+            if viewModel.isShowIndicatorView {
+                withAnimation {
+                    IndicatorView()
+                }
+            }
         }
     }
 }
