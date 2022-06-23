@@ -10,4 +10,7 @@ import Foundation
 
 final class LocationAddViewModel: ObservableObject {
     @Published var isShowIndicatorView = false
+    @Published var isShowSuccessSaveLocationAlert = false
+    @Published var isShowFailSaveLocationAlert = false
+    @Published var isShowInValidLocationNameAlert = false
 }

@@ -18,11 +18,19 @@ final class LocationAddPresenter: LocationAddUseCaseOutput {
 
     func successSaveLocation() {
         toggleIndicator()
+        viewModel.isShowSuccessSaveLocationAlert = true
     }
 
 
     func failSaveLocation() {
         toggleIndicator()
+        viewModel.isShowFailSaveLocationAlert = true
+    }
+
+
+    func inValidLocationName() {
+        toggleIndicator()
+        viewModel.isShowInValidLocationNameAlert = true
     }
 }
 

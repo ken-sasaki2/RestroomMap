@@ -59,6 +59,5 @@ final class LocationAddController {
     }
 }
 
-// 登録ボタンタップでIndicator表示
-// 登録完了でモーダル閉じる
+// エラー内容をErrorCodeで返す
 // テスト書く

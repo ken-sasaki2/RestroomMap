@@ -170,6 +170,27 @@ struct LocationAddView: View {
                     }
                 }
             }
+            .alert("完了", isPresented: $viewModel.isShowSuccessSaveLocationAlert) {
+                Button("OK") {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            } message: {
+                Text("トイレ情報の保存に成功しました！\nマップに戻ります。")
+            }
+            .alert("失敗", isPresented: $viewModel.isShowFailSaveLocationAlert) {
+                Button("OK") {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            } message: {
+                Text("トイレ情報の保存に失敗しました。\n時間を空けてから再度お試しください。")
+            }
+            .alert("確認", isPresented: $viewModel.isShowInValidLocationNameAlert) {
+                Button("やり直す") {
+                    name = ""
+                }
+            } message: {
+                Text("トイレの名前は\n2文字以上入力してください")
+            }
             .environment(\.locale, Locale(identifier: "ja_JP"))
             .interactiveDismissDisabled()
             if viewModel.isShowIndicatorView {
