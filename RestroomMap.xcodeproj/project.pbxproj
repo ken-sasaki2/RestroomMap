@@ -573,9 +573,9 @@
 			children = (
 				D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */,
 				D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */,
+				D822F456286163CE008D0B7F /* LocationAddDataStore.swift */,
 				D85B0B6128375D6900E8062D /* MapDataStore.swift */,
 				D8895ED12835323C0079C2AA /* UserDataStore.swift */,
-				D822F456286163CE008D0B7F /* LocationAddDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -640,10 +640,10 @@
 			isa = PBXGroup;
 			children = (
 				D838A7982833248000047D52 /* LocatePermissionViewModel.swift */,
+				D88A663D2863C285003271A3 /* LocationAddViewModel.swift */,
 				D8835FF5282FBE1D0048A495 /* MapViewModel.swift */,
 				D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */,
 				D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */,
-				D88A663D2863C285003271A3 /* LocationAddViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

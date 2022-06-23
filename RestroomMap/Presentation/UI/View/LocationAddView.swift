@@ -29,6 +29,7 @@ struct LocationAddView: View {
     let lng: Double
     let controller: LocationAddController
     @ObservedObject var viewModel: LocationAddViewModel
+    @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
         GeometryReader { geometry in
@@ -157,10 +158,20 @@ struct LocationAddView: View {
                             controller.showIndicator()
                             controller.onAddButtonTapped(lat: lat, lng: lng, name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
                         }
+                        .foregroundColor(.black)
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .foregroundColor(.black)
+                        }
                     }
                 }
             }
             .environment(\.locale, Locale(identifier: "ja_JP"))
+            .interactiveDismissDisabled()
             if viewModel.isShowIndicatorView {
                 withAnimation {
                     IndicatorView()
