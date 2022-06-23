@@ -15,6 +15,7 @@ protocol LocationAddUseCaseInput {
 protocol LocationAddUseCaseOutput {
     func successSaveLocation()
     func failSaveLocation()
+    func inValidLocationName()
 }
 
 
@@ -31,6 +32,11 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
 
     func saveLocation(_ model: LocationAddInputModel) async {
         do {
+            if !validLocationName(model.name) {
+                output.inValidLocationName()
+                return
+            }
+
             try await repository.saveLocation(model)
             output.successSaveLocation()
             return
@@ -40,4 +46,14 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
         }
     }
 
+
+    func validLocationName(_ name: String) -> Bool {
+        let isMin = name.count < 2
+
+        if isMin {
+            return false
+        } else {
+            return true
+        }
+    }
 }
