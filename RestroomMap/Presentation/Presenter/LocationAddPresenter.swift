@@ -16,21 +16,21 @@ final class LocationAddPresenter: LocationAddUseCaseOutput {
     }
 
 
-    func successSaveLocation() {
+    func successAddLocation() {
         toggleIndicator()
         viewModel.isShowSuccessSaveLocationAlert = true
     }
 
 
-    func failSaveLocation() {
+    func failAddLocation(_ status: FailAddLocationStatus) {
         toggleIndicator()
-        viewModel.isShowFailSaveLocationAlert = true
-    }
 
-
-    func inValidLocationName() {
-        toggleIndicator()
-        viewModel.isShowInValidLocationNameAlert = true
+        switch status {
+        case .error:
+            viewModel.isShowFailSaveLocationAlert = true
+        case .inValidName:
+            viewModel.isShowInValidLocationNameAlert = true
+        }
     }
 }
 

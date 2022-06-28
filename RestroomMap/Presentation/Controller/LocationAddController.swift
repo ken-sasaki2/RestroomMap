@@ -49,7 +49,7 @@ final class LocationAddController {
         )
 
         Task {
-            await useCaseInput.saveLocation(model)
+            await useCaseInput.addLocation(model)
         }
     }
 
@@ -58,6 +58,3 @@ final class LocationAddController {
         indicatorUseCaseInput.toggleIndicator()
     }
 }
-
-// エラー内容をErrorCodeで返す
-// テスト書く

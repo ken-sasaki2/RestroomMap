@@ -127,6 +127,8 @@
 		D88B1AAB2861C960000F5C0D /* CheckBoxButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84328472860683E003333EE /* CheckBoxButtonView.swift */; };
 		D88B1AAD2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */; };
 		D88B1AAE2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */; };
+		D8A5A347286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */; };
+		D8A5A348286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */; };
 		D8A9EDB62841E6AA0011E703 /* ATTPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */; };
 		D8A9EDB82841E8370011E703 /* ATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */; };
 		D8A9EDBA2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */; };
@@ -311,6 +313,7 @@
 		D88A663D2863C285003271A3 /* LocationAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddViewModel.swift; sourceTree = "<group>"; };
 		D88B1AA82861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestToFirestoreTests.swift; sourceTree = "<group>"; };
 		D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
+		D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAddLocationStatus.swift; sourceTree = "<group>"; };
 		D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionController.swift; sourceTree = "<group>"; };
 		D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionDataStore.swift; sourceTree = "<group>"; };
@@ -664,6 +667,7 @@
 		D84930922829FCDC002DDFD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D8A5A345286B00E20056CD2B /* Status */,
 				D85B0B63283767F300E8062D /* CurrentLocationModel.swift */,
 				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
 				D822F44D28616119008D0B7F /* LocationAddInputModel.swift */,
@@ -819,6 +823,14 @@
 				D88B1AA82861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D8A5A345286B00E20056CD2B /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */,
+			);
+			path = Status;
 			sourceTree = "<group>";
 		};
 		D8AF8C182846345800533CC7 /* Indicator */ = {
@@ -1126,6 +1138,7 @@
 				D8895ED5283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D8CE68EE283A328B00C1EFD7 /* MenuViewBuilder.swift in Sources */,
 				D822F44E28616119008D0B7F /* LocationAddInputModel.swift in Sources */,
+				D8A5A347286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */,
 				D8AF8C1E284654EC00533CC7 /* RootViewModel.swift in Sources */,
 				D8835FF3282FBE020048A495 /* MapController.swift in Sources */,
 				D8CE68D92838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
@@ -1193,6 +1206,7 @@
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D8C8135B285C5DFE00695401 /* MockIndicatorUseCase.swift in Sources */,
 				D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
+				D8A5A348286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */,
 				D8C81357285C534500695401 /* MockUserUseCase.swift in Sources */,
 				D84188BD285634F100CD2AFE /* ApplicationBuilderTests.swift in Sources */,
 				D8BAD8AB285A1D9C00E2CA1D /* MockUserRepository.swift in Sources */,

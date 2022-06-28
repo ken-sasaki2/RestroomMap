@@ -8,14 +8,13 @@
 import Foundation
 
 protocol LocationAddUseCaseInput {
-    func saveLocation(_ model: LocationAddInputModel) async
+    func addLocation(_ model: LocationAddInputModel) async
 }
 
 
 protocol LocationAddUseCaseOutput {
-    func successSaveLocation()
-    func failSaveLocation()
-    func inValidLocationName()
+    func successAddLocation()
+    func failAddLocation(_ status: FailAddLocationStatus)
 }
 
 
@@ -30,18 +29,18 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
     }
 
 
-    func saveLocation(_ model: LocationAddInputModel) async {
+    func addLocation(_ model: LocationAddInputModel) async {
         do {
             if !validLocationName(model.name) {
-                output.inValidLocationName()
+                output.failAddLocation(.inValidName)
                 return
             }
 
             try await repository.saveLocation(model)
-            output.successSaveLocation()
+            output.successAddLocation()
             return
         } catch {
-            output.failSaveLocation()
+            output.failAddLocation(.error)
             return
         }
     }
