@@ -129,6 +129,9 @@
 		D88B1AAE2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */; };
 		D8A5A347286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */; };
 		D8A5A348286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */; };
+		D8A5A34A286B02AA0056CD2B /* LocationAddViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */; };
+		D8A5A34C286B2C990056CD2B /* LocationAddControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A34B286B2C990056CD2B /* LocationAddControllerTests.swift */; };
+		D8A5A34F286B2F0E0056CD2B /* MockLocationAddUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A34D286B2F0E0056CD2B /* MockLocationAddUseCase.swift */; };
 		D8A9EDB62841E6AA0011E703 /* ATTPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */; };
 		D8A9EDB82841E8370011E703 /* ATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */; };
 		D8A9EDBA2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */; };
@@ -314,6 +317,9 @@
 		D88B1AA82861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestToFirestoreTests.swift; sourceTree = "<group>"; };
 		D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		D8A5A346286B00F30056CD2B /* FailAddLocationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAddLocationStatus.swift; sourceTree = "<group>"; };
+		D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddViewBuilderTests.swift; sourceTree = "<group>"; };
+		D8A5A34B286B2C990056CD2B /* LocationAddControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddControllerTests.swift; sourceTree = "<group>"; };
+		D8A5A34D286B2F0E0056CD2B /* MockLocationAddUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDB52841E6AA0011E703 /* ATTPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionController.swift; sourceTree = "<group>"; };
 		D8A9EDB72841E8370011E703 /* ATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionDataStore.swift; sourceTree = "<group>"; };
@@ -468,6 +474,7 @@
 				D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */,
 				D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */,
 				D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */,
+				D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -880,6 +887,7 @@
 				D8C8135E285C60D900695401 /* MockReviewUseCase.swift */,
 				D8C81360285C60E500695401 /* MockShareUseCase.swift */,
 				D8C81356285C534500695401 /* MockUserUseCase.swift */,
+				D8A5A34D286B2F0E0056CD2B /* MockLocationAddUseCase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";
@@ -890,6 +898,7 @@
 				D8C8134C285C51A800695401 /* AppDelegateControllerTests.swift */,
 				D8C8134E285C51E400695401 /* ATTPermissionControllerTests.swift */,
 				D8C81350285C520100695401 /* LocatePermissionControllerTests.swift */,
+				D8A5A34B286B2C990056CD2B /* LocationAddControllerTests.swift */,
 				D8C81352285C520F00695401 /* MapControllerTests.swift */,
 				D8C81354285C521D00695401 /* MenuControllerTests.swift */,
 			);
@@ -1193,6 +1202,7 @@
 				D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */,
 				D8C81365285C610000695401 /* MockBillingUseCase.swift in Sources */,
 				D8835FFD282FBE640048A495 /* MapUseCase.swift in Sources */,
+				D8A5A34A286B02AA0056CD2B /* LocationAddViewBuilderTests.swift in Sources */,
 				D8C81375285C9A5F00695401 /* MockUserDataStore.swift in Sources */,
 				D8C8135F285C60D900695401 /* MockReviewUseCase.swift in Sources */,
 				D85B0B6A2837720200E8062D /* MapDataStore.swift in Sources */,
@@ -1227,6 +1237,7 @@
 				D836EF4B285C28DA00A2D006 /* MockShareUseCaseOutput.swift in Sources */,
 				D8BAD8A3285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift in Sources */,
 				D838A79C2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
+				D8A5A34F286B2F0E0056CD2B /* MockLocationAddUseCase.swift in Sources */,
 				D838A7A5283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
 				D8BAD8A1285A165F00E2CA1D /* MockIndicatorOutput.swift in Sources */,
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
@@ -1236,6 +1247,7 @@
 				D822F4512861621C008D0B7F /* LocationAddUseCase.swift in Sources */,
 				D84188BE285634FA00CD2AFE /* ApplicationBuilder.swift in Sources */,
 				D8BAD8AF285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift in Sources */,
+				D8A5A34C286B2C990056CD2B /* LocationAddControllerTests.swift in Sources */,
 				D85B0B6F283772C800E8062D /* LocationAddView.swift in Sources */,
 				D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */,
 				D81FC00F284A512600C2CBEF /* RootViewModelTests.swift in Sources */,
