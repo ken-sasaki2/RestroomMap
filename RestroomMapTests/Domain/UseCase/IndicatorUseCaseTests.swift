@@ -17,20 +17,11 @@ final class IndicatorUseCaseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_show() throws {
+    func test_toggleIndicator() throws {
         let output = MockIndicatorOutput()
-        let useCase = IndicatorUseCase(indicatorOutput: output)
+        let useCase = IndicatorUseCase(output: output)
 
-        useCase.show()
-        XCTAssertEqual(output.isShowCalled, true)
-    }
-
-
-    func test_hide() throws {
-        let output = MockIndicatorOutput()
-        let useCase = IndicatorUseCase(indicatorOutput: output)
-
-        useCase.hide()
-        XCTAssertEqual(output.isHideCalled, true)
+        useCase.toggleIndicator()
+        XCTAssertEqual(output.isToggleIndicatorCalled, true)
     }
 }

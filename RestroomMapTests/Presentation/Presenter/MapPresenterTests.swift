@@ -78,16 +78,7 @@ class MapPresenterTests: XCTestCase {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
 
-        presenter.show()
-        XCTAssertEqual(viewModel.isShowIndicatorView, true)
-    }
-
-
-    func test_hideIndicatorView() throws {
-        let viewModel = MapViewModel()
-        let presenter = MapPresenter(viewModel: viewModel)
-
-        presenter.hide()
-        XCTAssertEqual(viewModel.isShowIndicatorView, false)
+        presenter.toggleIndicator()
+        XCTAssertEqual(viewModel., true)
     }
 }
