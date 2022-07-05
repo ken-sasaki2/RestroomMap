@@ -19,11 +19,11 @@ protocol LocationAddUseCaseOutput {
 
 
 final class LocationAddUseCase: LocationAddUseCaseInput {
-    private let repository: LocationAddRepository
+    private let repository: LocationAddRepositoryInterface
     private let output: LocationAddUseCaseOutput
 
 
-    init(repository: LocationAddRepository, output: LocationAddUseCaseOutput) {
+    init(repository: LocationAddRepositoryInterface, output: LocationAddUseCaseOutput) {
         self.repository = repository
         self.output = output
     }
@@ -36,7 +36,7 @@ final class LocationAddUseCase: LocationAddUseCaseInput {
                 return
             }
 
-            try await repository.saveLocation(model)
+            try await repository.addLocation(model)
             output.successAddLocation()
             return
         } catch {
