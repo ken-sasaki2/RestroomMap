@@ -59,7 +59,7 @@ struct MapView: View {
                         }
                     }
                     .sheet(isPresented: $viewModel.isShowAddLocationView) {
-                        AddLocationView()
+                        LocationAddViewBuilder.shared.build(lat: region.center.latitude, lng: region.center.longitude)
                     }
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
@@ -70,15 +70,13 @@ struct MapView: View {
                         Text("'設定'から位置情報を許可してください")
                     }
                     .onAppear {
-                        controller.showIndicatorView()
+                        controller.toggleIndicator()
                         controller.getCurrentLocation()
                         setRegion(
                             lat: viewModel.currentLocation.lat,
                             lng: viewModel.currentLocation.lng
                         )
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            controller.hideIndicatorView()
-                        }
+                        controller.toggleIndicator()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {

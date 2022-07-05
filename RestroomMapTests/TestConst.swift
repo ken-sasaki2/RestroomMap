@@ -14,4 +14,26 @@ struct TestConst {
     static let shareText = "test_shareText"
     static let shareUrl = "test_shareUrl"
     static let shareImage = "test_shareImage"
+
+    static let locationAddInputModel = LocationAddInputModel(
+        lat: TestConst.lat,
+        lng: TestConst.lng,
+        name: "テスト",
+        isOpen24Hour: false,
+        openDate: "11:00",
+        closeDate: "23:00",
+        holiday: "水曜日がお休み",
+        isWesternStyle: false,
+        isJapaneseStyle: false,
+        isPublic: false,
+        isByGender: false,
+        isWashlet: false,
+        isMultipurpose: false,
+        isWheelchair: false,
+        isDiaper: false,
+        isBed: false,
+        isPowderRoom: false,
+        isParking: false,
+        memo: nil
+    )
 }

@@ -1,13 +1,13 @@
 //
-//  IndicatorUseCaseTests.swift
+//  LocationAddViewBuilderTests.swift
 //  RestroomMapTests
 //
-//  Created by sasaki.ken on 2022/06/15.
+//  Created by sasaki.ken on 2022/06/28.
 //
 
 import XCTest
 
-final class IndicatorUseCaseTests: XCTestCase {
+class LocationAddViewBuilderTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -17,11 +17,8 @@ final class IndicatorUseCaseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_toggleIndicator() throws {
-        let output = MockIndicatorOutput()
-        let useCase = IndicatorUseCase(output: output)
-
-        useCase.toggleIndicator()
-        XCTAssertEqual(output.isToggleIndicatorCalled, true)
+    func test_build() throws {
+        let view = LocationAddViewBuilder.shared.build(lat: TestConst.lat, lng: TestConst.lng)
+        XCTAssertNotNil(view)
     }
 }

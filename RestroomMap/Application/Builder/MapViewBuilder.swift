@@ -22,7 +22,7 @@ final class MapViewBuilder {
         let locatePermissionRepository = LocatePermissionRepository(dataStore: locatePermissionDataStore)
 
         let mapUseCaseInput = MapUseCase(output: presenter, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
-        let indicatorUseCaseInput = IndicatorUseCase(indicatorOutput: presenter)
+        let indicatorUseCaseInput = IndicatorUseCase(output: presenter)
 
         let controller = MapController(mapUseCaseInput: mapUseCaseInput, indicatorUseCaseInput: indicatorUseCaseInput)
 

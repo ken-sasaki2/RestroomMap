@@ -9,14 +9,8 @@ import Foundation
 
 final class MockIndicatorOutput: IndicatorUseCaseOutput {
 
-    var isShowCalled = false
-    func show() {
-        isShowCalled = true
-    }
-
-
-    var isHideCalled = false
-    func hide() {
-        isHideCalled = true
+    var isToggleIndicatorCalled = false
+    func toggleIndicator() {
+        isToggleIndicatorCalled = true
     }
 }

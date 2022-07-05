@@ -67,22 +67,12 @@ class MapControllerTests: XCTestCase {
     }
 
 
-    func test_showIndicatorView() throws {
+    func test_toggleIndicator() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
         let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
 
-        controller.showIndicatorView()
-        XCTAssertEqual(indicatorUseCase.isShowCalled, true)
-    }
-
-
-    func test_hideIndicatorView() throws {
-        let mapUseCase = MockMapUseCase()
-        let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
-
-        controller.hideIndicatorView()
-        XCTAssertEqual(indicatorUseCase.isHideCalled, true)
+        controller.toggleIndicator()
+        XCTAssertEqual(indicatorUseCase.isToggleIndicatorCalled, true)
     }
 }
