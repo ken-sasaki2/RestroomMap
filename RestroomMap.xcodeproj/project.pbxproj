@@ -78,6 +78,8 @@
 		D84DC66C2873B0680048AAC6 /* LocationAddUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC66B2873B0680048AAC6 /* LocationAddUseCaseTests.swift */; };
 		D84DC66E2873B7590048AAC6 /* MockLocationAddRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC66D2873B7590048AAC6 /* MockLocationAddRepository.swift */; };
 		D84DC6702873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */; };
+		D84DC6722873C6BC0048AAC6 /* LocationAddRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */; };
+		D84DC6742873C73E0048AAC6 /* MockLocationAddDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */; };
 		D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
 		D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B6128375D6900E8062D /* MapDataStore.swift */; };
 		D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
@@ -299,6 +301,8 @@
 		D84DC66B2873B0680048AAC6 /* LocationAddUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddUseCaseTests.swift; sourceTree = "<group>"; };
 		D84DC66D2873B7590048AAC6 /* MockLocationAddRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddRepository.swift; sourceTree = "<group>"; };
 		D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddUseCaseOutput.swift; sourceTree = "<group>"; };
+		D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddRepositoryTests.swift; sourceTree = "<group>"; };
+		D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddDataStore.swift; sourceTree = "<group>"; };
 		D85B0B5F28375C2F00E8062D /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		D85B0B6128375D6900E8062D /* MapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStore.swift; sourceTree = "<group>"; };
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
@@ -863,10 +867,9 @@
 				D8BAD8A0285A165F00E2CA1D /* MockIndicatorOutput.swift */,
 				D8BAD8A2285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift */,
 				D8BAD8AC285A1E3200E2CA1D /* MockLocatePermissionUseCaseOutput.swift */,
+				D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */,
 				D836EF4C285C3BA600A2D006 /* MockMapUseCaseOutput.swift */,
 				D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */,
-				D84DC66D2873B7590048AAC6 /* MockLocationAddRepository.swift */,
-				D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */,
 			);
 			name = Output;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 			children = (
 				D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */,
 				D8BAD8A8285A1C7200E2CA1D /* MockLocatePermissionRepository.swift */,
+				D84DC66D2873B7590048AAC6 /* MockLocationAddRepository.swift */,
 				D836EF4E285C3BBD00A2D006 /* MockMapRepository.swift */,
 				D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */,
 				D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */,
@@ -891,12 +895,12 @@
 				D8C8135A285C5DFE00695401 /* MockIndicatorUseCase.swift */,
 				D8C81362285C60F200695401 /* MockInquiryUseCase.swift */,
 				D8BAD8AE285A1F1200E2CA1D /* MockLocatePermissionUseCase.swift */,
+				D8A5A34D286B2F0E0056CD2B /* MockLocationAddUseCase.swift */,
 				D8C81358285C57B300695401 /* MockMapUseCase.swift */,
 				D8C8135C285C60CD00695401 /* MockPinTypeUseCase.swift */,
 				D8C8135E285C60D900695401 /* MockReviewUseCase.swift */,
 				D8C81360285C60E500695401 /* MockShareUseCase.swift */,
 				D8C81356285C534500695401 /* MockUserUseCase.swift */,
-				D8A5A34D286B2F0E0056CD2B /* MockLocationAddUseCase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";
@@ -921,6 +925,7 @@
 				D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */,
 				D8C81376285C9CB700695401 /* MapRepositoryTests.swift */,
 				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
+				D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -932,6 +937,7 @@
 				D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */,
 				D8C81378285C9D2300695401 /* MockMapDataStore.swift */,
 				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
+				D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -1237,6 +1243,7 @@
 				D822F45C28616526008D0B7F /* LocationRequestToFirestore.swift in Sources */,
 				D8895ED32835323C0079C2AA /* UserDataStore.swift in Sources */,
 				D84DC6702873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift in Sources */,
+				D84DC6742873C73E0048AAC6 /* MockLocationAddDataStore.swift in Sources */,
 				D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */,
 				D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */,
 				D8C8136F285C7A4700695401 /* MockLocatePermissionDataStore.swift in Sources */,
@@ -1302,6 +1309,7 @@
 				D836EF4D285C3BA600A2D006 /* MockMapUseCaseOutput.swift in Sources */,
 				D8CE68E92838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
 				D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */,
+				D84DC6722873C6BC0048AAC6 /* LocationAddRepositoryTests.swift in Sources */,
 				D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
 				D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
