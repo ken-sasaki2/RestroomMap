@@ -8,7 +8,7 @@
 import Foundation
 
 final class MockIndicatorOutput: IndicatorUseCaseOutput {
-    
+
     var isToggleIndicatorCalled = false
     func toggleIndicator() {
         isToggleIndicatorCalled = true
