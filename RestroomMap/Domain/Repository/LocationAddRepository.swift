@@ -24,7 +24,7 @@ final class LocationAddRepository: LocationAddRepositoryInterface {
 
     func addLocation(_ model: LocationAddInputModel) async throws {
         do {
-            try await dataStore.saveLocation(model)
+            try await dataStore.addLocation(model)
         } catch {
             throw error
         }
