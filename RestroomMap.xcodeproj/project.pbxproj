@@ -81,6 +81,8 @@
 		D84DC6722873C6BC0048AAC6 /* LocationAddRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */; };
 		D84DC6742873C73E0048AAC6 /* MockLocationAddDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */; };
 		D84DC67C2873CDC90048AAC6 /* LocationAddPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */; };
+		D84DC67E2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */; };
+		D84DC67F2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */; };
 		D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
 		D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B6128375D6900E8062D /* MapDataStore.swift */; };
 		D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
@@ -305,6 +307,7 @@
 		D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddRepositoryTests.swift; sourceTree = "<group>"; };
 		D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddDataStore.swift; sourceTree = "<group>"; };
 		D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenterTests.swift; sourceTree = "<group>"; };
+		D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		D85B0B5F28375C2F00E8062D /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		D85B0B6128375D6900E8062D /* MapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStore.swift; sourceTree = "<group>"; };
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
@@ -773,6 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				D88B1AAC2861CC22000F5C0D /* GoogleService-Info-Debug.plist */,
+				D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -1069,6 +1073,7 @@
 			files = (
 				D84930652829841B002DDFD2 /* Preview Assets.xcassets in Resources */,
 				D84930622829841B002DDFD2 /* Assets.xcassets in Resources */,
+				D84DC67E2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */,
 				D88B1AAD2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1077,6 +1082,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84DC67F2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */,
 				D88B1AAE2861CC22000F5C0D /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
