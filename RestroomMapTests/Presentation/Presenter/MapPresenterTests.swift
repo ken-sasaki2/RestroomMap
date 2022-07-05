@@ -74,11 +74,11 @@ class MapPresenterTests: XCTestCase {
     }
 
 
-    func test_showIndicatorView() throws {
+    func test_toggleIndicator() throws {
         let viewModel = MapViewModel()
         let presenter = MapPresenter(viewModel: viewModel)
 
         presenter.toggleIndicator()
-        XCTAssertEqual(viewModel., true)
+        XCTAssertEqual(viewModel.isShowIndicatorView, true)
     }
 }
