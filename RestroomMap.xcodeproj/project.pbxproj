@@ -482,9 +482,9 @@
 				D84188BC285634F100CD2AFE /* ApplicationBuilderTests.swift */,
 				D84188C02856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift */,
 				D84188C22856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift */,
+				D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */,
 				D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */,
 				D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */,
-				D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -579,11 +579,11 @@
 		D84930892829FC7C002DDFD2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D8A9EDC12841EFC50011E703 /* ATTAuthorizationStatusEntity.swift */,
 				D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */,
 				D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */,
-				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
-				D8A9EDC12841EFC50011E703 /* ATTAuthorizationStatusEntity.swift */,
 				D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */,
+				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -684,10 +684,10 @@
 		D84930922829FCDC002DDFD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8A5A345286B00E20056CD2B /* Status */,
 				D85B0B63283767F300E8062D /* CurrentLocationModel.swift */,
-				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
 				D822F44D28616119008D0B7F /* LocationAddInputModel.swift */,
+				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
+				D8A5A345286B00E20056CD2B /* Status */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -923,9 +923,9 @@
 			children = (
 				D8C81367285C662900695401 /* ATTPermissionRepositoryTests.swift */,
 				D8C8136C285C799700695401 /* LocatePermissionRepositoryTests.swift */,
+				D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */,
 				D8C81376285C9CB700695401 /* MapRepositoryTests.swift */,
 				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
-				D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -935,9 +935,9 @@
 			children = (
 				D8C8136A285C670C00695401 /* MockATTPermissionDataStore.swift */,
 				D8C8136E285C7A4700695401 /* MockLocatePermissionDataStore.swift */,
+				D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */,
 				D8C81378285C9D2300695401 /* MockMapDataStore.swift */,
 				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
-				D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
