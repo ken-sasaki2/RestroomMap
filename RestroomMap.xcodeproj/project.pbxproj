@@ -80,6 +80,7 @@
 		D84DC6702873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */; };
 		D84DC6722873C6BC0048AAC6 /* LocationAddRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */; };
 		D84DC6742873C73E0048AAC6 /* MockLocationAddDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */; };
+		D84DC67C2873CDC90048AAC6 /* LocationAddPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */; };
 		D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
 		D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B6128375D6900E8062D /* MapDataStore.swift */; };
 		D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
@@ -303,6 +304,7 @@
 		D84DC66F2873B8970048AAC6 /* MockLocationAddUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddUseCaseOutput.swift; sourceTree = "<group>"; };
 		D84DC6712873C6BC0048AAC6 /* LocationAddRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddRepositoryTests.swift; sourceTree = "<group>"; };
 		D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddDataStore.swift; sourceTree = "<group>"; };
+		D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenterTests.swift; sourceTree = "<group>"; };
 		D85B0B5F28375C2F00E8062D /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		D85B0B6128375D6900E8062D /* MapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStore.swift; sourceTree = "<group>"; };
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				D8176FED2841D3E700C674EA /* LocatePermissionPresenterTest.swift */,
+				D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */,
 				D8176FEF2841D65100C674EA /* MapPresenterTests.swift */,
 				D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */,
 			);
@@ -1279,6 +1282,7 @@
 				D836EF4F285C3BBD00A2D006 /* MockMapRepository.swift in Sources */,
 				D8835FF7282FBE1D0048A495 /* MapViewModel.swift in Sources */,
 				D838A7A8283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
+				D84DC67C2873CDC90048AAC6 /* LocationAddPresenterTests.swift in Sources */,
 				D822F45F28616644008D0B7F /* LocationAddPresenter.swift in Sources */,
 				D822F458286163CE008D0B7F /* LocationAddDataStore.swift in Sources */,
 				D8CE68EC283A28B500C1EFD7 /* SharePostModel.swift in Sources */,
