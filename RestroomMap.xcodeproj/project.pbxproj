@@ -83,6 +83,8 @@
 		D84DC67C2873CDC90048AAC6 /* LocationAddPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */; };
 		D84DC67E2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */; };
 		D84DC67F2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */; };
+		D84DC6852875D3050048AAC6 /* DeviceIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */; };
+		D84DC6862875D3050048AAC6 /* DeviceIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */; };
 		D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
 		D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B6128375D6900E8062D /* MapDataStore.swift */; };
 		D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
@@ -153,8 +155,8 @@
 		D8A9EDC52841F6B20011E703 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9EDC42841F6B20011E703 /* AppTrackingTransparency.framework */; };
 		D8A9EDC82841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */; };
 		D8A9EDC92841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */; };
-		D8A9EDD128420A2F0011E703 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* UserUseCase.swift */; };
-		D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* UserUseCase.swift */; };
+		D8A9EDD128420A2F0011E703 /* LaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* LaunchUseCase.swift */; };
+		D8A9EDD228420A2F0011E703 /* LaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD028420A2F0011E703 /* LaunchUseCase.swift */; };
 		D8A9EDD428420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
 		D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */; };
 		D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */; };
@@ -308,6 +310,7 @@
 		D84DC6732873C73E0048AAC6 /* MockLocationAddDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationAddDataStore.swift; sourceTree = "<group>"; };
 		D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenterTests.swift; sourceTree = "<group>"; };
 		D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
+		D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdEntity.swift; sourceTree = "<group>"; };
 		D85B0B5F28375C2F00E8062D /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		D85B0B6128375D6900E8062D /* MapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStore.swift; sourceTree = "<group>"; };
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
@@ -342,7 +345,7 @@
 		D8A9EDC12841EFC50011E703 /* ATTAuthorizationStatusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTAuthorizationStatusEntity.swift; sourceTree = "<group>"; };
 		D8A9EDC42841F6B20011E703 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		D8A9EDC72841F73F0011E703 /* ATTPermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionViewBuilder.swift; sourceTree = "<group>"; };
-		D8A9EDD028420A2F0011E703 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		D8A9EDD028420A2F0011E703 /* LaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCase.swift; sourceTree = "<group>"; };
 		D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountEntity.swift; sourceTree = "<group>"; };
 		D8AF8C1628462D6600533CC7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D8AF8C192846347500533CC7 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -590,6 +593,7 @@
 				D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */,
 				D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */,
 				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
+				D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -711,7 +715,7 @@
 				D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */,
 				D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */,
 				D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */,
-				D8A9EDD028420A2F0011E703 /* UserUseCase.swift */,
+				D8A9EDD028420A2F0011E703 /* LaunchUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1178,6 +1182,7 @@
 				D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */,
 				D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D822F4542861639A008D0B7F /* LocationAddRepository.swift in Sources */,
+				D84DC6852875D3050048AAC6 /* DeviceIdEntity.swift in Sources */,
 				D822F45E28616644008D0B7F /* LocationAddPresenter.swift in Sources */,
 				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
 				D8CE68E82838CD1900C1EFD7 /* PinTypeUseCase.swift in Sources */,
@@ -1190,7 +1195,7 @@
 				D8CE68D32837950D00C1EFD7 /* MenuViewModel.swift in Sources */,
 				D8CE68DC2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */,
 				D8CE68F1283A3CDF00C1EFD7 /* ShareSheetView.swift in Sources */,
-				D8A9EDD128420A2F0011E703 /* UserUseCase.swift in Sources */,
+				D8A9EDD128420A2F0011E703 /* LaunchUseCase.swift in Sources */,
 				D849305E2829841A002DDFD2 /* RestroomMapApp.swift in Sources */,
 				D8D8578D283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
 				D8CE68F8283A865800C1EFD7 /* Const.swift in Sources */,
@@ -1221,10 +1226,11 @@
 				D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */,
 				D822F4552861639A008D0B7F /* LocationAddRepository.swift in Sources */,
 				D85B0B6D283772B400E8062D /* MapRepository.swift in Sources */,
-				D8A9EDD228420A2F0011E703 /* UserUseCase.swift in Sources */,
+				D8A9EDD228420A2F0011E703 /* LaunchUseCase.swift in Sources */,
 				D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */,
 				D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */,
 				D8C81365285C610000695401 /* MockBillingUseCase.swift in Sources */,
+				D84DC6862875D3050048AAC6 /* DeviceIdEntity.swift in Sources */,
 				D8835FFD282FBE640048A495 /* MapUseCase.swift in Sources */,
 				D8A5A34A286B02AA0056CD2B /* LocationAddViewBuilderTests.swift in Sources */,
 				D8C81375285C9A5F00695401 /* MockUserDataStore.swift in Sources */,

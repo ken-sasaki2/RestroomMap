@@ -13,6 +13,7 @@ final class UserDefaultsEntity {
         case lat
         case lng
         case launchCount
+        case deviceId
     }
 
 
@@ -44,6 +45,15 @@ final class UserDefaultsEntity {
             defaults.integer(forKey: DefaultsKey.launchCount.rawValue)
         } set {
             defaults.set(newValue + 1, forKey: DefaultsKey.launchCount.rawValue)
+        }
+    }
+
+
+    var deviceId: String? {
+        get {
+            defaults.string(forKey: DefaultsKey.launchCount.rawValue)
+        } set {
+            defaults.set(newValue, forKey: DefaultsKey.deviceId.rawValue)
         }
     }
 }

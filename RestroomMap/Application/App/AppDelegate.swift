@@ -14,7 +14,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         firebaseConfigure()
         let controller = ApplicationBuilder.shared.build()
         controller.saveLaunchCount()
-        controller.getLaunchCount()
+        controller.actionPerFirstLaunchIfCan()
 
         return true
     }

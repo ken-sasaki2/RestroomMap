@@ -11,6 +11,7 @@ protocol UserDataStoreInterface {
     func saveLocation(entity: CurrentLocationEntity)
     func saveLaunchCount()
     func getLaunchCount() -> LaunchCountEntity
+    func saveDeviceId(_ entity: DeviceIdEntity)
 }
 
 
@@ -34,5 +35,10 @@ final class UserDataStore: UserDataStoreInterface {
         let entity = LaunchCountEntity(launchCount: launchCount)
 
         return entity
+    }
+
+
+    func saveDeviceId(_ entity: DeviceIdEntity) {
+        userDefaults.deviceId = entity.deviceId
     }
 }
