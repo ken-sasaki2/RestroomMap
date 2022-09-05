@@ -54,7 +54,7 @@ final class LocationAddController {
     }
 
 
-    func showIndicator() {
+    func toggleIndicator() {
         indicatorUseCaseInput.toggleIndicator()
     }
 }
