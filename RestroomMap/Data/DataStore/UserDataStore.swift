@@ -5,13 +5,14 @@
 //  Created by sasaki.ken on 2022/05/18.
 //
 
-import Foundation
+import SwiftUI
+
 
 protocol UserDataStoreInterface {
     func saveLocation(entity: CurrentLocationEntity)
     func saveLaunchCount()
     func getLaunchCount() -> LaunchCountEntity
-    func saveDeviceId(_ entity: DeviceIdEntity)
+    func saveDeviceId()
 }
 
 
@@ -38,7 +39,20 @@ final class UserDataStore: UserDataStoreInterface {
     }
 
 
-    func saveDeviceId(_ entity: DeviceIdEntity) {
+    func getDeviceId() -> DeviceIdEntity? {
+        guard let device = UIDevice.current.identifierForVendor else {
+            return nil
+        }
+        let entity = DeviceIdEntity(deviceId: device.uuidString)
+
+        return entity
+    }
+
+
+    func saveDeviceId() {
+        guard let entity = getDeviceId() else {
+            return
+        }
         userDefaults.deviceId = entity.deviceId
     }
 }
