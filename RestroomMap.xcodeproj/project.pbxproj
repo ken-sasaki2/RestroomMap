@@ -229,6 +229,7 @@
 		D8D02A0028C629D700D70345 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D8D029FF28C629D700D70345 /* FirebaseAuth */; };
 		D8D02A0228C629D700D70345 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D8D02A0128C629D700D70345 /* FirebaseCrashlytics */; };
 		D8D02A0428C629D700D70345 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D8D02A0328C629D700D70345 /* FirebaseFirestore */; };
+		D8D02A0628C64A0500D70345 /* MockLaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D02A0528C64A0500D70345 /* MockLaunchUseCase.swift */; };
 		D8D8578D283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 		D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */; };
 		D8E700322842E20B0046B391 /* AppDelegateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E700312842E20B0046B391 /* AppDelegateController.swift */; };
@@ -398,6 +399,7 @@
 		D8CE68F0283A3CDF00C1EFD7 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		D8CE68F3283A7F2F00C1EFD7 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		D8CE68F7283A865800C1EFD7 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		D8D02A0528C64A0500D70345 /* MockLaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchUseCase.swift; sourceTree = "<group>"; };
 		D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationEntity.swift; sourceTree = "<group>"; };
 		D8E700312842E20B0046B391 /* AppDelegateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateController.swift; sourceTree = "<group>"; };
 		D8E700332842F02A0046B391 /* ApplicationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationBuilder.swift; sourceTree = "<group>"; };
@@ -911,6 +913,7 @@
 				D8C8135C285C60CD00695401 /* MockPinTypeUseCase.swift */,
 				D8C8135E285C60D900695401 /* MockReviewUseCase.swift */,
 				D8C81360285C60E500695401 /* MockShareUseCase.swift */,
+				D8D02A0528C64A0500D70345 /* MockLaunchUseCase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";
@@ -1246,6 +1249,7 @@
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D8BAD89F285A161700E2CA1D /* IndicatorUseCaseTests.swift in Sources */,
 				D8A9EDBB2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */,
+				D8D02A0628C64A0500D70345 /* MockLaunchUseCase.swift in Sources */,
 				D8C81368285C662900695401 /* ATTPermissionRepositoryTests.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D84DC66C2873B0680048AAC6 /* LocationAddUseCaseTests.swift in Sources */,
