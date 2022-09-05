@@ -29,4 +29,10 @@ final class MockUserRepository: UserRepositoryInterface {
 
         return entity
     }
+
+
+    var isSaveDeviceIdCalled = false
+    func saveDeviceId() {
+        isSaveDeviceIdCalled = true
+    }
 }

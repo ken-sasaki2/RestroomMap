@@ -11,7 +11,7 @@ protocol UserRepositoryInterface {
     func saveLocation(entity: CurrentLocationEntity)
     func saveLaunchCount()
     func getLaunchCount() -> LaunchCountEntity
-    func saveDeviceId(_ entity: DeviceIdEntity)
+    func saveDeviceId()
 }
 
 
@@ -41,7 +41,7 @@ final class UserRepository: UserRepositoryInterface {
     }
 
 
-    func saveDeviceId(_ entity: DeviceIdEntity) {
-        dataStore.saveDeviceId(entity)
+    func saveDeviceId() {
+        dataStore.saveDeviceId()
     }
 }
