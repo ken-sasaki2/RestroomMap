@@ -39,7 +39,6 @@
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
-		D836EF49285C21BE00A2D006 /* MockUserUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */; };
 		D836EF4B285C28DA00A2D006 /* MockShareUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */; };
 		D836EF4D285C3BA600A2D006 /* MockMapUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF4C285C3BA600A2D006 /* MockMapUseCaseOutput.swift */; };
 		D836EF4F285C3BBD00A2D006 /* MockMapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EF4E285C3BBD00A2D006 /* MockMapRepository.swift */; };
@@ -275,7 +274,6 @@
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserUseCaseOutput.swift; sourceTree = "<group>"; };
 		D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareUseCaseOutput.swift; sourceTree = "<group>"; };
 		D836EF4C285C3BA600A2D006 /* MockMapUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapUseCaseOutput.swift; sourceTree = "<group>"; };
 		D836EF4E285C3BBD00A2D006 /* MockMapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapRepository.swift; sourceTree = "<group>"; };
@@ -896,7 +894,6 @@
 				D84DC66D2873B7590048AAC6 /* MockLocationAddRepository.swift */,
 				D836EF4E285C3BBD00A2D006 /* MockMapRepository.swift */,
 				D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */,
-				D836EF48285C21BE00A2D006 /* MockUserUseCaseOutput.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -1341,7 +1338,6 @@
 				D84DC66E2873B7590048AAC6 /* MockLocationAddRepository.swift in Sources */,
 				D84188C12856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift in Sources */,
 				D85B0B672837684300E8062D /* CurrentLocationModelTranslator.swift in Sources */,
-				D836EF49285C21BE00A2D006 /* MockUserUseCaseOutput.swift in Sources */,
 				D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */,
 				D88B1AAA2861C95A000F5C0D /* LocationAddViewBuilder.swift in Sources */,
 				D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
