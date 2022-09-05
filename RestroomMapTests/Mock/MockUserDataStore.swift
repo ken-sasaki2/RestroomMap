@@ -9,6 +9,7 @@ import Foundation
 
 final class MockUserDataStore: UserDataStoreInterface {
 
+
     var isSaveLocationCalled = false
     func saveLocation(entity: CurrentLocationEntity) {
         isSaveLocationCalled = true
@@ -25,5 +26,11 @@ final class MockUserDataStore: UserDataStoreInterface {
         let entity = LaunchCountEntity(launchCount: 1)
 
         return entity
+    }
+    
+    
+    var isSaveDeviceIdCalled = false
+    func saveDeviceId() {
+        isSaveDeviceIdCalled = true
     }
 }
