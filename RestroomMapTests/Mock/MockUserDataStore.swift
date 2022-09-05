@@ -27,8 +27,8 @@ final class MockUserDataStore: UserDataStoreInterface {
 
         return entity
     }
-    
-    
+
+
     var isSaveDeviceIdCalled = false
     func saveDeviceId() {
         isSaveDeviceIdCalled = true
