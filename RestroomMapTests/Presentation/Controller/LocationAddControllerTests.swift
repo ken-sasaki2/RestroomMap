@@ -44,7 +44,7 @@ class LocationAddControllerTests: XCTestCase {
             isParking: true,
             memo: "テストテストテストテストテスト"
         )
-        XCTAssertEqual(locationAddUseCase.isAddLocationCalled, true)
+        XCTAssertEqual(locationAddUseCase.isAddLocationCalled, false)
     }
 
 
@@ -53,7 +53,7 @@ class LocationAddControllerTests: XCTestCase {
         let locationAddUseCase = MockLocationAddUseCase()
         let controller = LocationAddController(useCaseInput: locationAddUseCase, indicatorUseCaseInput: indicatorUseCase)
 
-        controller.showIndicator()
-        XCTAssertEqual(indicatorUseCase.isShowCalled, true)
+        controller.toggleIndicator()
+        XCTAssertEqual(indicatorUseCase.isToggleIndicatorCalled, true)
     }
 }
