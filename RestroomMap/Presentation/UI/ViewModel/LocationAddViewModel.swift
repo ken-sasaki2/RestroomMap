@@ -13,4 +13,5 @@ final class LocationAddViewModel: ObservableObject {
     @Published var isShowSuccessSaveLocationAlert = false
     @Published var isShowFailSaveLocationAlert = false
     @Published var isShowInValidLocationNameAlert = false
+    @Published var deviceId = ""
 }

@@ -18,7 +18,7 @@ final class LocationAddController {
         self.indicatorUseCaseInput = indicatorUseCaseInput
     }
 
-    func onAddButtonTapped(lat: Double, lng: Double, name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?) {
+    func onAddButtonTapped(lat: Double, lng: Double, name: String, isOpen24Hour: Bool, openDate: Date, closeDate: Date, holiday: String?, isWesternStyle: Bool, isJapaneseStyle: Bool, isPublic: Bool, isByGender: Bool, isWashlet: Bool, isMultipurpose: Bool, isWheelchair: Bool, isDiaper: Bool, isBed: Bool, isPowderRoom: Bool, isParking: Bool, memo: String?, deviceId: String) {
 
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
@@ -45,7 +45,8 @@ final class LocationAddController {
             isBed: isBed,
             isPowderRoom: isPowderRoom,
             isParking: isParking,
-            memo: memo
+            memo: memo,
+            deviceId: deviceId
         )
 
         Task {
@@ -56,5 +57,10 @@ final class LocationAddController {
 
     func toggleIndicator() {
         indicatorUseCaseInput.toggleIndicator()
+    }
+
+
+    func getDeviceId() {
+        useCaseInput.getDeviceId()
     }
 }

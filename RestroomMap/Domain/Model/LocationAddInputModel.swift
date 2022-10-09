@@ -27,4 +27,5 @@ struct LocationAddInputModel {
     var isPowderRoom: Bool
     var isParking: Bool
     var memo: String?
+    var deviceId: String
 }

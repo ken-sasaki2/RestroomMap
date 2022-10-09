@@ -163,6 +163,10 @@
 		D8AF8C1E284654EC00533CC7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */; };
 		D8AF8C20284655CF00533CC7 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */; };
 		D8AF8C21284655CF00533CC7 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */; };
+		D8B9E89028F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */; };
+		D8B9E89128F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */; };
+		D8B9E89328F2BE6E008E001F /* DeviceIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */; };
+		D8B9E89428F2BE6E008E001F /* DeviceIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */; };
 		D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */; };
 		D8BAD897285A013500E2CA1D /* MockATTPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */; };
 		D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */; };
@@ -352,6 +356,8 @@
 		D8AF8C1B2846519400533CC7 /* IndicatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorUseCase.swift; sourceTree = "<group>"; };
 		D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdModelTranslator.swift; sourceTree = "<group>"; };
+		D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdModel.swift; sourceTree = "<group>"; };
 		D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionOutput.swift; sourceTree = "<group>"; };
 		D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionRepository.swift; sourceTree = "<group>"; };
 		D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionUseCase.swift; sourceTree = "<group>"; };
@@ -702,6 +708,7 @@
 				D822F44D28616119008D0B7F /* LocationAddInputModel.swift */,
 				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
 				D8A5A345286B00E20056CD2B /* Status */,
+				D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -776,6 +783,7 @@
 			isa = PBXGroup;
 			children = (
 				D85B0B652837681200E8062D /* CurrentLocationModelTranslator.swift */,
+				D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -1140,6 +1148,7 @@
 				D8A9EDBA2841E8B50011E703 /* ATTPermissionDataStore.swift in Sources */,
 				D838A7AA283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D8895ED22835323C0079C2AA /* UserDataStore.swift in Sources */,
+				D8B9E89328F2BE6E008E001F /* DeviceIdModel.swift in Sources */,
 				D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */,
 				D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
 				D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
@@ -1180,6 +1189,7 @@
 				D8AF8C1C2846519400533CC7 /* IndicatorUseCase.swift in Sources */,
 				D88360052830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8895ED5283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
+				D8B9E89028F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */,
 				D8CE68EE283A328B00C1EFD7 /* MenuViewBuilder.swift in Sources */,
 				D822F44E28616119008D0B7F /* LocationAddInputModel.swift in Sources */,
 				D8A5A347286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */,
@@ -1244,7 +1254,9 @@
 				D8C8135F285C60D900695401 /* MockReviewUseCase.swift in Sources */,
 				D85B0B6A2837720200E8062D /* MapDataStore.swift in Sources */,
 				D87816852849FDC2009B9FB0 /* ATTPermissionView.swift in Sources */,
+				D8B9E89428F2BE6E008E001F /* DeviceIdModel.swift in Sources */,
 				D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */,
+				D8B9E89128F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */,
 				D8A9EDBC2841E8BE0011E703 /* ATTPermissionController.swift in Sources */,
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D8BAD89F285A161700E2CA1D /* IndicatorUseCaseTests.swift in Sources */,

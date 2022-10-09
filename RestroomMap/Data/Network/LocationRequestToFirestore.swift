@@ -32,7 +32,8 @@ final class LocationRequestToFirestore {
                 "isBed": model.isBed,
                 "isPowderRoom": model.isPowderRoom,
                 "isParking": model.isParking,
-                "memo": model.memo as Any
+                "memo": model.memo as Any,
+                "deviceId": model.deviceId
             ])
         } catch {
             throw error
