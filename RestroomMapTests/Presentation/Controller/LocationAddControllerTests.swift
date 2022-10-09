@@ -44,7 +44,7 @@ class LocationAddControllerTests: XCTestCase {
             isParking: true,
             memo: "テストテストテストテストテスト"
         )
-        XCTAssertEqual(locationAddUseCase.isAddLocationCalled, false)
+        XCTAssertEqual(locationAddUseCase.isAddLocationCalled, true)
     }
 
 
