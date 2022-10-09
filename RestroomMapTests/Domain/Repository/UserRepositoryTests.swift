@@ -44,4 +44,14 @@ class UserRepositoryTests: XCTestCase {
         let result = repository.getLaunchCount()
         XCTAssertEqual(result.launchCount, 1)
     }
+
+
+    func test_getDeviceId() throws {
+        let dataStore = MockUserDataStore()
+        let repository = UserRepository(dataStore: dataStore)
+
+        let result = repository.getDeviceId()
+        XCTAssertEqual(dataStore.isGetDeviceIdCalled, true)
+        XCTAssertEqual(result?.deviceId, TestConst.deviceId)
+    }
 }

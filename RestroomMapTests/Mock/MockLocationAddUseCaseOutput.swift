@@ -19,4 +19,10 @@ final class MockLocationAddUseCaseOutput: LocationAddUseCaseOutput {
     func failAddLocation(_ status: FailAddLocationStatus) {
         isFailAddLocationCalled = true
     }
+
+
+    var isSetDeviceIdCalled = false
+    func setDeviceId(_ model: DeviceIdModel) {
+        isSetDeviceIdCalled = true
+    }
 }

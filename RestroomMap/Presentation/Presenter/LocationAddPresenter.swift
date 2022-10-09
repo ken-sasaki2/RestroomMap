@@ -33,6 +33,7 @@ final class LocationAddPresenter: LocationAddUseCaseOutput {
         }
     }
 
+
     func setDeviceId(_ model: DeviceIdModel) {
         viewModel.deviceId = model.deviceId
     }

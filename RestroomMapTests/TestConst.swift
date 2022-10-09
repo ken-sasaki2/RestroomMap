@@ -15,6 +15,8 @@ struct TestConst {
     static let shareUrl = "test_shareUrl"
     static let shareImage = "test_shareImage"
 
+    static let deviceId = "xxxxx_xxxxx"
+
     static let locationAddInputModel = LocationAddInputModel(
         lat: TestConst.lat,
         lng: TestConst.lng,
@@ -34,6 +36,7 @@ struct TestConst {
         isBed: false,
         isPowderRoom: false,
         isParking: false,
-        memo: nil
+        memo: nil,
+        deviceId: TestConst.deviceId
     )
 }

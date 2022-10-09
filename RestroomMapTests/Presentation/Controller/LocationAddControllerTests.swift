@@ -42,7 +42,8 @@ class LocationAddControllerTests: XCTestCase {
             isBed: true,
             isPowderRoom: true,
             isParking: true,
-            memo: "テストテストテストテストテスト"
+            memo: "テストテストテストテストテスト",
+            deviceId: TestConst.deviceId
         )
         XCTAssertEqual(locationAddUseCase.isAddLocationCalled, true)
     }
@@ -55,5 +56,15 @@ class LocationAddControllerTests: XCTestCase {
 
         controller.toggleIndicator()
         XCTAssertEqual(indicatorUseCase.isToggleIndicatorCalled, true)
+    }
+
+
+    func test_getDeviceId() throws {
+        let locationAddUseCase = MockLocationAddUseCase()
+        let indicatorUseCase = MockIndicatorUseCase()
+        let controller = LocationAddController(useCaseInput: locationAddUseCase, indicatorUseCaseInput: indicatorUseCase)
+
+        controller.getDeviceId()
+        XCTAssertEqual(locationAddUseCase.isGetDeviceIdCalled, true)
     }
 }

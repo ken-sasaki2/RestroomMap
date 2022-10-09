@@ -167,6 +167,7 @@
 		D8B9E89128F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */; };
 		D8B9E89328F2BE6E008E001F /* DeviceIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */; };
 		D8B9E89428F2BE6E008E001F /* DeviceIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */; };
+		D8B9E89628F2CE36008E001F /* DeviceIdModelTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9E89528F2CE36008E001F /* DeviceIdModelTranslatorTests.swift */; };
 		D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */; };
 		D8BAD897285A013500E2CA1D /* MockATTPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */; };
 		D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */; };
@@ -358,6 +359,7 @@
 		D8AF8C1F284655CF00533CC7 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		D8B9E88F28F2BE47008E001F /* DeviceIdModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdModelTranslator.swift; sourceTree = "<group>"; };
 		D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdModel.swift; sourceTree = "<group>"; };
+		D8B9E89528F2CE36008E001F /* DeviceIdModelTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdModelTranslatorTests.swift; sourceTree = "<group>"; };
 		D8BAD8932859FD8D00E2CA1D /* MockATTPermissionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionOutput.swift; sourceTree = "<group>"; };
 		D8BAD896285A013500E2CA1D /* MockATTPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionRepository.swift; sourceTree = "<group>"; };
 		D8BAD89B285A06F400E2CA1D /* MockATTPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockATTPermissionUseCase.swift; sourceTree = "<group>"; };
@@ -811,6 +813,7 @@
 			isa = PBXGroup;
 			children = (
 				D85B0B742837743C00E8062D /* CurrentLocationModelTranslatorTests.swift */,
+				D8B9E89528F2CE36008E001F /* DeviceIdModelTranslatorTests.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -1285,6 +1288,7 @@
 				D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */,
 				D8C81379285C9D2300695401 /* MockMapDataStore.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
+				D8B9E89628F2CE36008E001F /* DeviceIdModelTranslatorTests.swift in Sources */,
 				D84188BA2855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
 				D836EF4B285C28DA00A2D006 /* MockShareUseCaseOutput.swift in Sources */,
 				D8BAD8A3285A1A7100E2CA1D /* MockInquiryUseCaseOutput.swift in Sources */,

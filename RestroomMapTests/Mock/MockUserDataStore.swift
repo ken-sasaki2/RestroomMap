@@ -33,4 +33,12 @@ final class MockUserDataStore: UserDataStoreInterface {
     func saveDeviceId() {
         isSaveDeviceIdCalled = true
     }
+
+    var isGetDeviceIdCalled = false
+    func getDeviceId() -> DeviceIdEntity? {
+        isGetDeviceIdCalled = true
+        let entity = DeviceIdEntity(deviceId: TestConst.deviceId)
+
+        return entity
+    }
 }

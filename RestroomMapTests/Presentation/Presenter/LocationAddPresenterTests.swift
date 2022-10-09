@@ -55,4 +55,14 @@ class LocationAddPresenterTests: XCTestCase {
         presenter.toggleIndicator()
         XCTAssertEqual(viewModel.isShowIndicatorView, true)
     }
+
+
+    func test_setDeviceId() throws {
+        let viewModel = LocationAddViewModel()
+        let presenter = LocationAddPresenter(viewModel: viewModel)
+        let model = DeviceIdModel(deviceId: TestConst.deviceId)
+
+        presenter.setDeviceId(model)
+        XCTAssertEqual(viewModel.deviceId, model.deviceId)
+    }
 }
