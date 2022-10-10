@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D806298028F4103A00192D82 /* LocationFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D806297F28F4103A00192D82 /* LocationFetchOutputEntity.swift */; };
+		D806298128F4103A00192D82 /* LocationFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D806297F28F4103A00192D82 /* LocationFetchOutputEntity.swift */; };
 		D806CBDD286075C600EDBD18 /* LocationAddViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D806CBDC286075C600EDBD18 /* LocationAddViewBuilder.swift */; };
 		D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B098284B104F000CA523 /* ShareUseCaseTests.swift */; };
 		D811B09B284B1FE7000CA523 /* MapUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */; };
@@ -259,6 +261,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D806297F28F4103A00192D82 /* LocationFetchOutputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetchOutputEntity.swift; sourceTree = "<group>"; };
 		D806CBDC286075C600EDBD18 /* LocationAddViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddViewBuilder.swift; sourceTree = "<group>"; };
 		D811B098284B104F000CA523 /* ShareUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareUseCaseTests.swift; sourceTree = "<group>"; };
 		D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCaseTests.swift; sourceTree = "<group>"; };
@@ -606,6 +609,7 @@
 				D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */,
 				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
 				D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */,
+				D806297F28F4103A00192D82 /* LocationFetchOutputEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1154,6 +1158,7 @@
 				D8B9E89328F2BE6E008E001F /* DeviceIdModel.swift in Sources */,
 				D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */,
 				D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
+				D806298028F4103A00192D82 /* LocationFetchOutputEntity.swift in Sources */,
 				D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
 				D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */,
 				D8835FF9282FBE370048A495 /* MapPresenter.swift in Sources */,
@@ -1362,6 +1367,7 @@
 				D88B1AAA2861C95A000F5C0D /* LocationAddViewBuilder.swift in Sources */,
 				D8D8578E283343BB0094C1EB /* CurrentLocationEntity.swift in Sources */,
 				D8CE68F9283A865800C1EFD7 /* Const.swift in Sources */,
+				D806298128F4103A00192D82 /* LocationFetchOutputEntity.swift in Sources */,
 				D8C8136B285C670C00695401 /* MockATTPermissionDataStore.swift in Sources */,
 				D822F4522861621E008D0B7F /* LocationAddInputModel.swift in Sources */,
 			);
