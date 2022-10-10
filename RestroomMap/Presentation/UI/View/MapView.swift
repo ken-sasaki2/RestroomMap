@@ -33,7 +33,16 @@ struct MapView: View {
                         userTrackingMode: $userTrackingMode,
                         annotationItems: viewModel.locationFetchOutputModel,
                         annotationContent: { item in
-                            MapMarker(coordinate: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng))
+                            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng)) {
+                                Image(systemName: "mappin.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.blue)
+                                    .frame(width: 28, height: 28)
+                                    .onTapGesture {
+                                        print("item:", item)
+                                        // ここから登録内容表示Viewを開く
+                                    }
+                            }
                         }
                     )
                     .edgesIgnoringSafeArea(.all)
