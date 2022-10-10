@@ -20,7 +20,8 @@ class MapControllerTests: XCTestCase {
     func test_onPlusButtonTapped() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.onPlusButtonTapped()
         XCTAssertEqual(mapUseCase.isShowFocusViewCalled, true)
@@ -30,7 +31,8 @@ class MapControllerTests: XCTestCase {
     func test_onCancelAddLocationButtonTapped() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.onCancelAddLocationButtonTapped()
         XCTAssertEqual(mapUseCase.isHideFocusViewCalled, true)
@@ -40,7 +42,8 @@ class MapControllerTests: XCTestCase {
     func test_onAddLocationButtonTapped() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.onAddLocationButtonTapped()
         XCTAssertEqual(mapUseCase.isShowAddLocationViewIfCanCalled, true)
@@ -50,7 +53,8 @@ class MapControllerTests: XCTestCase {
     func test_onLocationButtonTapped() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.onLocationButtonTapped()
         XCTAssertEqual(mapUseCase.isGetCurrentLocationCalled, true)
@@ -60,7 +64,8 @@ class MapControllerTests: XCTestCase {
     func test_onMenuButtonTapped() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.onMenuButtonTapped()
         XCTAssertEqual(mapUseCase.isShowMenuViewCalled, true)
@@ -70,9 +75,21 @@ class MapControllerTests: XCTestCase {
     func test_toggleIndicator() throws {
         let mapUseCase = MockMapUseCase()
         let indicatorUseCase = MockIndicatorUseCase()
-        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase)
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
 
         controller.toggleIndicator()
         XCTAssertEqual(indicatorUseCase.isToggleIndicatorCalled, true)
+    }
+
+
+    func test_fetchLocation() throws {
+        let mapUseCase = MockMapUseCase()
+        let indicatorUseCase = MockIndicatorUseCase()
+        let locationFetchUseCase = MockLocationFetchUseCase()
+        let controller = MapController(mapUseCaseInput: mapUseCase, indicatorUseCaseInput: indicatorUseCase, locationFetchUseCaseInput: locationFetchUseCase)
+
+        controller.fetchLocation()
+        XCTAssertEqual(locationFetchUseCase.isFetchLocationCalled, true)
     }
 }

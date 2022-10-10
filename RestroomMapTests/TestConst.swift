@@ -39,4 +39,54 @@ struct TestConst {
         memo: nil,
         deviceId: TestConst.deviceId
     )
+
+    static let locationFetchOutputEntity = [
+        LocationFetchOutputEntity(
+            lat: TestConst.lat,
+            lng: TestConst.lng,
+            name: "テスト",
+            isOpen24Hour: false,
+            openDate: "11:00",
+            closeDate: "23:00",
+            holiday: "水曜日がお休み",
+            isWesternStyle: false,
+            isJapaneseStyle: false,
+            isPublic: false,
+            isByGender: false,
+            isWashlet: false,
+            isMultipurpose: false,
+            isWheelchair: false,
+            isDiaper: false,
+            isBed: false,
+            isPowderRoom: false,
+            isParking: false,
+            memo: nil,
+            deviceId: TestConst.deviceId
+        )
+    ]
+
+    static let locationFetchOutputModel = [
+        LocationFetchOutputModel(
+            lat: TestConst.lat,
+            lng: TestConst.lng,
+            name: "テスト",
+            isOpen24Hour: false,
+            openDate: "11:00",
+            closeDate: "23:00",
+            holiday: "水曜日がお休み",
+            isWesternStyle: false,
+            isJapaneseStyle: false,
+            isPublic: false,
+            isByGender: false,
+            isWashlet: false,
+            isMultipurpose: false,
+            isWheelchair: false,
+            isDiaper: false,
+            isBed: false,
+            isPowderRoom: false,
+            isParking: false,
+            memo: nil,
+            deviceId: TestConst.deviceId
+        )
+    ]
 }

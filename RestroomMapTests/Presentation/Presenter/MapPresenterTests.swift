@@ -81,4 +81,22 @@ class MapPresenterTests: XCTestCase {
         presenter.toggleIndicator()
         XCTAssertEqual(viewModel.isShowIndicatorView, true)
     }
+
+
+    func test_successFetchLocation() throws {
+        let viewModel = MapViewModel()
+        let presenter = MapPresenter(viewModel: viewModel)
+
+        presenter.successFetchLocation(TestConst.locationFetchOutputModel)
+        XCTAssert(viewModel.locationFetchOutputModel.count != 0)
+    }
+
+
+    func test_failFetchLocation() throws {
+        let viewModel = MapViewModel()
+        let presenter = MapPresenter(viewModel: viewModel)
+
+        presenter.failFetchLocation()
+        XCTAssertEqual(viewModel.isShowFetchLocationAlert, true)
+    }
 }

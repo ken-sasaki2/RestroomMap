@@ -14,10 +14,10 @@ protocol LocationFetchRepositoryInterface {
 
 
 final class LocationFetchRepository: LocationFetchRepositoryInterface {
-    private let dataStore: LocationFetchDataStore
+    private let dataStore: LocationFetchDataStoreInterface
 
 
-    init(dataStore: LocationFetchDataStore) {
+    init(dataStore: LocationFetchDataStoreInterface) {
         self.dataStore = dataStore
     }
 

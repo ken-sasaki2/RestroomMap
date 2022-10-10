@@ -101,9 +101,3 @@ final class LocationRequestToFirestore {
         return entity
     }
 }
-
-// データの取得処理書く ok
-// 起動時にデータ取得してUI反映 ok
-// 登録完了時にデータ取得してUI反映
-// テスト書く
-// データ取得のタイミングでIndivcator回す ok
