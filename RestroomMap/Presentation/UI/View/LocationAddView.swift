@@ -155,8 +155,30 @@ struct LocationAddView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("登録") {
-                            controller.showIndicator()
-                            controller.onAddButtonTapped(lat: lat, lng: lng, name: name, isOpen24Hour: isOpen24Hour, openDate: openDate, closeDate: closeDate, holiday: holiday, isWesternStyle: isWesternStyle, isJapaneseStyle: isJapaneseStyle, isPublic: isPublic, isByGender: isByGender, isWashlet: isWashlet, isMultipurpose: isMultipurpose, isWheelchair: isWheelchair, isDiaper: isDiaper, isBed: isBed, isPowderRoom: isPowderRoom, isParking: isParking, memo: memo)
+                            controller.toggleIndicator()
+                            controller.getDeviceId()
+                            controller.onAddButtonTapped(
+                                lat: lat,
+                                lng: lng,
+                                name: name,
+                                isOpen24Hour: isOpen24Hour,
+                                openDate: openDate,
+                                closeDate: closeDate,
+                                holiday: holiday,
+                                isWesternStyle: isWesternStyle,
+                                isJapaneseStyle: isJapaneseStyle,
+                                isPublic: isPublic,
+                                isByGender: isByGender,
+                                isWashlet: isWashlet,
+                                isMultipurpose: isMultipurpose,
+                                isWheelchair: isWheelchair,
+                                isDiaper: isDiaper,
+                                isBed: isBed,
+                                isPowderRoom: isPowderRoom,
+                                isParking: isParking,
+                                memo: memo,
+                                deviceId: viewModel.deviceId
+                            )
                         }
                         .foregroundColor(.black)
                     }

@@ -28,4 +28,16 @@ class LocationRequestToFirestoreTests: XCTestCase {
             XCTFail("Fail location save.")
         }
     }
+
+
+    func test_fetch() async throws {
+        let request = LocationRequestToFirestore()
+
+        do {
+            let result = try await request.fetch()
+            XCTAssertNotNil(result)
+        } catch {
+            XCTFail("Fail location fetch.")
+        }
+    }
 }

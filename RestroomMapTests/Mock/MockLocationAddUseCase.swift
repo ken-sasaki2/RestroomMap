@@ -13,4 +13,10 @@ final class MockLocationAddUseCase: LocationAddUseCaseInput {
     func addLocation(_ model: LocationAddInputModel) async {
         isAddLocationCalled = true
     }
+
+
+    var isGetDeviceIdCalled = false
+    func getDeviceId() {
+        isGetDeviceIdCalled = true
+    }
 }

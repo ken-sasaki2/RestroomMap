@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class LaunchPresenter: UserUseCaseOutput {
+final class LaunchPresenter: LaunchUseCaseOutput {
 
     func showLocatePermissionView() {
         RootViewModel.shared.changeRootView(rootView: .location)

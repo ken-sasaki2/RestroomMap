@@ -16,6 +16,8 @@ struct PinItem: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
+    @State private var outputModel: LocationFetchOutputModel?
+    @State private var isShowRegistedDataView = false
     @ObservedObject var viewModel: MapViewModel
     let controller: MapController
     var coordinate: CLLocationCoordinate2D?
@@ -31,11 +33,19 @@ struct MapView: View {
                         interactionModes: .all,
                         showsUserLocation: true,
                         userTrackingMode: $userTrackingMode,
-                        annotationItems: [
-                            PinItem(coordinate: .init(latitude: lat, longitude: lng))
-                        ],
+                        annotationItems: viewModel.locationFetchOutputModel,
                         annotationContent: { item in
-                            MapMarker(coordinate: item.coordinate)
+                            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng)) {
+                                Image(systemName: "mappin.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.blue)
+                                    .frame(width: 24, height: 24)
+                                    .onTapGesture {
+                                        print("kenken:", item)
+                                        outputModel = item
+                                        isShowRegistedDataView = true
+                                    }
+                            }
                         }
                     )
                     .edgesIgnoringSafeArea(.all)
@@ -58,25 +68,35 @@ struct MapView: View {
                             Spacer()
                         }
                     }
-                    .sheet(isPresented: $viewModel.isShowAddLocationView) {
+                    .sheet(isPresented: $viewModel.isShowAddLocationView, onDismiss: {
+                        refrech(region.center.latitude, lng: region.center.longitude)
+                    }, content: {
                         LocationAddViewBuilder.shared.build(lat: region.center.latitude, lng: region.center.longitude)
-                    }
+                    })
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
                     }
+                    .sheet(isPresented: $isShowRegistedDataView, onDismiss: {
+                        refrech(region.center.latitude, lng: region.center.longitude)
+                    }, content: {
+                        if let outputModel = outputModel {
+                            RegistedDataViewBuilder.shared.build(outputModel)
+                        }
+                    })
                     .alert("確認", isPresented: $viewModel.isShowLocationAlert) {
                         Button("OK") {}
                     } message: {
                         Text("'設定'から位置情報を許可してください")
                     }
+                    .alert("エラー", isPresented: $viewModel.isShowFetchLocationAlert) {
+                        Button("もう一度") {
+                            firstLaunchRefresh()
+                        }
+                    } message: {
+                        Text("データの取得に失敗しました。\n時間をおいてもう一度お試しください。")
+                    }
                     .onAppear {
-                        controller.toggleIndicator()
-                        controller.getCurrentLocation()
-                        setRegion(
-                            lat: viewModel.currentLocation.lat,
-                            lng: viewModel.currentLocation.lng
-                        )
-                        controller.toggleIndicator()
+                        firstLaunchRefresh()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {
@@ -96,6 +116,26 @@ struct MapView: View {
             }
         }
     }
+
+
+    private func firstLaunchRefresh() {
+        controller.getCurrentLocation()
+        refrech(viewModel.currentLocation.lat, lng: viewModel.currentLocation.lng)
+    }
+
+
+    private func refrech(_ lat: Double, lng: Double) {
+        controller.toggleIndicator()
+        controller.fetchLocation()
+        setRegion(
+            lat: lat,
+            lng: lng
+        )
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            controller.toggleIndicator()
+        }
+    }
+
 
     private func setRegion(lat: Double, lng: Double) {
         region = MKCoordinateRegion(

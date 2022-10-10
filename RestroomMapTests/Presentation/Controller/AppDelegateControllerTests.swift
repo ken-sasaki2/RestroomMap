@@ -19,19 +19,19 @@ class AppDelegateControllerTests: XCTestCase {
 
 
     func test_saveLaunchCount() throws {
-        let useCase = MockUserUseCase()
-        let controller = AppDelegateController(userUseCaseInput: useCase)
+        let useCase = MockLaunchUseCase()
+        let controller = AppDelegateController(launchUseCaseInput: useCase)
 
         controller.saveLaunchCount()
         XCTAssertEqual(useCase.isSaveLaunchCountCalled, true)
     }
 
 
-    func test_getLaunchCount() throws {
-        let useCase = MockUserUseCase()
-        let controller = AppDelegateController(userUseCaseInput: useCase)
+    func test_ActionPerFirstLaunchIfCan() throws {
+        let useCase = MockLaunchUseCase()
+        let controller = AppDelegateController(launchUseCaseInput: useCase)
 
-        controller.getLaunchCount()
-        XCTAssertEqual(useCase.isGetLaunchCountCalled, true)
+        controller.actionPerFirstLaunchIfCan()
+        XCTAssertEqual(useCase.isActionPerFirstlaunchIfCan, true)
     }
 }

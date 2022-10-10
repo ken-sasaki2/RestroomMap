@@ -19,9 +19,10 @@ class LocationAddUseCaseTests: XCTestCase {
 
 
     func test_addLocation_successAddLocationが呼ばれる() async throws {
-        let repository = MockLocationAddRepository()
+        let locationAddRepository = MockLocationAddRepository()
+        let userRepository = MockUserRepository()
         let output = MockLocationAddUseCaseOutput()
-        let useCase = LocationAddUseCase(repository: repository, output: output)
+        let useCase = LocationAddUseCase(repository: locationAddRepository, output: output, userRepository: userRepository)
 
         await useCase.addLocation(TestConst.locationAddInputModel)
         XCTAssertEqual(output.isSuccessAddLocationCalled, true)
@@ -29,9 +30,10 @@ class LocationAddUseCaseTests: XCTestCase {
 
 
     func test_addLocation_failAddLocationが呼ばれる() async throws {
-        let repository = MockLocationAddRepository()
+        let locationAddRepository = MockLocationAddRepository()
+        let userRepository = MockUserRepository()
         let output = MockLocationAddUseCaseOutput()
-        let useCase = LocationAddUseCase(repository: repository, output: output)
+        let useCase = LocationAddUseCase(repository: locationAddRepository, output: output, userRepository: userRepository)
         let model = LocationAddInputModel(
             lat: TestConst.lat,
             lng: TestConst.lng,
@@ -51,7 +53,8 @@ class LocationAddUseCaseTests: XCTestCase {
             isBed: false,
             isPowderRoom: false,
             isParking: false,
-            memo: nil
+            memo: nil,
+            deviceId: TestConst.deviceId
         )
 
         await useCase.addLocation(model)
@@ -59,9 +62,10 @@ class LocationAddUseCaseTests: XCTestCase {
     }
 
     func test_validLocationName_引数の文字数が2未満の場合() throws {
-        let repository = MockLocationAddRepository()
+        let locationAddRepository = MockLocationAddRepository()
+        let userRepository = MockUserRepository()
         let output = MockLocationAddUseCaseOutput()
-        let useCase = LocationAddUseCase(repository: repository, output: output)
+        let useCase = LocationAddUseCase(repository: locationAddRepository, output: output, userRepository: userRepository)
 
         let result = useCase.validLocationName("x")
         XCTAssertEqual(result, false)
@@ -69,12 +73,24 @@ class LocationAddUseCaseTests: XCTestCase {
 
 
     func test_validLocationName_引数の文字数が2以上の場合() throws {
-        let repository = MockLocationAddRepository()
+        let locationAddRepository = MockLocationAddRepository()
+        let userRepository = MockUserRepository()
         let output = MockLocationAddUseCaseOutput()
-        let useCase = LocationAddUseCase(repository: repository, output: output)
+        let useCase = LocationAddUseCase(repository: locationAddRepository, output: output, userRepository: userRepository)
 
         let result = useCase.validLocationName("xx")
         XCTAssertEqual(result, true)
     }
 
+
+    func test_getDeviceId() throws {
+        let locationAddRepository = MockLocationAddRepository()
+        let userRepository = MockUserRepository()
+        let output = MockLocationAddUseCaseOutput()
+        let useCase = LocationAddUseCase(repository: locationAddRepository, output: output, userRepository: userRepository)
+
+        useCase.getDeviceId()
+        XCTAssertEqual(userRepository.isGetDeviceIdCalled, true)
+        XCTAssertEqual(output.isSetDeviceIdCalled, true)
+    }
 }

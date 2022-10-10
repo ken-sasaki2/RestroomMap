@@ -20,11 +20,14 @@ final class MapViewBuilder {
         let mapRepository = MapRepository(dataStore: mapDataStore)
         let locatePermissionDataStore = LocatePermissionDataStore()
         let locatePermissionRepository = LocatePermissionRepository(dataStore: locatePermissionDataStore)
+        let locationFetchDataStore = LocationFetchDataStore()
+        let locationFetchRepository = LocationFetchRepository(dataStore: locationFetchDataStore)
 
         let mapUseCaseInput = MapUseCase(output: presenter, mapRepository: mapRepository, locatePermissionRepository: locatePermissionRepository)
         let indicatorUseCaseInput = IndicatorUseCase(output: presenter)
+        let locationFetchUseCaseInput = LocationFetchUseCase(repositorty: locationFetchRepository, output: presenter)
 
-        let controller = MapController(mapUseCaseInput: mapUseCaseInput, indicatorUseCaseInput: indicatorUseCaseInput)
+        let controller = MapController(mapUseCaseInput: mapUseCaseInput, indicatorUseCaseInput: indicatorUseCaseInput, locationFetchUseCaseInput: locationFetchUseCaseInput)
 
         let view = MapView(viewModel: viewModel, controller: controller)
 

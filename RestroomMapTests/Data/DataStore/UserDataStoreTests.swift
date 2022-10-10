@@ -26,4 +26,12 @@ class UserDataStoreTests: XCTestCase {
         let result = dataStore.getLaunchCount()
         XCTAssertEqual(result.launchCount, expect)
     }
+
+
+    func test_getDeviceId() throws {
+        let dataStore = UserDataStore()
+        let expects = dataStore.getDeviceId()
+
+        XCTAssertNotNil(expects)
+    }
 }

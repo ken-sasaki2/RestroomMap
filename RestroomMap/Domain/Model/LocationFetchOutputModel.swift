@@ -1,13 +1,14 @@
 //
-//  LocationAddInputModel.swift
+//  LocationFetchOutputModel.swift
 //  RestroomMap
 //
-//  Created by sasaki.ken on 2022/06/21.
+//  Created by sasaki.ken on 2022/10/10.
 //
 
 import Foundation
 
-struct LocationAddInputModel {
+struct LocationFetchOutputModel: Identifiable {
+    let id = UUID()
     var lat: Double
     var lng: Double
     var name: String

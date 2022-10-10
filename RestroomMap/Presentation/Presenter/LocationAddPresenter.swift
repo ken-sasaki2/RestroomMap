@@ -32,6 +32,11 @@ final class LocationAddPresenter: LocationAddUseCaseOutput {
             viewModel.isShowInValidLocationNameAlert = true
         }
     }
+
+
+    func setDeviceId(_ model: DeviceIdModel) {
+        viewModel.deviceId = model.deviceId
+    }
 }
 
 

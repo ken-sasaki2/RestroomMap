@@ -1,13 +1,13 @@
 //
-//  LocationAddInputModel.swift
+//  LocationFetchOutputEntity.swift
 //  RestroomMap
 //
-//  Created by sasaki.ken on 2022/06/21.
+//  Created by sasaki.ken on 2022/10/10.
 //
 
 import Foundation
 
-struct LocationAddInputModel {
+struct LocationFetchOutputEntity {
     var lat: Double
     var lng: Double
     var name: String
