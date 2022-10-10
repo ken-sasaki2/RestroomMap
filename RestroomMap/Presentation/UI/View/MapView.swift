@@ -16,6 +16,8 @@ struct PinItem: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion() // 座標領域
     @State private var userTrackingMode: MapUserTrackingMode = .none
+    @State private var outputModel: LocationFetchOutputModel?
+    @State private var isShowRegistedDataView = false
     @ObservedObject var viewModel: MapViewModel
     let controller: MapController
     var coordinate: CLLocationCoordinate2D?
@@ -37,10 +39,11 @@ struct MapView: View {
                                 Image(systemName: "mappin.circle.fill")
                                     .resizable()
                                     .foregroundColor(.blue)
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 24, height: 24)
                                     .onTapGesture {
-                                        print("item:", item)
-                                        // ここから登録内容表示Viewを開く
+                                        print("kenken:", item)
+                                        outputModel = item
+                                        isShowRegistedDataView = true
                                     }
                             }
                         }
@@ -73,6 +76,13 @@ struct MapView: View {
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
                     }
+                    .sheet(isPresented: $isShowRegistedDataView, onDismiss: {
+                        refrech(region.center.latitude, lng: region.center.longitude)
+                    }, content: {
+                        if let outputModel = outputModel {
+                            RegistedDataViewBuilder.shared.build(outputModel)
+                        }
+                    })
                     .alert("確認", isPresented: $viewModel.isShowLocationAlert) {
                         Button("OK") {}
                     } message: {

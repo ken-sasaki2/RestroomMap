@@ -74,18 +74,18 @@ struct TestConst {
             openDate: "11:00",
             closeDate: "23:00",
             holiday: "水曜日がお休み",
-            isWesternStyle: false,
-            isJapaneseStyle: false,
+            isWesternStyle: true,
+            isJapaneseStyle: true,
             isPublic: false,
             isByGender: false,
             isWashlet: false,
             isMultipurpose: false,
             isWheelchair: false,
             isDiaper: false,
-            isBed: false,
+            isBed: true,
             isPowderRoom: false,
             isParking: false,
-            memo: nil,
+            memo: "これはテストです。",
             deviceId: TestConst.deviceId
         )
     ]
