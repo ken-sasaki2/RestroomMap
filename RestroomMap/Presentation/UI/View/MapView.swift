@@ -31,11 +31,9 @@ struct MapView: View {
                         interactionModes: .all,
                         showsUserLocation: true,
                         userTrackingMode: $userTrackingMode,
-                        annotationItems: [
-                            PinItem(coordinate: .init(latitude: lat, longitude: lng))
-                        ],
+                        annotationItems: viewModel.locationFetchOutputModel,
                         annotationContent: { item in
-                            MapMarker(coordinate: item.coordinate)
+                            MapMarker(coordinate: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng))
                         }
                     )
                     .edgesIgnoringSafeArea(.all)
@@ -69,14 +67,15 @@ struct MapView: View {
                     } message: {
                         Text("'設定'から位置情報を許可してください")
                     }
+                    .alert("エラー", isPresented: $viewModel.isShowFetchLocationAlert) {
+                        Button("もう一度") {
+                            refrech()
+                        }
+                    } message: {
+                        Text("データの取得に失敗しました。\n時間をおいてもう一度お試しください。")
+                    }
                     .onAppear {
-                        controller.toggleIndicator()
-                        controller.getCurrentLocation()
-                        setRegion(
-                            lat: viewModel.currentLocation.lat,
-                            lng: viewModel.currentLocation.lng
-                        )
-                        controller.toggleIndicator()
+                        refrech()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {
@@ -96,6 +95,21 @@ struct MapView: View {
             }
         }
     }
+
+
+    private func refrech() {
+        controller.toggleIndicator()
+        controller.fetchLocation()
+        controller.getCurrentLocation()
+        setRegion(
+            lat: viewModel.currentLocation.lat,
+            lng: viewModel.currentLocation.lng
+        )
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            controller.toggleIndicator()
+        }
+    }
+
 
     private func setRegion(lat: Double, lng: Double) {
         region = MKCoordinateRegion(

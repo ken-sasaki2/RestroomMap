@@ -10,11 +10,13 @@ import Foundation
 final class MapController {
     private let mapUseCaseInput: MapUseCaseInput
     private let indicatorUseCaseInput: IndicatorUseCaseInput
+    private let locationFetchUseCaseInput: LocationFetchUseCaseInput
 
 
-    init(mapUseCaseInput: MapUseCaseInput, indicatorUseCaseInput: IndicatorUseCaseInput) {
+    init(mapUseCaseInput: MapUseCaseInput, indicatorUseCaseInput: IndicatorUseCaseInput, locationFetchUseCaseInput: LocationFetchUseCaseInput) {
         self.mapUseCaseInput = mapUseCaseInput
         self.indicatorUseCaseInput = indicatorUseCaseInput
+        self.locationFetchUseCaseInput = locationFetchUseCaseInput
     }
 
 
@@ -50,5 +52,12 @@ final class MapController {
 
     func toggleIndicator() {
         indicatorUseCaseInput.toggleIndicator()
+    }
+
+
+    func fetchLocation() {
+        Task {
+            await locationFetchUseCaseInput.fetchLocation()
+        }
     }
 }

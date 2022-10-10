@@ -55,3 +55,14 @@ extension MapPresenter: IndicatorUseCaseOutput {
         viewModel.isShowIndicatorView.toggle()
     }
 }
+
+
+extension MapPresenter: LocationFetchUseCaseOutput {
+    func successFetchLocation(_ model: [LocationFetchOutputModel]) {
+        viewModel.locationFetchOutputModel = model
+    }
+
+    func failFetchLocation() {
+        viewModel.isShowFetchLocationAlert = true
+    }
+}
