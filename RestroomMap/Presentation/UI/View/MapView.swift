@@ -56,9 +56,11 @@ struct MapView: View {
                             Spacer()
                         }
                     }
-                    .sheet(isPresented: $viewModel.isShowAddLocationView) {
+                    .sheet(isPresented: $viewModel.isShowAddLocationView, onDismiss: {
+                        refrech(region.center.latitude, lng: region.center.longitude)
+                    }, content: {
                         LocationAddViewBuilder.shared.build(lat: region.center.latitude, lng: region.center.longitude)
-                    }
+                    })
                     .sheet(isPresented: $viewModel.isShowMenuView) {
                         MenuViewBuilder.shared.build()
                     }
@@ -69,13 +71,13 @@ struct MapView: View {
                     }
                     .alert("エラー", isPresented: $viewModel.isShowFetchLocationAlert) {
                         Button("もう一度") {
-                            refrech()
+                            firstLaunchRefresh()
                         }
                     } message: {
                         Text("データの取得に失敗しました。\n時間をおいてもう一度お試しください。")
                     }
                     .onAppear {
-                        refrech()
+                        firstLaunchRefresh()
                     }
                     if viewModel.isShowFocusView {
                         MapFocusView {
@@ -97,13 +99,18 @@ struct MapView: View {
     }
 
 
-    private func refrech() {
+    private func firstLaunchRefresh() {
+        controller.getCurrentLocation()
+        refrech(viewModel.currentLocation.lat, lng: viewModel.currentLocation.lng)
+    }
+
+
+    private func refrech(_ lat: Double, lng: Double) {
         controller.toggleIndicator()
         controller.fetchLocation()
-        controller.getCurrentLocation()
         setRegion(
-            lat: viewModel.currentLocation.lat,
-            lng: viewModel.currentLocation.lng
+            lat: lat,
+            lng: lng
         )
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             controller.toggleIndicator()
