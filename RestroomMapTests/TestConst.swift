@@ -16,6 +16,7 @@ struct TestConst {
     static let shareImage = "test_shareImage"
 
     static let deviceId = "xxxxx_xxxxx"
+    static let documentId = "yyyyy_yyyyy"
 
     static let locationAddInputModel = LocationAddInputModel(
         lat: TestConst.lat,
@@ -61,7 +62,8 @@ struct TestConst {
             isPowderRoom: false,
             isParking: false,
             memo: nil,
-            deviceId: TestConst.deviceId
+            deviceId: TestConst.deviceId,
+            documentId: TestConst.documentId
         )
     ]
 
@@ -86,7 +88,8 @@ struct TestConst {
             isPowderRoom: false,
             isParking: false,
             memo: "これはテストです。",
-            deviceId: TestConst.deviceId
+            deviceId: TestConst.deviceId,
+            documentId: TestConst.documentId
         )
     ]
 }

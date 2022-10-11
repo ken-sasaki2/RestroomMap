@@ -9,15 +9,32 @@ import Foundation
 
 
 final class RegistedDataController {
-    private let useCaseInput: RegistedDataUseCaseInput
+    private let registedDataUseCaseInput: RegistedDataUseCaseInput
+    private let locationDeleteUseCase: LocationDeleteUseCase
+    private let indicatorUseCaseInput: IndicatorUseCaseInput
 
 
-    init(useCaseInput: RegistedDataUseCaseInput) {
-        self.useCaseInput = useCaseInput
+    init(registedDataUseCaseInput: RegistedDataUseCaseInput, locationDeleteUseCase: LocationDeleteUseCase, indicatorUseCaseInput: IndicatorUseCaseInput) {
+        self.registedDataUseCaseInput = registedDataUseCaseInput
+        self.locationDeleteUseCase = locationDeleteUseCase
+        self.indicatorUseCaseInput = indicatorUseCaseInput
     }
 
 
     func getDeviceId() {
-        useCaseInput.getDeviceId()
+        registedDataUseCaseInput.getDeviceId()
+    }
+
+
+    func deleteLocation(_ documentId: String) {
+        Task {
+            let model = DocumentIdModel(id: documentId)
+            await locationDeleteUseCase.deleteLocation(model)
+        }
+    }
+
+
+    func toggleIndicator() {
+        indicatorUseCaseInput.toggleIndicator()
     }
 }

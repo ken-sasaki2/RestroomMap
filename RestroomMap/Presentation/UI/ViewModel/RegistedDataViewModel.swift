@@ -9,4 +9,7 @@ import Foundation
 
 final class RegistedDataViewModel: ObservableObject {
     @Published var deviceId = ""
+    @Published var successDeleteLocation = false
+    @Published var failDeleteLocation = false
+    @Published var isShowIndicatorView = false
 }

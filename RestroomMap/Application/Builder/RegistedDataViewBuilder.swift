@@ -17,10 +17,16 @@ final class RegistedDataViewBuilder {
         let presenter = RegistedDataPresenter(viewModel: viewModel)
 
         let dataStore = UserDataStore()
-        let repository = UserRepository(dataStore: dataStore)
+        let locationDeleteDataStore = LocationDeleteDataStore()
 
-        let useCase = RegistedDataUseCase(repository: repository, output: presenter)
-        let controller = RegistedDataController(useCaseInput: useCase)
+        let repository = UserRepository(dataStore: dataStore)
+        let locationDeleteRepository = LocationDeleteRepository(dataStore: locationDeleteDataStore)
+
+        let registedDataUseCaseInput = RegistedDataUseCase(repository: repository, output: presenter)
+        let locationDeleteUseCase = LocationDeleteUseCase(repository: locationDeleteRepository, output: presenter)
+        let indicatorUseCase = IndicatorUseCase(output: presenter)
+
+        let controller = RegistedDataController(registedDataUseCaseInput: registedDataUseCaseInput, locationDeleteUseCase: locationDeleteUseCase, indicatorUseCaseInput: indicatorUseCase)
 
         let view = RegistedDataView(viewModel: viewModel, controller: controller, outputModel: outputModel)
 

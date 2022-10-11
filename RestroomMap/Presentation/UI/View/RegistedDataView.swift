@@ -16,111 +16,134 @@ struct RegistedDataView: View {
 
     var body: some View {
         NavigationView {
-            Form {
-                Section("トイレの名前") {
-                    Text(outputModel.name)
-                }
-                Section("営業時間") {
-                    if outputModel.isOpen24Hour {
-                        HStack {
-                            Text("24時間営業")
-                        }
-                    } else {
-                        Text("\(outputModel.openDate)〜\(outputModel.closeDate)")
+            ZStack {
+                Form {
+                    Section("トイレの名前") {
+                        Text(outputModel.name)
                     }
-                }
-                Section("休業日") {
-                    Text(outputModel.holiday ?? "休業日なし")
-                }
-                Section("設備") {
-                    Group {
-                        HStack {
-                            Text("洋式トイレ")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isWesternStyle)
-                        }
-                        HStack {
-                            Text("和式トイレ")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isJapaneseStyle)
-                        }
-                        HStack {
-                            Text("公衆トイレ")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isPublic)
-                        }
-                        HStack {
-                            Text("男女別トイレ")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isByGender)
+                    Section("営業時間") {
+                        if outputModel.isOpen24Hour {
+                            HStack {
+                                Text("24時間営業")
+                            }
+                        } else {
+                            Text("\(outputModel.openDate)〜\(outputModel.closeDate)")
                         }
                     }
-                    Group {
-                        HStack {
-                            Text("ウォシュレット")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isWashlet)
+                    Section("休業日") {
+                        Text(outputModel.holiday ?? "休業日なし")
+                    }
+                    Section("設備") {
+                        Group {
+                            HStack {
+                                Text("洋式トイレ")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isWesternStyle)
+                            }
+                            HStack {
+                                Text("和式トイレ")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isJapaneseStyle)
+                            }
+                            HStack {
+                                Text("公衆トイレ")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isPublic)
+                            }
+                            HStack {
+                                Text("男女別トイレ")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isByGender)
+                            }
+                        }
+                        Group {
+                            HStack {
+                                Text("ウォシュレット")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isWashlet)
+                            }
+                            HStack {
+                                Text("多目的トイレ")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isMultipurpose)
+                            }
+                            HStack {
+                                Text("車イス対応")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isWheelchair)
+                            }
+                            HStack {
+                                Text("おむつ交換設備")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isDiaper)
+                            }
+                            HStack {
+                                Text("大型ベッド")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isBed)
+                            }
+                            HStack {
+                                Text("パウダールーム")
+                                Spacer()
+                                CheckBoxView(isCheck: outputModel.isPowderRoom)
+                            }
                         }
                         HStack {
-                            Text("多目的トイレ")
+                            Text("駐車場")
                             Spacer()
-                            CheckBoxView(isCheck: outputModel.isMultipurpose)
-                        }
-                        HStack {
-                            Text("車イス対応")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isWheelchair)
-                        }
-                        HStack {
-                            Text("おむつ交換設備")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isDiaper)
-                        }
-                        HStack {
-                            Text("大型ベッド")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isBed)
-                        }
-                        HStack {
-                            Text("パウダールーム")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isPowderRoom)
+                            CheckBoxView(isCheck: outputModel.isParking)
                         }
                     }
-                    HStack {
-                        Text("駐車場")
-                        Spacer()
-                        CheckBoxView(isCheck: outputModel.isParking)
+                    if let memo = outputModel.memo {
+                        Section("メモ") {
+                            Text(memo)
+                        }
                     }
                 }
-                if let memo = outputModel.memo {
-                    Section("メモ") {
-                        Text(memo)
-                    }
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
+                .alert("確認", isPresented: $viewModel.successDeleteLocation) {
+                    Button("OK") {
                         presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .foregroundColor(.black)
                     }
+                } message: {
+                    Text("データの削除に成功しました！\nマップに戻ります。")
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    if outputModel.deviceId == viewModel.deviceId {
+                .alert("エラー", isPresented: $viewModel.failDeleteLocation) {
+                    Button("OK") {}
+                } message: {
+                    Text("データの削除に失敗しました。\n時間をおいてもう一度お試しください。")
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Button {
-                            print("削除")
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Text("このデータを削除")
-                                .foregroundColor(.red)
+                            Image(systemName: "xmark")
+                                .foregroundColor(.black)
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        if outputModel.deviceId == viewModel.deviceId {
+                            Button {
+                                controller.toggleIndicator()
+                                controller.deleteLocation(outputModel.documentId)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                                    controller.toggleIndicator()
+                                }
+                            } label: {
+                                Text("このデータを削除")
+                                    .foregroundColor(.red)
+                            }
                         }
                     }
                 }
-            }
-            .onAppear {
-                controller.getDeviceId()
+                .onAppear {
+                    controller.getDeviceId()
+                }
+                if viewModel.isShowIndicatorView {
+                    withAnimation {
+                        IndicatorView()
+                    }
+                }
             }
         }
     }

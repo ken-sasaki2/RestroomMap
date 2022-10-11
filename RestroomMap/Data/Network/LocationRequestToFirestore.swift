@@ -67,7 +67,8 @@ final class LocationRequestToFirestore {
                   let isPowderRoom = documentData["isPowderRoom"] as? Bool,
                   let isParking = documentData["isParking"] as? Bool,
                   let memo = documentData["memo"] as? String,
-                  let deviceId = documentData["deviceId"] as? String
+                  let deviceId = documentData["deviceId"] as? String,
+                  let documentId = document.documentID as? String
             else {
                 throw NSError(domain: "Fail fetch locations data.", code: -1)
             }
@@ -92,12 +93,22 @@ final class LocationRequestToFirestore {
                 isPowderRoom: isPowderRoom,
                 isParking: isParking,
                 memo: memo,
-                deviceId: deviceId
+                deviceId: deviceId,
+                documentId: documentId
             )
 
             entity.append(data)
         }
 
         return entity
+    }
+
+
+    func delete(_ model: DocumentIdModel) async throws {
+        do {
+            try await reference.document(model.id).delete()
+        } catch {
+            throw error
+        }
     }
 }

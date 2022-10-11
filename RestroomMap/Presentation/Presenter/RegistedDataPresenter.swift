@@ -21,3 +21,22 @@ final class RegistedDataPresenter: RegistedDataUseCaseOutput {
         viewModel.deviceId = model.deviceId
     }
 }
+
+
+extension RegistedDataPresenter: LocationDeleteUseCaseOutput {
+    func successDeleteLocation() {
+        viewModel.successDeleteLocation = true
+    }
+
+
+    func failDeleteLocation() {
+        viewModel.failDeleteLocation = true
+    }
+}
+
+
+extension RegistedDataPresenter: IndicatorUseCaseOutput {
+    func toggleIndicator() {
+        viewModel.isShowIndicatorView.toggle()
+    }
+}
