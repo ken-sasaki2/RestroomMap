@@ -102,13 +102,17 @@ struct RegistedDataView: View {
                 }
                 .alert("確認", isPresented: $viewModel.successDeleteLocation) {
                     Button("OK") {
+                        controller.toggleIndicator()
                         presentationMode.wrappedValue.dismiss()
                     }
                 } message: {
                     Text("データの削除に成功しました！\nマップに戻ります。")
                 }
                 .alert("エラー", isPresented: $viewModel.failDeleteLocation) {
-                    Button("OK") {}
+                    Button("OK") {
+                        controller.toggleIndicator()
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 } message: {
                     Text("データの削除に失敗しました。\n時間をおいてもう一度お試しください。")
                 }
@@ -126,9 +130,6 @@ struct RegistedDataView: View {
                             Button {
                                 controller.toggleIndicator()
                                 controller.deleteLocation(outputModel.documentId)
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                                    controller.toggleIndicator()
-                                }
                             } label: {
                                 Text("このデータを削除")
                                     .foregroundColor(.red)
