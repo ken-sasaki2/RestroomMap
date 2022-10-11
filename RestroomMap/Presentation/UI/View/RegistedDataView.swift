@@ -9,7 +9,9 @@ import SwiftUI
 
 
 struct RegistedDataView: View {
-    var outputModel: LocationFetchOutputModel
+    @ObservedObject var viewModel: RegistedDataViewModel
+    let controller: RegistedDataController
+    let outputModel: LocationFetchOutputModel
     @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
@@ -22,8 +24,6 @@ struct RegistedDataView: View {
                     if outputModel.isOpen24Hour {
                         HStack {
                             Text("24時間営業")
-                            Spacer()
-                            CheckBoxView(isCheck: outputModel.isOpen24Hour)
                         }
                     } else {
                         Text("\(outputModel.openDate)〜\(outputModel.closeDate)")
@@ -109,14 +109,18 @@ struct RegistedDataView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    // deviceIDが一致したら削除ボタンを表示
-                    Button {
-                        print("削除")
-                    } label: {
-                        Text("このデータを削除")
-                            .foregroundColor(.red)
+                    if outputModel.deviceId == viewModel.deviceId {
+                        Button {
+                            print("削除")
+                        } label: {
+                            Text("このデータを削除")
+                                .foregroundColor(.red)
+                        }
                     }
                 }
+            }
+            .onAppear {
+                controller.getDeviceId()
             }
         }
     }
@@ -125,6 +129,6 @@ struct RegistedDataView: View {
 
 struct RegistedDataView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistedDataView(outputModel: TestConst.locationFetchOutputModel[0])
+        RegistedDataViewBuilder.shared.build(TestConst.locationFetchOutputModel[0])
     }
 }
