@@ -40,4 +40,16 @@ class LocationRequestToFirestoreTests: XCTestCase {
             XCTFail("Fail location fetch.")
         }
     }
+
+
+    func test_delete() async throws {
+        let request = LocationRequestToFirestore()
+        let model = DocumentIdModel(id: TestConst.documentId)
+
+        do {
+            try await request.delete(model)
+        } catch {
+            XCTFail("Fail test deleteLocation.")
+        }
+    }
 }
