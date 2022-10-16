@@ -10,13 +10,13 @@ import Foundation
 
 final class RegistedDataController {
     private let registedDataUseCaseInput: RegistedDataUseCaseInput
-    private let locationDeleteUseCase: LocationDeleteUseCase
+    private let locationDeleteUseCaseInput: LocationDeleteUseCaseInput
     private let indicatorUseCaseInput: IndicatorUseCaseInput
 
 
-    init(registedDataUseCaseInput: RegistedDataUseCaseInput, locationDeleteUseCase: LocationDeleteUseCase, indicatorUseCaseInput: IndicatorUseCaseInput) {
+    init(registedDataUseCaseInput: RegistedDataUseCaseInput, locationDeleteUseCaseInput: LocationDeleteUseCaseInput, indicatorUseCaseInput: IndicatorUseCaseInput) {
         self.registedDataUseCaseInput = registedDataUseCaseInput
-        self.locationDeleteUseCase = locationDeleteUseCase
+        self.locationDeleteUseCaseInput = locationDeleteUseCaseInput
         self.indicatorUseCaseInput = indicatorUseCaseInput
     }
 
@@ -29,7 +29,7 @@ final class RegistedDataController {
     func deleteLocation(_ documentId: String) {
         Task {
             let model = DocumentIdModel(id: documentId)
-            await locationDeleteUseCase.deleteLocation(model)
+            await locationDeleteUseCaseInput.deleteLocation(model)
         }
     }
 

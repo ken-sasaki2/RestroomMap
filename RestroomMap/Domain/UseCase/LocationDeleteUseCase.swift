@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LocationDeleteUseCaseInput {
-    func deleteLocation(_ model: DocumentIdModel) async throws
+    func deleteLocation(_ model: DocumentIdModel) async
 }
 
 
