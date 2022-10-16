@@ -29,4 +29,5 @@ struct LocationFetchOutputModel: Identifiable {
     var isParking: Bool
     var memo: String?
     var deviceId: String
+    var documentId: String
 }

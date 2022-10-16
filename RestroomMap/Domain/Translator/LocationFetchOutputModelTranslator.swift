@@ -34,7 +34,8 @@ final class LocationFetchOutputModelTranslator {
                 isPowderRoom: entity.isPowderRoom,
                 isParking: entity.isParking,
                 memo: entity.memo,
-                deviceId: entity.deviceId
+                deviceId: entity.deviceId,
+                documentId: entity.documentId
             )
             model.append(data)
         }

@@ -28,4 +28,5 @@ struct LocationFetchOutputEntity {
     var isParking: Bool
     var memo: String?
     var deviceId: String
+    var documentId: String
 }

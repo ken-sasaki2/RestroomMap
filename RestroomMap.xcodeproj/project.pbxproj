@@ -60,6 +60,20 @@
 		D822F45E28616644008D0B7F /* LocationAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822F45D28616644008D0B7F /* LocationAddPresenter.swift */; };
 		D822F45F28616644008D0B7F /* LocationAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822F45D28616644008D0B7F /* LocationAddPresenter.swift */; };
 		D824610F2857893B004AC989 /* ATTPermissionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824610E2857893B004AC989 /* ATTPermissionUseCaseTests.swift */; };
+		D828DBAA28FC24C400DFE7C4 /* RegistedDataViewBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBA928FC24C400DFE7C4 /* RegistedDataViewBuilderTests.swift */; };
+		D828DBAC28FC261A00DFE7C4 /* RegistedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80629A728F45CA600192D82 /* RegistedDataView.swift */; };
+		D828DBAD28FC262C00DFE7C4 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80629AD28F466CC00192D82 /* CheckBoxView.swift */; };
+		D828DBAF28FC266A00DFE7C4 /* RegistedDataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBAE28FC266A00DFE7C4 /* RegistedDataControllerTests.swift */; };
+		D828DBB128FC26D600DFE7C4 /* MockLocationDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBB028FC26D600DFE7C4 /* MockLocationDeleteUseCase.swift */; };
+		D828DBB328FC28C300DFE7C4 /* MockRegistedDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBB228FC28C300DFE7C4 /* MockRegistedDataUseCase.swift */; };
+		D828DBB528FC390200DFE7C4 /* LocationDeleteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBB428FC390200DFE7C4 /* LocationDeleteUseCaseTests.swift */; };
+		D828DBB728FC394E00DFE7C4 /* MockLocationDeleteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBB628FC394E00DFE7C4 /* MockLocationDeleteRepository.swift */; };
+		D828DBB928FC39E800DFE7C4 /* MockLocationDeleteUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBB828FC39E800DFE7C4 /* MockLocationDeleteUseCaseOutput.swift */; };
+		D828DBBB28FC3C0900DFE7C4 /* LocationDeleteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBBA28FC3C0900DFE7C4 /* LocationDeleteRepositoryTests.swift */; };
+		D828DBBD28FC3CB200DFE7C4 /* MockLocationDeleteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBBC28FC3CB200DFE7C4 /* MockLocationDeleteDataStore.swift */; };
+		D828DBBF28FC423900DFE7C4 /* RegistedDataPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828DBBE28FC423900DFE7C4 /* RegistedDataPresenterTests.swift */; };
+		D83305E828F504AE0054252E /* RegistedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83305E728F504AE0054252E /* RegistedDataController.swift */; };
+		D83305E928F504AE0054252E /* RegistedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83305E728F504AE0054252E /* RegistedDataController.swift */; };
 		D836061F282D023400CDD7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836061E282D023400CDD7F0 /* AppDelegate.swift */; };
 		D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */; };
 		D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8360623282EB72D00CDD7F0 /* MenuView.swift */; };
@@ -107,6 +121,20 @@
 		D84DC67F2873D0DA0048AAC6 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */; };
 		D84DC6852875D3050048AAC6 /* DeviceIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */; };
 		D84DC6862875D3050048AAC6 /* DeviceIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */; };
+		D855AA7E28F5583500DE8DCF /* RegistedDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA7D28F5583500DE8DCF /* RegistedDataViewModel.swift */; };
+		D855AA7F28F5583500DE8DCF /* RegistedDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA7D28F5583500DE8DCF /* RegistedDataViewModel.swift */; };
+		D855AA8128F559CE00DE8DCF /* RegistedDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8028F559CE00DE8DCF /* RegistedDataUseCase.swift */; };
+		D855AA8228F559CE00DE8DCF /* RegistedDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8028F559CE00DE8DCF /* RegistedDataUseCase.swift */; };
+		D855AA8428F559FA00DE8DCF /* RegistedDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8328F559FA00DE8DCF /* RegistedDataPresenter.swift */; };
+		D855AA8528F559FA00DE8DCF /* RegistedDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8328F559FA00DE8DCF /* RegistedDataPresenter.swift */; };
+		D855AA8728F5696A00DE8DCF /* DocumentIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8628F5696A00DE8DCF /* DocumentIdModel.swift */; };
+		D855AA8828F5696A00DE8DCF /* DocumentIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8628F5696A00DE8DCF /* DocumentIdModel.swift */; };
+		D855AA8A28F5698800DE8DCF /* LocationDeleteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8928F5698800DE8DCF /* LocationDeleteDataStore.swift */; };
+		D855AA8B28F5698800DE8DCF /* LocationDeleteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8928F5698800DE8DCF /* LocationDeleteDataStore.swift */; };
+		D855AA8D28F56AA300DE8DCF /* LocationDeleteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8C28F56AA300DE8DCF /* LocationDeleteRepository.swift */; };
+		D855AA8E28F56AA300DE8DCF /* LocationDeleteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8C28F56AA300DE8DCF /* LocationDeleteRepository.swift */; };
+		D855AA9028F56B0400DE8DCF /* LocationDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8F28F56B0400DE8DCF /* LocationDeleteUseCase.swift */; };
+		D855AA9128F56B0400DE8DCF /* LocationDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855AA8F28F56B0400DE8DCF /* LocationDeleteUseCase.swift */; };
 		D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B5F28375C2F00E8062D /* MapRepository.swift */; };
 		D85B0B6228375D6900E8062D /* MapDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B6128375D6900E8062D /* MapDataStore.swift */; };
 		D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0B63283767F300E8062D /* CurrentLocationModel.swift */; };
@@ -316,6 +344,17 @@
 		D822F45A28616526008D0B7F /* LocationRequestToFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestToFirestore.swift; sourceTree = "<group>"; };
 		D822F45D28616644008D0B7F /* LocationAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenter.swift; sourceTree = "<group>"; };
 		D824610E2857893B004AC989 /* ATTPermissionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTPermissionUseCaseTests.swift; sourceTree = "<group>"; };
+		D828DBA928FC24C400DFE7C4 /* RegistedDataViewBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataViewBuilderTests.swift; sourceTree = "<group>"; };
+		D828DBAE28FC266A00DFE7C4 /* RegistedDataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataControllerTests.swift; sourceTree = "<group>"; };
+		D828DBB028FC26D600DFE7C4 /* MockLocationDeleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationDeleteUseCase.swift; sourceTree = "<group>"; };
+		D828DBB228FC28C300DFE7C4 /* MockRegistedDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegistedDataUseCase.swift; sourceTree = "<group>"; };
+		D828DBB428FC390200DFE7C4 /* LocationDeleteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeleteUseCaseTests.swift; sourceTree = "<group>"; };
+		D828DBB628FC394E00DFE7C4 /* MockLocationDeleteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationDeleteRepository.swift; sourceTree = "<group>"; };
+		D828DBB828FC39E800DFE7C4 /* MockLocationDeleteUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationDeleteUseCaseOutput.swift; sourceTree = "<group>"; };
+		D828DBBA28FC3C0900DFE7C4 /* LocationDeleteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeleteRepositoryTests.swift; sourceTree = "<group>"; };
+		D828DBBC28FC3CB200DFE7C4 /* MockLocationDeleteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationDeleteDataStore.swift; sourceTree = "<group>"; };
+		D828DBBE28FC423900DFE7C4 /* RegistedDataPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataPresenterTests.swift; sourceTree = "<group>"; };
+		D83305E728F504AE0054252E /* RegistedDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataController.swift; sourceTree = "<group>"; };
 		D836061E282D023400CDD7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8360621282EAA9100CDD7F0 /* MapToolBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolBarButtonView.swift; sourceTree = "<group>"; };
 		D8360623282EB72D00CDD7F0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -355,6 +394,13 @@
 		D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddPresenterTests.swift; sourceTree = "<group>"; };
 		D84DC67D2873D0DA0048AAC6 /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdEntity.swift; sourceTree = "<group>"; };
+		D855AA7D28F5583500DE8DCF /* RegistedDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataViewModel.swift; sourceTree = "<group>"; };
+		D855AA8028F559CE00DE8DCF /* RegistedDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataUseCase.swift; sourceTree = "<group>"; };
+		D855AA8328F559FA00DE8DCF /* RegistedDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistedDataPresenter.swift; sourceTree = "<group>"; };
+		D855AA8628F5696A00DE8DCF /* DocumentIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIdModel.swift; sourceTree = "<group>"; };
+		D855AA8928F5698800DE8DCF /* LocationDeleteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeleteDataStore.swift; sourceTree = "<group>"; };
+		D855AA8C28F56AA300DE8DCF /* LocationDeleteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeleteRepository.swift; sourceTree = "<group>"; };
+		D855AA8F28F56B0400DE8DCF /* LocationDeleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeleteUseCase.swift; sourceTree = "<group>"; };
 		D85B0B5F28375C2F00E8062D /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		D85B0B6128375D6900E8062D /* MapDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataStore.swift; sourceTree = "<group>"; };
 		D85B0B63283767F300E8062D /* CurrentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationModel.swift; sourceTree = "<group>"; };
@@ -504,6 +550,7 @@
 				D84DC67B2873CDC90048AAC6 /* LocationAddPresenterTests.swift */,
 				D8176FEF2841D65100C674EA /* MapPresenterTests.swift */,
 				D8176FF32841DA2700C674EA /* MenuPresenterTests.swift */,
+				D828DBBE28FC423900DFE7C4 /* RegistedDataPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -545,6 +592,7 @@
 				D8A5A349286B02AA0056CD2B /* LocationAddViewBuilderTests.swift */,
 				D84188C42856AB6C00CD2AFE /* MapViewBuilderTests.swift */,
 				D84188C62856AB7A00CD2AFE /* MenuViewBuilderTests.swift */,
+				D828DBA928FC24C400DFE7C4 /* RegistedDataViewBuilderTests.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -642,10 +690,10 @@
 				D8A9EDC12841EFC50011E703 /* ATTAuthorizationStatusEntity.swift */,
 				D838A7A9283324DD00047D52 /* AuthorizationStatusEntity.swift */,
 				D8D8578C283343BB0094C1EB /* CurrentLocationEntity.swift */,
-				D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */,
-				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
 				D84DC6842875D3050048AAC6 /* DeviceIdEntity.swift */,
+				D8A9EDD328420AAD0011E703 /* LaunchCountEntity.swift */,
 				D806297F28F4103A00192D82 /* LocationFetchOutputEntity.swift */,
+				D8895ED4283535AE0079C2AA /* UserDefaultsEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -656,6 +704,7 @@
 				D8A9EDB92841E8B50011E703 /* ATTPermissionDataStore.swift */,
 				D838A7A6283324CF00047D52 /* LocatePermissionDataStore.swift */,
 				D822F456286163CE008D0B7F /* LocationAddDataStore.swift */,
+				D855AA8928F5698800DE8DCF /* LocationDeleteDataStore.swift */,
 				D806298228F4123400192D82 /* LocationFetchDataStore.swift */,
 				D85B0B6128375D6900E8062D /* MapDataStore.swift */,
 				D8895ED12835323C0079C2AA /* UserDataStore.swift */,
@@ -728,6 +777,7 @@
 				D88A663D2863C285003271A3 /* LocationAddViewModel.swift */,
 				D8835FF5282FBE1D0048A495 /* MapViewModel.swift */,
 				D8CE68D22837950D00C1EFD7 /* MenuViewModel.swift */,
+				D855AA7D28F5583500DE8DCF /* RegistedDataViewModel.swift */,
 				D8AF8C1D284654EC00533CC7 /* RootViewModel.swift */,
 			);
 			path = ViewModel;
@@ -742,6 +792,7 @@
 				D8C8137A285F247100695401 /* LocationAddController.swift */,
 				D8835FF2282FBE020048A495 /* MapController.swift */,
 				D8CE68CC283794BC00C1EFD7 /* MenuController.swift */,
+				D83305E728F504AE0054252E /* RegistedDataController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -749,12 +800,13 @@
 		D84930922829FCDC002DDFD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D85B0B63283767F300E8062D /* CurrentLocationModel.swift */,
-				D822F44D28616119008D0B7F /* LocationAddInputModel.swift */,
-				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
 				D8A5A345286B00E20056CD2B /* Status */,
+				D85B0B63283767F300E8062D /* CurrentLocationModel.swift */,
 				D8B9E89228F2BE6E008E001F /* DeviceIdModel.swift */,
+				D855AA8628F5696A00DE8DCF /* DocumentIdModel.swift */,
+				D822F44D28616119008D0B7F /* LocationAddInputModel.swift */,
 				D806299728F420F300192D82 /* LocationFetchOutputModel.swift */,
+				D8CE68EA283A28B500C1EFD7 /* SharePostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -769,9 +821,11 @@
 				D8A9EDD028420A2F0011E703 /* LaunchUseCase.swift */,
 				D838A7A3283324C200047D52 /* LocatePermissionUseCase.swift */,
 				D822F44F28616215008D0B7F /* LocationAddUseCase.swift */,
+				D855AA8F28F56B0400DE8DCF /* LocationDeleteUseCase.swift */,
 				D806298828F4142800192D82 /* LocationFetchUseCase.swift */,
 				D8835FFB282FBE640048A495 /* MapUseCase.swift */,
 				D8CE68E72838CD1900C1EFD7 /* PinTypeUseCase.swift */,
+				D855AA8028F559CE00DE8DCF /* RegistedDataUseCase.swift */,
 				D8CE68DE2838CC8600C1EFD7 /* ReviewUseCase.swift */,
 				D8CE68DB2838CC7100C1EFD7 /* ShareUseCase.swift */,
 			);
@@ -784,6 +838,7 @@
 				D8A9EDBE2841EDCC0011E703 /* ATTPermissionRepository.swift */,
 				D838A7A0283324B600047D52 /* LocatePermissionRepository.swift */,
 				D822F4532861639A008D0B7F /* LocationAddRepository.swift */,
+				D855AA8C28F56AA300DE8DCF /* LocationDeleteRepository.swift */,
 				D806298528F4137500192D82 /* LocationFetchRepository.swift */,
 				D85B0B5F28375C2F00E8062D /* MapRepository.swift */,
 				D8895ED7283536D20079C2AA /* UserRepository.swift */,
@@ -824,6 +879,7 @@
 				D822F45D28616644008D0B7F /* LocationAddPresenter.swift */,
 				D8835FF8282FBE370048A495 /* MapPresenter.swift */,
 				D8CE68CF283794E500C1EFD7 /* MenuPresenter.swift */,
+				D855AA8328F559FA00DE8DCF /* RegistedDataPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -877,6 +933,7 @@
 				D811B09A284B1FE7000CA523 /* MapUseCaseTests.swift */,
 				D811B098284B104F000CA523 /* ShareUseCaseTests.swift */,
 				D80629A328F44E6500192D82 /* LocationFetchUseCaseTests.swift */,
+				D828DBB428FC390200DFE7C4 /* LocationDeleteUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -945,6 +1002,7 @@
 				D80629A128F44A1B00192D82 /* MockLocationFetchUseCaseOutput.swift */,
 				D836EF4C285C3BA600A2D006 /* MockMapUseCaseOutput.swift */,
 				D836EF4A285C28DA00A2D006 /* MockShareUseCaseOutput.swift */,
+				D828DBB828FC39E800DFE7C4 /* MockLocationDeleteUseCaseOutput.swift */,
 			);
 			name = Output;
 			sourceTree = "<group>";
@@ -958,6 +1016,7 @@
 				D806299D28F4491400192D82 /* MockLocationFetchRepository.swift */,
 				D836EF4E285C3BBD00A2D006 /* MockMapRepository.swift */,
 				D8BAD8AA285A1D9C00E2CA1D /* MockUserRepository.swift */,
+				D828DBB628FC394E00DFE7C4 /* MockLocationDeleteRepository.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -977,6 +1036,8 @@
 				D8C8135C285C60CD00695401 /* MockPinTypeUseCase.swift */,
 				D8C8135E285C60D900695401 /* MockReviewUseCase.swift */,
 				D8C81360285C60E500695401 /* MockShareUseCase.swift */,
+				D828DBB028FC26D600DFE7C4 /* MockLocationDeleteUseCase.swift */,
+				D828DBB228FC28C300DFE7C4 /* MockRegistedDataUseCase.swift */,
 			);
 			name = UseCase;
 			sourceTree = "<group>";
@@ -990,6 +1051,7 @@
 				D8A5A34B286B2C990056CD2B /* LocationAddControllerTests.swift */,
 				D8C81352285C520F00695401 /* MapControllerTests.swift */,
 				D8C81354285C521D00695401 /* MenuControllerTests.swift */,
+				D828DBAE28FC266A00DFE7C4 /* RegistedDataControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1003,6 +1065,7 @@
 				D8C81376285C9CB700695401 /* MapRepositoryTests.swift */,
 				D8C81372285C9A0100695401 /* UserRepositoryTests.swift */,
 				D80629A528F4536700192D82 /* LocationFetchRepositoryTests.swift */,
+				D828DBBA28FC3C0900DFE7C4 /* LocationDeleteRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1016,6 +1079,7 @@
 				D806299F28F4498C00192D82 /* MockLocationFetchDataStore.swift */,
 				D8C81378285C9D2300695401 /* MockMapDataStore.swift */,
 				D8C81374285C9A5F00695401 /* MockUserDataStore.swift */,
+				D828DBBC28FC3CB200DFE7C4 /* MockLocationDeleteDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -1209,6 +1273,7 @@
 				D8B9E89328F2BE6E008E001F /* DeviceIdModel.swift in Sources */,
 				D85B0B6028375C2F00E8062D /* MapRepository.swift in Sources */,
 				D838A7A7283324CF00047D52 /* LocatePermissionDataStore.swift in Sources */,
+				D83305E828F504AE0054252E /* RegistedDataController.swift in Sources */,
 				D806298028F4103A00192D82 /* LocationFetchOutputEntity.swift in Sources */,
 				D84188B92855FC9A00CD2AFE /* ATTPermissionPresenter.swift in Sources */,
 				D8360624282EB72D00CDD7F0 /* MenuView.swift in Sources */,
@@ -1219,6 +1284,7 @@
 				D8CE68DF2838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D8CE68F4283A7F2F00C1EFD7 /* SafariView.swift in Sources */,
 				D84328482860683E003333EE /* CheckBoxButtonView.swift in Sources */,
+				D855AA8D28F56AA300DE8DCF /* LocationDeleteRepository.swift in Sources */,
 				D8176FF62841E3C500C674EA /* ATTPermissionView.swift in Sources */,
 				D8A9EDC82841F73F0011E703 /* ATTPermissionViewBuilder.swift in Sources */,
 				D822F457286163CE008D0B7F /* LocationAddDataStore.swift in Sources */,
@@ -1234,6 +1300,7 @@
 				D8360622282EAA9100CDD7F0 /* MapToolBarButtonView.swift in Sources */,
 				D8CE68E52838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D8A9EDD428420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
+				D855AA8728F5696A00DE8DCF /* DocumentIdModel.swift in Sources */,
 				D8835FFF282FC5800048A495 /* MapViewBuilder.swift in Sources */,
 				D8835FF1282FBC830048A495 /* LocationAddView.swift in Sources */,
 				D838A7AD2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
@@ -1243,6 +1310,7 @@
 				D8E700342842F02A0046B391 /* ApplicationBuilder.swift in Sources */,
 				D84930602829841A002DDFD2 /* MapView.swift in Sources */,
 				D8AF8C1A2846347500533CC7 /* IndicatorView.swift in Sources */,
+				D855AA9028F56B0400DE8DCF /* LocationDeleteUseCase.swift in Sources */,
 				D80629A928F45EDF00192D82 /* TestConst.swift in Sources */,
 				D88360082830BEAC0048A495 /* PermissionButtonView.swift in Sources */,
 				D8C8137B285F247100695401 /* LocationAddController.swift in Sources */,
@@ -1256,13 +1324,16 @@
 				D822F44E28616119008D0B7F /* LocationAddInputModel.swift in Sources */,
 				D8A5A347286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */,
 				D8AF8C1E284654EC00533CC7 /* RootViewModel.swift in Sources */,
+				D855AA8A28F5698800DE8DCF /* LocationDeleteDataStore.swift in Sources */,
 				D8835FF3282FBE020048A495 /* MapController.swift in Sources */,
 				D8CE68D92838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
+				D855AA7E28F5583500DE8DCF /* RegistedDataViewModel.swift in Sources */,
 				D85B0B64283767F300E8062D /* CurrentLocationModel.swift in Sources */,
 				D838A79B2833249500047D52 /* LocatePermissionPresenter.swift in Sources */,
 				D822F4542861639A008D0B7F /* LocationAddRepository.swift in Sources */,
 				D80629AB28F461A000192D82 /* RegistedDataViewBuilder.swift in Sources */,
 				D84DC6852875D3050048AAC6 /* DeviceIdEntity.swift in Sources */,
+				D855AA8128F559CE00DE8DCF /* RegistedDataUseCase.swift in Sources */,
 				D806299B28F4469900192D82 /* MockLocationFetchUseCase.swift in Sources */,
 				D822F45E28616644008D0B7F /* LocationAddPresenter.swift in Sources */,
 				D838A79E2833249D00047D52 /* LocatePermissionController.swift in Sources */,
@@ -1271,6 +1342,7 @@
 				D8AF8C20284655CF00533CC7 /* LaunchPresenter.swift in Sources */,
 				D8AF8C1728462D6600533CC7 /* ActivityIndicatorView.swift in Sources */,
 				D8E700322842E20B0046B391 /* AppDelegateController.swift in Sources */,
+				D855AA8428F559FA00DE8DCF /* RegistedDataPresenter.swift in Sources */,
 				D8A9EDC22841EFC50011E703 /* ATTAuthorizationStatusEntity.swift in Sources */,
 				D806299528F41E4000192D82 /* LocationFetchOutputModelTranslator.swift in Sources */,
 				D838A7A4283324C200047D52 /* LocatePermissionUseCase.swift in Sources */,
@@ -1297,22 +1369,28 @@
 				D81FC003284A102900C2CBEF /* IndicatorUseCase.swift in Sources */,
 				D8C8136D285C799700695401 /* LocatePermissionRepositoryTests.swift in Sources */,
 				D8BAD8A9285A1C7200E2CA1D /* MockLocatePermissionRepository.swift in Sources */,
+				D855AA8528F559FA00DE8DCF /* RegistedDataPresenter.swift in Sources */,
 				D8A9EDD528420AAD0011E703 /* LaunchCountEntity.swift in Sources */,
 				D84188C32856AB5900CD2AFE /* LocatePermissionViewBuilderTests.swift in Sources */,
 				D8C8135D285C60CD00695401 /* MockPinTypeUseCase.swift in Sources */,
 				D8836000282FC5800048A495 /* MapViewBuilder.swift in Sources */,
+				D855AA8E28F56AA300DE8DCF /* LocationDeleteRepository.swift in Sources */,
 				D8C8134D285C51A800695401 /* AppDelegateControllerTests.swift in Sources */,
 				D84188C72856AB7A00CD2AFE /* MenuViewBuilderTests.swift in Sources */,
 				D8835FF4282FBE020048A495 /* MapController.swift in Sources */,
+				D828DBAA28FC24C400DFE7C4 /* RegistedDataViewBuilderTests.swift in Sources */,
+				D855AA9128F56B0400DE8DCF /* LocationDeleteUseCase.swift in Sources */,
 				D85B0B692837712900E8062D /* MapDataStoreTests.swift in Sources */,
 				D824610F2857893B004AC989 /* ATTPermissionUseCaseTests.swift in Sources */,
 				D85B0B6B2837728100E8062D /* LocatePermissionViewModel.swift in Sources */,
 				D81FC005284A109C00C2CBEF /* MapView.swift in Sources */,
+				D855AA8828F5696A00DE8DCF /* DocumentIdModel.swift in Sources */,
 				D811B099284B104F000CA523 /* ShareUseCaseTests.swift in Sources */,
 				D822F4552861639A008D0B7F /* LocationAddRepository.swift in Sources */,
 				D85B0B6D283772B400E8062D /* MapRepository.swift in Sources */,
 				D8A9EDD228420A2F0011E703 /* LaunchUseCase.swift in Sources */,
 				D838A79F2833249D00047D52 /* LocatePermissionController.swift in Sources */,
+				D855AA8228F559CE00DE8DCF /* RegistedDataUseCase.swift in Sources */,
 				D81FC007284A10C300C2CBEF /* ActivityIndicatorView.swift in Sources */,
 				D8C81365285C610000695401 /* MockBillingUseCase.swift in Sources */,
 				D84DC6862875D3050048AAC6 /* DeviceIdEntity.swift in Sources */,
@@ -1326,6 +1404,7 @@
 				D8CE68CE283794BC00C1EFD7 /* MenuController.swift in Sources */,
 				D8B9E89128F2BE47008E001F /* DeviceIdModelTranslator.swift in Sources */,
 				D8A9EDBC2841E8BE0011E703 /* ATTPermissionController.swift in Sources */,
+				D828DBAF28FC266A00DFE7C4 /* RegistedDataControllerTests.swift in Sources */,
 				D806298A28F4142800192D82 /* LocationFetchUseCase.swift in Sources */,
 				D838A7AE2833251000047D52 /* LocatePermissionViewBuilder.swift in Sources */,
 				D8BAD89F285A161700E2CA1D /* IndicatorUseCaseTests.swift in Sources */,
@@ -1335,7 +1414,9 @@
 				D8C81368285C662900695401 /* ATTPermissionRepositoryTests.swift in Sources */,
 				D838A7AB283324DD00047D52 /* AuthorizationStatusEntity.swift in Sources */,
 				D84DC66C2873B0680048AAC6 /* LocationAddUseCaseTests.swift in Sources */,
+				D855AA7F28F5583500DE8DCF /* RegistedDataViewModel.swift in Sources */,
 				D8C8135B285C5DFE00695401 /* MockIndicatorUseCase.swift in Sources */,
+				D828DBBD28FC3CB200DFE7C4 /* MockLocationDeleteDataStore.swift in Sources */,
 				D8CE68E02838CC8600C1EFD7 /* ReviewUseCase.swift in Sources */,
 				D8A5A348286B00F30056CD2B /* FailAddLocationStatus.swift in Sources */,
 				D84188BD285634F100CD2AFE /* ApplicationBuilderTests.swift in Sources */,
@@ -1351,12 +1432,16 @@
 				D84DC6742873C73E0048AAC6 /* MockLocationAddDataStore.swift in Sources */,
 				D85B0B6C283772AA00E8062D /* CurrentLocationModel.swift in Sources */,
 				D8CE68D1283794E500C1EFD7 /* MenuPresenter.swift in Sources */,
+				D828DBAD28FC262C00DFE7C4 /* CheckBoxView.swift in Sources */,
+				D828DBBF28FC423900DFE7C4 /* RegistedDataPresenterTests.swift in Sources */,
 				D8C8136F285C7A4700695401 /* MockLocatePermissionDataStore.swift in Sources */,
+				D828DBBB28FC3C0900DFE7C4 /* LocationDeleteRepositoryTests.swift in Sources */,
 				D8BAD8A7285A1C2200E2CA1D /* LocatePermissionUseCaseTests.swift in Sources */,
 				D811B09F284B2748000CA523 /* LocatePermissionDataStoreTests.swift in Sources */,
 				D806299928F420F300192D82 /* LocationFetchOutputModel.swift in Sources */,
 				D80629AC28F461A000192D82 /* RegistedDataViewBuilder.swift in Sources */,
 				D8C81379285C9D2300695401 /* MockMapDataStore.swift in Sources */,
+				D855AA8B28F5698800DE8DCF /* LocationDeleteDataStore.swift in Sources */,
 				D8176FEE2841D3E700C674EA /* LocatePermissionPresenterTest.swift in Sources */,
 				D80629A028F4498C00192D82 /* MockLocationFetchDataStore.swift in Sources */,
 				D8B9E89628F2CE36008E001F /* DeviceIdModelTranslatorTests.swift in Sources */,
@@ -1370,6 +1455,7 @@
 				D8CE68E62838CCDF00C1EFD7 /* BillingUseCase.swift in Sources */,
 				D88360062830BAC70048A495 /* LocatePermissionView.swift in Sources */,
 				D8C8137C285F247100695401 /* LocationAddController.swift in Sources */,
+				D828DBB728FC394E00DFE7C4 /* MockLocationDeleteRepository.swift in Sources */,
 				D8895ED6283535AE0079C2AA /* UserDefaultsEntity.swift in Sources */,
 				D822F4512861621C008D0B7F /* LocationAddUseCase.swift in Sources */,
 				D84188BE285634FA00CD2AFE /* ApplicationBuilder.swift in Sources */,
@@ -1377,6 +1463,7 @@
 				D8A5A34C286B2C990056CD2B /* LocationAddControllerTests.swift in Sources */,
 				D85B0B6F283772C800E8062D /* LocationAddView.swift in Sources */,
 				D811B0A1284B2937000CA523 /* UserDataStoreTests.swift in Sources */,
+				D828DBB328FC28C300DFE7C4 /* MockRegistedDataUseCase.swift in Sources */,
 				D81FC00F284A512600C2CBEF /* RootViewModelTests.swift in Sources */,
 				D84188C52856AB6C00CD2AFE /* MapViewBuilderTests.swift in Sources */,
 				D8C8134F285C51E400695401 /* ATTPermissionControllerTests.swift in Sources */,
@@ -1398,6 +1485,7 @@
 				D838A7A2283324B600047D52 /* LocatePermissionRepository.swift in Sources */,
 				D8C81377285C9CB700695401 /* MapRepositoryTests.swift in Sources */,
 				D8C81355285C521D00695401 /* MenuControllerTests.swift in Sources */,
+				D828DBB128FC26D600DFE7C4 /* MockLocationDeleteUseCase.swift in Sources */,
 				D81FC006284A10AD00C2CBEF /* IndicatorView.swift in Sources */,
 				D85B0B73283772E500E8062D /* MapToolBarButtonView.swift in Sources */,
 				D8176FF02841D65100C674EA /* MapPresenterTests.swift in Sources */,
@@ -1407,9 +1495,11 @@
 				D8176FF22841D92A00C674EA /* TestConst.swift in Sources */,
 				D88B1AA92861C8BF000F5C0D /* LocationRequestToFirestoreTests.swift in Sources */,
 				D85B0B70283772CD00E8062D /* MenuView.swift in Sources */,
+				D83305E928F504AE0054252E /* RegistedDataController.swift in Sources */,
 				D81FC004284A107C00C2CBEF /* RootViewModel.swift in Sources */,
 				D806299C28F4469900192D82 /* MockLocationFetchUseCase.swift in Sources */,
 				D8CE68DA2838CA7700C1EFD7 /* MenuButtonView.swift in Sources */,
+				D828DBB528FC390200DFE7C4 /* LocationDeleteUseCaseTests.swift in Sources */,
 				D8176FF42841DA2700C674EA /* MenuPresenterTests.swift in Sources */,
 				D88A663F2863C285003271A3 /* LocationAddViewModel.swift in Sources */,
 				D8835FFA282FBE370048A495 /* MapPresenter.swift in Sources */,
@@ -1428,12 +1518,14 @@
 				D8BAD8942859FD8D00E2CA1D /* MockATTPermissionOutput.swift in Sources */,
 				D8895ED9283536D20079C2AA /* UserRepository.swift in Sources */,
 				D8CE68E32838CCB700C1EFD7 /* InquiryUseCase.swift in Sources */,
+				D828DBB928FC39E800DFE7C4 /* MockLocationDeleteUseCaseOutput.swift in Sources */,
 				D8AF8C21284655CF00533CC7 /* LaunchPresenter.swift in Sources */,
 				D8CE68D42837950D00C1EFD7 /* MenuViewModel.swift in Sources */,
 				D8CE68DD2838CC7100C1EFD7 /* ShareUseCase.swift in Sources */,
 				D8CE68F2283A3CDF00C1EFD7 /* ShareSheetView.swift in Sources */,
 				D84DC66E2873B7590048AAC6 /* MockLocationAddRepository.swift in Sources */,
 				D84188C12856AB4C00CD2AFE /* ATTPermissionViewBuilderTests.swift in Sources */,
+				D828DBAC28FC261A00DFE7C4 /* RegistedDataView.swift in Sources */,
 				D85B0B672837684300E8062D /* CurrentLocationModelTranslator.swift in Sources */,
 				D8BAD89C285A06F400E2CA1D /* MockATTPermissionUseCase.swift in Sources */,
 				D88B1AAA2861C95A000F5C0D /* LocationAddViewBuilder.swift in Sources */,
